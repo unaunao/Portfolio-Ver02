@@ -3,6 +3,28 @@
   margin: 0;
   padding: 0;
 }
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/* Sikp Navigation */
+.skipNavi {
+  height: 0;
+  .skipLink {
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    overflow: hidden;
+    z-index: 9000;
+    &:focus, &:active {
+      top: 0;
+      left: 0;
+      padding: 10px 20px;
+      background: #1e64ba;
+      color: #fff;
+    }
+  }
+}
 
 /* common hidden */ 
 .hidden {
