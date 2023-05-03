@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* common hidden */ 
+.hidden {
+  display: none;
+}
+.blind, table caption {
+  width:1px;
+  height: 1px; 
+  overflow: hidden;
+  position: absolute;
+  top:-9999em;
+  left: -9999em;
+  display: block;
+  text-indent: -9999em;
+  font-size: 0;
+  line-height: 0;
+}
