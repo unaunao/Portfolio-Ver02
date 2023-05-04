@@ -6,6 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link type="text/css" rel="stylesheet" href="Css/style.css">
+  <!-- jQuery -->
+  <script src="Js/jquery-3.6.4.min.js"></script>
+  <!-- Swiper slide -->
+  <link rel="stylesheet" href="/library/swiper/swiper.min.css">
+  <script src="library/swiper/swiper.min.js"></script>
+  <!-- Custom Js-->
+  <script src="/Js/common.js"></script>
 </head>
 <body>
   <div class="skipNavi">
@@ -25,12 +32,19 @@
     </header>
     <!-- e: header -->
     <!-- s: fullpage -->
-    <div class="fullpage">
-      <section class="page-main"></section>
-      <section class="page-about"></section>
-      <section class="page-work"></section>
-      <section class="page-design"></section>
-      <section class="page-contact"></section>
+    <div class="fullpage swiper-pages">
+      <div class="swiper-wrapper">
+        <section class="page-main swiper-slide"></section>
+        <section class="page-about swiper-slide"></section>
+        <section class="page-work swiper-slide"></section>
+        <section class="page-design swiper-slide"></section>
+        <section class="page-contact swiper-slide"></section>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Pagination -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>  
     </div>
     <!-- e: fullpage -->
     <!-- s: footer -->
