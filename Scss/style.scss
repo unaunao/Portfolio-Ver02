@@ -10,6 +10,11 @@ body {
   width: 100%;
   height: auto;
   overflow: hidden;
+  .swiper-wrapper {
+    .swiper-slide {
+      max-width: 100%;
+    }
+  }
   .swiper-pagination {
     position: fixed;
     transform: rotate(90deg) translateY(-50%);
@@ -29,27 +34,23 @@ body {
   }
   .fullpage{
     .page-main {
-      width: 100%;
       height: 100vh;
       background-color: #ddd;
     }
     .page-about {
-      width: 100%;
       height: 500px;
       background-color: crimson;
+      min-width: 100%;
     }
     .page-work {
-      width: 100%;
       height: 800px;
       background-color: #444;
     }
     .page-design {
-      width: 100%;
       height: 2200px;
       background-color: olive;
     }
     .page-contact {
-      width: 100%;
       height: 100vh;
       background-color: olivedrab;
     }
