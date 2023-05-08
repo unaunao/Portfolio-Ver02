@@ -59,92 +59,92 @@ a {
   font-family: "Pretendard";
   font-weight: 900;
   font-display: swap;
-  src: local("Pretendard Black"), url("./woff2/Pretendard-Black.woff2") format("woff2"), url("./woff/Pretendard-Black.woff") format("woff");
+  src: local("Pretendard Black"), url("/woff2/Pretendard-Black.woff2") format("woff2"), url("/woff/Pretendard-Black.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 800;
   font-display: swap;
-  src: local("Pretendard ExtraBold"), url("./woff2/Pretendard-ExtraBold.woff2") format("woff2"), url("./woff/Pretendard-ExtraBold.woff") format("woff");
+  src: local("Pretendard ExtraBold"), url("/woff2/Pretendard-ExtraBold.woff2") format("woff2"), url("/woff/Pretendard-ExtraBold.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 700;
   font-display: swap;
-  src: local("Pretendard Bold"), url("./woff2/Pretendard-Bold.woff2") format("woff2"), url("./woff/Pretendard-Bold.woff") format("woff");
+  src: local("Pretendard Bold"), url("/woff2/Pretendard-Bold.woff2") format("woff2"), url("/woff/Pretendard-Bold.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 600;
   font-display: swap;
-  src: local("Pretendard SemiBold"), url("./woff2/Pretendard-SemiBold.woff2") format("woff2"), url("./woff/Pretendard-SemiBold.woff") format("woff");
+  src: local("Pretendard SemiBold"), url("/woff2/Pretendard-SemiBold.woff2") format("woff2"), url("/woff/Pretendard-SemiBold.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 500;
   font-display: swap;
-  src: local("Pretendard Medium"), url("./woff2/Pretendard-Medium.woff2") format("woff2"), url("./woff/Pretendard-Medium.woff") format("woff");
+  src: local("Pretendard Medium"), url("/woff2/Pretendard-Medium.woff2") format("woff2"), url("/woff/Pretendard-Medium.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 400;
   font-display: swap;
-  src: local("Pretendard Regular"), url("./woff2/Pretendard-Regular.woff2") format("woff2"), url("./woff/Pretendard-Regular.woff") format("woff");
+  src: local("Pretendard Regular"), url("/woff2/Pretendard-Regular.woff2") format("woff2"), url("/woff/Pretendard-Regular.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 300;
   font-display: swap;
-  src: local("Pretendard Light"), url("./woff2/Pretendard-Light.woff2") format("woff2"), url("./woff/Pretendard-Light.woff") format("woff");
+  src: local("Pretendard Light"), url("/woff2/Pretendard-Light.woff2") format("woff2"), url("/woff/Pretendard-Light.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 200;
   font-display: swap;
-  src: local("Pretendard ExtraLight"), url("./woff2/Pretendard-ExtraLight.woff2") format("woff2"), url("./woff/Pretendard-ExtraLight.woff") format("woff");
+  src: local("Pretendard ExtraLight"), url("/woff2/Pretendard-ExtraLight.woff2") format("woff2"), url("./woff/Pretendard-ExtraLight.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 100;
   font-display: swap;
-  src: local("Pretendard Thin"), url("./woff2/Pretendard-Thin.woff2") format("woff2"), url("./woff/Pretendard-Thin.woff") format("woff");
+  src: local("Pretendard Thin"), url("/woff2/Pretendard-Thin.woff2") format("woff2"), url("/woff/Pretendard-Thin.woff") format("woff");
 }
 /* font */
 @font-face {
   font-family: "Pretendard";
   font-weight: 700;
   font-display: swap;
-  src: local("Pretendard SemiBold"), url("../Fonts/Pretendard-SemiBold.woff2") format("woff2"), url("../Fonts/Pretendard-SemiBold.woff") format("woff"), url("../Fonts/Pretendard-SemiBold.otf") format("opentype");
+  src: local("Pretendard SemiBold"), url("/Fonts/Pretendard-SemiBold.woff2") format("woff2"), url("/Fonts/Pretendard-SemiBold.woff") format("woff"), url("/Fonts/Pretendard-SemiBold.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 600;
   font-display: swap;
-  src: local("Pretendard Bold"), url("../Fonts/Pretendard-Bold.woff2") format("woff2"), url("../Fonts/Pretendard-Bold.woff") format("woff"), url("../Fonts/Pretendard-Bold.otf") format("opentype");
+  src: local("Pretendard Bold"), url("/Fonts/Pretendard-Bold.woff2") format("woff2"), url("/Fonts/Pretendard-Bold.woff") format("woff"), url("/Fonts/Pretendard-Bold.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 500;
   font-display: swap;
-  src: local("Pretendard Medium"), url("../Fonts/Pretendard-Medium.woff2") format("woff2"), url("../Fonts/Pretendard-Medium.woff") format("woff"), url("../Fonts/Pretendard-Medium.otf") format("opentype");
+  src: local("Pretendard Medium"), url("/Fonts/Pretendard-Medium.woff2") format("woff2"), url("/Fonts/Pretendard-Medium.woff") format("woff"), url("/Fonts/Pretendard-Medium.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 400;
   font-display: swap;
-  src: local("Pretendard Regular"), url("../Fonts/Pretendard-Regular.woff2") format("woff2"), url("../Fonts/Pretendard-Regular.woff") format("woff"), url("../Fonts/Pretendard-Regular.otf") format("opentype");
+  src: local("Pretendard Regular"), url("/Fonts/Pretendard-Regular.woff2") format("woff2"), url("/Fonts/Pretendard-Regular.woff") format("woff"), url("/Fonts/Pretendard-Regular.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 300;
   font-display: swap;
-  src: local("Pretendard Light"), url("../Fonts/Pretendard-Light.woff2") format("woff2"), url("../Fonts/Pretendard-Light.woff") format("woff"), url("../Fonts/Pretendard-Light.otf") format("opentype");
+  src: local("Pretendard Light"), url("/Fonts/Pretendard-Light.woff2") format("woff2"), url("/Fonts/Pretendard-Light.woff") format("woff"), url("/Fonts/Pretendard-Light.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 100;
   font-display: swap;
-  src: local("Pretendard Thin"), url("../Fonts/Pretendard-Thin.woff2") format("woff2"), url("../Fonts/Pretendard-Thin.woff") format("woff"), url("../Fonts/Pretendard-Thin.otf") format("opentype");
+  src: local("Pretendard Thin"), url("/Fonts/Pretendard-Thin.woff2") format("woff2"), url("/Fonts/Pretendard-Thin.woff") format("woff"), url("/Fonts/Pretendard-Thin.otf") format("opentype");
 }
 /* Mobile */
 /* Tablet */
