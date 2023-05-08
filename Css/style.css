@@ -1,9 +1,15 @@
+@charset "UTF-8";
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.6em;
+  margin-top: 0;
 }
 
 a {
@@ -103,11 +109,73 @@ a {
   font-display: swap;
   src: local("Pretendard Thin"), url("./woff2/Pretendard-Thin.woff2") format("woff2"), url("./woff/Pretendard-Thin.woff") format("woff");
 }
+/* font */
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Pretendard SemiBold"), url("../Fonts/Pretendard-SemiBold.woff2") format("woff2"), url("../Fonts/Pretendard-SemiBold.woff") format("woff"), url("../Fonts/Pretendard-SemiBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Pretendard Bold"), url("../Fonts/Pretendard-Bold.woff2") format("woff2"), url("../Fonts/Pretendard-Bold.woff") format("woff"), url("../Fonts/Pretendard-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Pretendard Medium"), url("../Fonts/Pretendard-Medium.woff2") format("woff2"), url("../Fonts/Pretendard-Medium.woff") format("woff"), url("../Fonts/Pretendard-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard Regular"), url("../Fonts/Pretendard-Regular.woff2") format("woff2"), url("../Fonts/Pretendard-Regular.woff") format("woff"), url("../Fonts/Pretendard-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Pretendard Light"), url("../Fonts/Pretendard-Light.woff2") format("woff2"), url("../Fonts/Pretendard-Light.woff") format("woff"), url("../Fonts/Pretendard-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  font-display: swap;
+  src: local("Pretendard Thin"), url("../Fonts/Pretendard-Thin.woff2") format("woff2"), url("../Fonts/Pretendard-Thin.woff") format("woff"), url("../Fonts/Pretendard-Thin.otf") format("opentype");
+}
+/* Mobile */
+/* Tablet */
+/* PC */
+@media (min-width: 1366px) {
+  h1 {
+    font-size: 6.875rem;
+    font-weight: 100;
+    letter-spacing: 1.1em;
+  }
+  h1, button {
+    line-height: 100%;
+  }
+  h2, h3, h4 {
+    line-height: 120em;
+  }
+  h2 {
+    font-size: 3.125rem;
+  }
+  h2.ko {
+    font-size: 3.125rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+}
 body {
   font-family: "pretendard", sans-serif;
 }
 
-/*swiper silder */
+/*Body Swiper Silder Custom*/
 .swiper-pages {
   width: 100%;
   height: auto;
@@ -128,14 +196,54 @@ body {
   width: auto !important;
 }
 
-.container .m-nav {
-  width: 100%;
-  height: 80px;
-  background-color: yellowgreen;
+.swiper-pagination,
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
 }
+
+/* Navigation bar */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  padding: 8px 0;
+  background-color: transparent;
+  z-index: 9000;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+}
+.nav .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.nav .inner .btn-m-gnb {
+  width: 46px;
+  height: 46px;
+  background: url(../Images/svg/Menu_hamberger.svg) no-repeat;
+  color: #fff;
+}
+.nav .inner h1 {
+  width: 72px;
+  height: 30px;
+  background: url(../Images/svg/Logo_Mbile.svg);
+}
+.nav.nav-down {
+  background-color: #FDFDFD;
+}
+
+/* 중심 콘텐츠 레이아웃*/
 .container .fullpage .page-main {
   height: 100vh;
-  background-color: #ddd;
+  background-image: url(../Images/M_main.jpg);
+  background-repeat: no-repeat;
+  background-color: #fdfdfd;
 }
 .container .fullpage .page-about {
   height: 500px;
@@ -147,14 +255,20 @@ body {
   background-color: #444;
 }
 .container .fullpage .page-design {
-  height: 2200px;
+  height: 3000px;
   background-color: olive;
 }
 .container .fullpage .page-contact {
   height: 100vh;
   background-color: olivedrab;
 }
-.container footer {
+
+footer {
   height: 150px;
   width: 100%;
+}
+footer .div-cont .f-logo {
+  width: 72px;
+  height: 30px;
+  background: url(../Images/svg/Logo_Mbile.svg);
 }

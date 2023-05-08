@@ -1,11 +1,13 @@
 @import "reset";
+@import "variable";
 @import "common";
+@import "layout";
 
 body {
   font-family: 'pretendard', sans-serif;
 }
 
-/*swiper silder */
+/*Body Swiper Silder Custom*/
 .swiper-pages {
   width: 100%;
   height: auto;
@@ -26,16 +28,52 @@ body {
   left: 0 !important;
   width: auto !important;
 }
-.container{
-  .m-nav {
-    width: 100%;
-    height: 80px;
-    background-color: yellowgreen;
+.swiper-pagination, 
+.swiper-button-next,
+.swiper-button-prev{
+  display: none;
+}
+
+
+/* Navigation bar */
+.nav {
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  padding: 8px 0;
+  background-color: transparent;
+  z-index: 9000;
+  transition: 0.35s;
+  .inner {
+    display: flex;
+    align-items: center;
+    .btn-m-gnb {
+      width:46px;
+      height: 46px;
+      background: url(../Images/svg/Menu_hamberger.svg) no-repeat ;
+      color: #fff;
+    }
+    h1 {
+      width: 72px;
+      height: 30px;
+      background: url(../Images/svg/Logo_Mbile.svg);
+    }
   }
+  &.nav-down{
+    background-color: #FDFDFD;
+  }
+}
+
+/* 중심 콘텐츠 레이아웃*/
+.container{
   .fullpage{
     .page-main {
       height: 100vh;
-      background-color: #ddd;
+      background-image: url(../Images/M_main.jpg);
+      background-repeat: no-repeat;
+      background-color: #fdfdfd;
     }
     .page-about {
       height: 500px;
@@ -47,7 +85,7 @@ body {
       background-color: #444;
     }
     .page-design {
-      height: 2200px;
+      height: 3000px;
       background-color: olive;
     }
     .page-contact {
@@ -55,8 +93,17 @@ body {
       background-color: olivedrab;
     }
   }
-  footer {
-    height: 150px;
-    width: 100%;
+}
+footer {
+  height: 150px;
+  width: 100%;
+  .div-cont {
+    .f-logo {
+        width: 72px;
+        height: 30px;
+        background: url(../Images/svg/Logo_Mbile.svg);
+    }
+    .f-info {
+    }
   }
 }
