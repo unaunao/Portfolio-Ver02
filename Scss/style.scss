@@ -14,7 +14,7 @@ body {
   overflow: hidden;
   .swiper-wrapper {
     .swiper-slide {
-      max-width: 100%;
+      // max-width: 100%;
     }
   }
   .swiper-pagination {
@@ -68,30 +68,33 @@ body {
 
 /* 중심 콘텐츠 레이아웃*/
 .container{
+  color: map-get($color, text);
   .fullpage{
-    .page-main {
-      height: 100vh;
-      background-image: url(../Images/M_main.jpg);
-      background-repeat: no-repeat;
-      background-color: #fdfdfd;
-    }
-    .page-about {
-      height: 500px;
-      background-color: crimson;
-      min-width: 100%;
-    }
-    .page-work {
-      height: 800px;
-      background-color: #444;
-    }
-    .page-design {
-      height: 3000px;
-      background-color: olive;
-    }
-    .page-contact {
-      height: 100vh;
-      background-color: olivedrab;
-    }
+    section{
+      .page-main {
+        height: 100vh;
+        background-image: url(../Images/M_main.jpg);
+        background-repeat: no-repeat;
+        background-color: #fdfdfd;
+      }
+      .page-about {
+        height: 500px;
+        background-color: crimson;
+        // min-width: 100%;
+      }
+      .page-work {
+        height: 800px;
+        background-color: #444;
+      }
+      .page-design {
+        height: 3000px;
+        background-color: olive;
+      }
+      .page-contact {
+        height: 100vh;
+        background-color: olivedrab;
+      }
+    }  
   }
 }
 footer {

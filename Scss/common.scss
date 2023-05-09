@@ -1,23 +1,25 @@
 /* font */
-// @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
 /* font */
+// 최상위 부터의 경로로 올려야 git url에서 문제 없이 나옴
+// 대부분의 최신 웹 브라우저에서 지원되는 woff와 ttf 개선으로 나온 많은 운영체제에서 지원이 되는 otf로 폰트 설정
 @font-face {
-	font-family: 'Pretendard';
+  font-family: 'Pretendard';
 	font-weight: 700;
-	font-display: swap;
-	src: local('Pretendard SemiBold'), 
-  url('/Fonts/Pretendard-SemiBold.woff2') format('woff2'), 
-  url('/Fonts/Pretendard-SemiBold.woff') format('woff'),
-  url('/Fonts/Pretendard-SemiBold.otf') format('opentype');
-}
-@font-face {
-	font-family: 'Pretendard';
-	font-weight: 600;
 	font-display: swap;
 	src: local('Pretendard Bold'), 
   url('/Fonts/Pretendard-Bold.woff2') format('woff2'), 
   url('/Fonts/Pretendard-Bold.woff') format('woff'),
   url('/Fonts/Pretendard-Bold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 600;
+  font-display: swap;
+  src: local('Pretendard SemiBold'), 
+  url('/Fonts/Pretendard-SemiBold.woff2') format('woff2'), 
+  url('/Fonts/Pretendard-SemiBold.woff') format('woff'),
+  url('/Fonts/Pretendard-SemiBold.otf') format('opentype');
 }
 @font-face {
 	font-family: 'Pretendard';
@@ -56,6 +58,29 @@
   url('/Fonts/Pretendard-Thin.otf') format('opentype');
 }
 /* Mobile */
+h1 {
+  font-size: map-get($font_size_mobile, h1);
+  font-weight: map-get($font_wight, light);
+}
+h2{
+  font-size: map-get($font_size_mobile, h2);
+}
+h3{
+  font-size: map-get($font_size_mobile, h3_ko);
+  font-weight: map-get($font_wight, bold);
+}
+h4{
+  font-size: map-get($font_size_mobile, h4); 
+}
+h2, h3, h4 {
+  line-height: 1.2em;
+}
+button,h2,h4{
+  font-weight: map-get($font_wight, medium);
+}
+h1, button {
+  line-height: 100%;
+}
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1366px) {
@@ -65,29 +90,17 @@
 /* PC */
 @media (min-width: 1366px) {
   h1 {
-    font-size: 6.875rem;
-    font-weight: 100;
-    letter-spacing: 1.1em;
-  }
-  h1, button {
-    line-height: 100%;
-  }
-  h2, h3, h4 {
-    line-height: 120em;
+    font-size: map-get($font_size_pc, h1);
+    font-weight: map-get($font_wight, thin);
   }
   h2{
-    font-size: 3.125rem;
-  }
-  h2.ko{
-    font-size: 3.125rem;
+    font-size: map-get($font_size_pc, h2);
   }
   h3{
-    font-size: 3rem;
+    font-size: map-get($font_size_pc, h3_ko);
+    font-weight: map-get($font_wight, semibold);
   }
   h4{
-
-  }
-  p {
-  
+    font-size: map-get($font_size_pc, h4); 
   }
 }

@@ -34,11 +34,12 @@
     <!-- s: fullpage -->
     <div class="fullpage swiper-pages">
       <div class="swiper-wrapper">
-        <section class="page-main swiper-slide"></section>
-        <section class="page-about swiper-slide"></section>
-        <section class="page-work swiper-slide"></section>
-        <section class="page-design swiper-slide"></section>
-        <section class="page-contact swiper-slide"></section>
+        <section class="page-main swiper-slide" html-include="./sub/sub01_main.html">
+        </section>
+        <section class="swiper-slide" html-include="./sub/sub02_about.html"></section>
+        <section class="page-work swiper-slide" html-include="./sub/sub03_work.html"></section>
+        <section class="page-design swiper-slide" html-include="./sub/sub04_design.html"></section>
+        <section class="page-contact swiper-slide" html-include="./sub/sub05_contact.html"></section>
       </div>
       <!-- Add Pagination -->
       <div class="swiper-pagination"></div>
