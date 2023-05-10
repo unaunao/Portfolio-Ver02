@@ -122,7 +122,7 @@ button, h2, h4 {
 }
 
 h1, button {
-  line-height: 100%;
+  line-height: 0;
 }
 
 /* Tablet */
@@ -143,15 +143,20 @@ h1, button {
     font-size: 1.5rem;
   }
 }
+/* ===== 공통 레이아웃  ===== */
 body {
   font-family: "pretendard", sans-serif;
+  color: #1F1F1F;
 }
 
-/*Body Swiper Silder Custom*/
+/* Body Swiper Silder Custom */
 .swiper-pages {
   width: 100%;
   height: auto;
   overflow: hidden;
+}
+.swiper-pages .swiper-wrapper {
+  height: 100vh;
 }
 .swiper-pages .swiper-pagination {
   position: fixed;
@@ -169,6 +174,11 @@ body {
 .swiper-button-next,
 .swiper-button-prev {
   display: none;
+}
+
+/* Content box */
+.div-cont {
+  padding: 64px 8px 82px;
 }
 
 /* Navigation bar */
@@ -207,17 +217,17 @@ body {
   background-color: #FDFDFD;
 }
 
-/* 중심 콘텐츠 레이아웃*/
+/* Main Contents Layout */
 .container {
   color: #1F1F1F;
 }
-.container .fullpage section .page-main {
-  height: 100vh;
+.container .fullpage section #page-main {
   background-image: url(../Images/M_main.jpg);
   background-repeat: no-repeat;
   background-color: #fdfdfd;
+  background-size: cover;
 }
-.container .fullpage section .page-about {
+.container .fullpage section #page-about {
   height: 500px;
   background-color: crimson;
 }
@@ -234,12 +244,129 @@ body {
   background-color: olivedrab;
 }
 
-footer {
-  height: 150px;
+/* Bottom Navigation */
+.div-cont {
   width: 100%;
 }
-footer .div-cont .f-logo {
+.div-cont .nav_btn_wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+.div-cont .nav_btn_wrap .nav_btn a {
+  padding: 20px 25px;
+  background-color: rgba(205, 156, 252, 0.8);
+  border-radius: 20px;
+  display: grid;
+  align-self: start;
+  grid-gap: 6px;
+}
+.div-cont .nav_btn_wrap .nav_btn a span {
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.div-cont .nav_btn_wrap .nav_btn a span:first-child {
+  font-size: 0.875rem;
+}
+.div-cont .nav_btn_wrap .nav_btn a span:last-child {
+  font-size: 1.125rem;
+  text-transform: uppercase;
+}
+.div-cont .nav_btn_wrap .nav_btn a .privious::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../Images/svg/Arrow_L.svg) no-repeat;
+}
+.div-cont .nav_btn_wrap .nav_btn a .next::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../Images/svg/Arrow_R.svg) no-repeat;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 50px;
+  border-top: 1px solid #1F1F1F;
+}
+footer .footer .f-logo {
   width: 72px;
   height: 30px;
   background: url(../Images/svg/Logo_Mbile.svg);
+  margin: 0 auto;
+}
+footer .footer .f-info {
+  font-size: 0.75rem;
+  margin: 8px;
+}
+
+/* sub-page Main */
+.page-main .div-cont {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.page-main .div-cont .main-con {
+  height: 80%;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.page-main .div-cont .main-con .visual-txt {
+  text-align: center;
+}
+.page-main .div-cont .main-con .visual-txt h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.page-main .div-cont .main-con .visual-txt p {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.page-main .div-cont .main-con .visual-txt .gide {
+  margin-top: 30px;
+}
+.page-main .div-cont .main-con .visual-txt .gide span.l {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../Images/svg/Arrow_L_02.svg) no-repeat;
+}
+.page-main .div-cont .main-con .visual-txt .gide span.R {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../Images/svg/Arrow_R_02.svg) no-repeat;
+}
+.page-main .div-cont .main-con .visual-txt .gide i {
+  content: "";
+  display: inline-block;
+  width: 54px;
+  height: 54px;
+  background: url(../Images/svg/swiper.svg) no-repeat;
+  background-size: 124%;
+  background-position: -5px 0;
 }

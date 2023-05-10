@@ -1,112 +1,52 @@
 @import "reset";
 @import "variable";
+@import "mixin";
 @import "common";
 @import "layout";
 
-body {
-  font-family: 'pretendard', sans-serif;
-}
-
-/*Body Swiper Silder Custom*/
-.swiper-pages {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  .swiper-wrapper {
-    .swiper-slide {
-      // max-width: 100%;
-    }
-  }
-  .swiper-pagination {
-    position: fixed;
-    transform: rotate(90deg) translateY(-50%);
-  }
-  
-}
-.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
-  bottom: 50% !important;
-  left: 0 !important;
-  width: auto !important;
-}
-.swiper-pagination, 
-.swiper-button-next,
-.swiper-button-prev{
-  display: none;
-}
-
-
-/* Navigation bar */
-.nav {
-  position: fixed;
-  top:0;
-  left: 0;
-  width: 100%;
-  height: 64px;
-  padding: 8px 0;
-  background-color: transparent;
-  z-index: 9000;
-  transition: 0.35s;
-  .inner {
+/* sub-page Main */
+.page-main {
+  .div-cont{
+    height: 100vh;
     display: flex;
-    align-items: center;
-    .btn-m-gnb {
-      width:46px;
-      height: 46px;
-      background: url(../Images/svg/Menu_hamberger.svg) no-repeat ;
-      color: #fff;
-    }
-    h1 {
-      width: 72px;
-      height: 30px;
-      background: url(../Images/svg/Logo_Mbile.svg);
-    }
-  }
-  &.nav-down{
-    background-color: #FDFDFD;
-  }
-}
-
-/* 중심 콘텐츠 레이아웃*/
-.container{
-  color: map-get($color, text);
-  .fullpage{
-    section{
-      .page-main {
-        height: 100vh;
-        background-image: url(../Images/M_main.jpg);
-        background-repeat: no-repeat;
-        background-color: #fdfdfd;
+    flex-direction: column;
+    justify-content: space-between;
+    .main-con{
+      height: 80%;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      .visual-txt{
+        text-align: center;
+        h2 {
+          text-transform: uppercase;
+          font-weight: map-get($font_wight, light);
+        }
+        p {
+          font-size: map-get($font_size_mobile, body_lg);
+          font-weight: map-get($font_wight, medium);
+        }
+        .gide {
+          margin-top: 30px;
+          span.l {
+            @include icon;
+            background: url(../Images/svg/Arrow_L_02.svg) no-repeat;
+          }
+          span.R {
+            @include icon;
+            background: url(../Images/svg/Arrow_R_02.svg) no-repeat;
+          }
+          i{
+            content: '';
+            display: inline-block;
+            width: 54px;
+            height: 54px;
+            background: url(../Images/svg/swiper.svg) no-repeat;
+            background-size: 124%;
+            background-position: -5px 0;
+          }
+        }
       }
-      .page-about {
-        height: 500px;
-        background-color: crimson;
-        // min-width: 100%;
-      }
-      .page-work {
-        height: 800px;
-        background-color: #444;
-      }
-      .page-design {
-        height: 3000px;
-        background-color: olive;
-      }
-      .page-contact {
-        height: 100vh;
-        background-color: olivedrab;
-      }
-    }  
-  }
-}
-footer {
-  height: 150px;
-  width: 100%;
-  .div-cont {
-    .f-logo {
-        width: 72px;
-        height: 30px;
-        background: url(../Images/svg/Logo_Mbile.svg);
-    }
-    .f-info {
     }
   }
 }

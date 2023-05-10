@@ -19,21 +19,13 @@ function includeHTML(){
   for (let i = 0; i < z.length; i++) {
     elmnt = z[i];
     file = elmnt.getAttribute("html-include");
-    // console.log("i", i);
-    // console.log("file",file);
-    // debugger;
     // if문을 통해 file이 null값이 아니면 다음의 내용을 실행함
     if (file) {
-      // debugger;
-      // console.log("i", i);
-      // console.log("file = ", file);
-
+      
       xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
-        // console.log("readyState", this.readyState);
-
+        
         if (this.readyState == 4) {
-          // console.log("this.responseText", this.responseText);
           if (this.status == 200) {elmnt.innerHTML = this.responseText;}
           if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
           /* Remove the attribute, and call this function once more: */

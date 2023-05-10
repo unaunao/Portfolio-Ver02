@@ -1,0 +1,162 @@
+/* ===== 공통 레이아웃  ===== */
+body {
+  font-family: 'pretendard', sans-serif;
+  color:map-get($color, text);
+}
+
+/* Body Swiper Silder Custom */
+.swiper-pages {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  .swiper-wrapper {
+    height: 100vh;
+    .swiper-slide {
+      // max-width: 100%;
+    }
+  }
+  .swiper-pagination {
+    position: fixed;
+    transform: rotate(90deg) translateY(-50%);
+  }
+  
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 50% !important;
+  left: 0 !important;
+  width: auto !important;
+}
+.swiper-pagination, 
+.swiper-button-next,
+.swiper-button-prev{
+  display: none;
+}
+/* Content box */
+.div-cont {
+  padding: 64px 8px 82px;
+}
+
+/* Navigation bar */
+.nav {
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  padding: 8px 0;
+  background-color: transparent;
+  z-index: 9000;
+  transition: 0.35s;
+  .inner {
+    display: flex;
+    align-items: center;
+    .btn-m-gnb {
+      width:46px;
+      height: 46px;
+      background: url(../Images/svg/Menu_hamberger.svg) no-repeat ;
+      color: #fff;
+    }
+    h1 {
+      width: 72px;
+      height: 30px;
+      background: url(../Images/svg/Logo_Mbile.svg);
+    }
+  }
+  &.nav-down{
+    background-color: #FDFDFD;
+  }
+}
+
+/* Main Contents Layout */
+.container{
+  color: map-get($color, text);
+  .fullpage{
+    section{
+      #page-main {
+        background-image: url(../Images/M_main.jpg);
+        background-repeat: no-repeat;
+        background-color: #fdfdfd;
+        background-size: cover;
+      }
+      #page-about {
+        height: 500px;
+        background-color: crimson;
+        // min-width: 100%;
+      }
+      .page-work {
+        height: 800px;
+        background-color: #444;
+      }
+      .page-design {
+        height: 3000px;
+        background-color: olive;
+      }
+      .page-contact {
+        height: 100vh;
+        background-color: olivedrab;
+      }
+    }  
+  }
+}
+
+/* Bottom Navigation */
+.div-cont{
+  width: 100%;
+  .nav_btn_wrap{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:8px;
+    .nav_btn{
+      a {
+        padding:20px 25px;
+        background-color: map-get($color, primary ); 
+        border-radius: 20px;
+        display: grid;
+        align-self: start;
+        grid-gap: 6px;
+        span{
+          font-weight: map-get($font_wight, medium);
+          display: flex;
+          align-items: center;
+        }
+        span:first-child{
+          font-size: map-get($font_size_mobile, btn_sm);
+        }
+        span:last-child{
+          font-size: map-get($font_size_mobile, btn_lg);
+          text-transform: uppercase; 
+        }
+        .privious{
+          &::before{
+            @include icon;
+            background: url(../Images/svg/Arrow_L.svg) no-repeat;
+          }
+        }
+        .next{
+          &::after{
+            @include icon;
+            background: url(../Images/svg/Arrow_R.svg) no-repeat;
+          }
+        }
+      }
+    }
+  }
+}
+/* Footer */
+footer {
+  text-align: center;
+  padding: 50px;
+  border-top: 1px solid map-get($color, text);
+  .footer {
+    .f-logo {
+        width: 72px;
+        height: 30px;
+        background: url(../Images/svg/Logo_Mbile.svg);
+        margin:0 auto;
+    }
+    .f-info {
+      font-size: map-get($font_size_mobile, body_sm );
+      margin: 8px;
+    }
+  }
+}
