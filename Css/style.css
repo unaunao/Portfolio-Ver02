@@ -352,21 +352,21 @@ footer .footer .f-info {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background: url(../Images/svg/Arrow_L_02.svg) no-repeat;
+  background: url(../images/svg/Arrow_L_02.svg) no-repeat;
 }
 .page-main .div-cont .main-con .visual-txt .gide span.R {
   content: "";
   display: inline-block;
   width: 24px;
   height: 24px;
-  background: url(../Images/svg/Arrow_R_02.svg) no-repeat;
+  background: url(../images/svg/Arrow_R_02.svg) no-repeat;
 }
 .page-main .div-cont .main-con .visual-txt .gide i {
   content: "";
   display: inline-block;
   width: 54px;
   height: 54px;
-  background: url(../Images/svg/swiper.svg) no-repeat;
+  background: url(../images/svg/swiper.svg) no-repeat;
   background-size: 124%;
   background-position: -5px 0;
 }

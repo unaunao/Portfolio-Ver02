@@ -30,18 +30,18 @@
           margin-top: 30px;
           span.l {
             @include icon;
-            background: url(../Images/svg/Arrow_L_02.svg) no-repeat;
+            background: url(../images/svg/Arrow_L_02.svg) no-repeat;
           }
           span.R {
             @include icon;
-            background: url(../Images/svg/Arrow_R_02.svg) no-repeat;
+            background: url(../images/svg/Arrow_R_02.svg) no-repeat;
           }
           i{
             content: '';
             display: inline-block;
             width: 54px;
             height: 54px;
-            background: url(../Images/svg/swiper.svg) no-repeat;
+            background: url(../images/svg/swiper.svg) no-repeat;
             background-size: 124%;
             background-position: -5px 0;
           }
