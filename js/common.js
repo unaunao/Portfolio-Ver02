@@ -88,4 +88,6 @@ $("document").ready(function () {
   }
   swiper.on("slideChangeTransitionStart", activeHeightSet);
 
+  
+
 })

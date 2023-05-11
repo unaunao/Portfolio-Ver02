@@ -26,11 +26,12 @@ body {
   left: 0 !important;
   width: auto !important;
 }
-.swiper-pagination, 
 .swiper-button-next,
-.swiper-button-prev{
+.swiper-button-prev,
+.swiper-pagination {
   display: none;
 }
+
 /* Content box */
 .div-cont {
   padding: 64px 8px 82px;
@@ -57,9 +58,12 @@ body {
       color: #fff;
     }
     h1 {
-      width: 72px;
-      height: 30px;
-      background: url(../images/svg/Logo_Mbile.svg);
+      a {
+        display: inline-block;
+        width: 72px;
+        height: 30px;
+        background: url(../images/svg/Logo_Mbile.svg);
+      }
     }
   }
   &.nav-down{
@@ -73,10 +77,6 @@ body {
   .fullpage{
     section{
       #page-main {
-        background-image: url(../images/M_main.jpg);
-        background-repeat: no-repeat;
-        background-color: #fdfdfd;
-        background-size: cover;
       }
       #page-about {
         height: 500px;
