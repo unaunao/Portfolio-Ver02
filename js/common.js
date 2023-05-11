@@ -54,6 +54,8 @@ init();
 
 // jQuery
 $("document").ready(function () {
+  let activePage = 0;
+  let total_count = 5;
 
   /* 메인 body 화면 슬라이드 */
   var swiper = new Swiper('.swiper-pages', {
@@ -68,6 +70,14 @@ $("document").ready(function () {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    // 페이지 특정페이지로 이동하기
+    on : {
+      slideChange : function(){
+        activePage = this.activeIndex;
+        if(activePage > total_count) activePage = 1;
+        if(activePage <= 0) activePage = total_count;
+      }
+    }
   });
 
    /* 다음 슬라이드로 넘어갈때 항상위로 */
@@ -88,6 +98,10 @@ $("document").ready(function () {
   }
   swiper.on("slideChangeTransitionStart", activeHeightSet);
 
-  
+  $("#next").click(function(){
+    console.log("잘 작동함");
+    var NextPage = activePage + 1;
+    swiper.slideTo(NextPage, 400);
+  });
 
 })

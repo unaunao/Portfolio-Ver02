@@ -13,12 +13,12 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../images/M_main.jpg);
+    background-image: url(../images/bg_mobile_main.jpg);
     background-repeat: no-repeat;
     background-color: #fdfdfd;
     background-size: cover;
-    animation:bgScale 3s ease-in-out infinite alternate-reverse,
-              bgblur 2s linear;
+    animation:bgScale_m 3s ease-in-out infinite alternate-reverse,
+              bgblur 4s linear;
     z-index: -1;
   }
   .div-cont{
@@ -118,7 +118,7 @@
     left: 74%;
   }
 } 
-@keyframes bgScale {
+@keyframes bgScale_m {
   0% {
     transform: scaleY(1) translate(0px) rotate3d(0);
   }
@@ -129,11 +129,34 @@
     transform: scaleY(1) translate(0px) rotate3d(0);
   }
 }
+@keyframes bgScale_pc {
+  0% {
+    transform: scaleY(1) translateY(0) rotate3d(0);
+  }
+  50% {
+    transform: scaleY(1.01) translateY(-1px) rotate3d(1, 1, 1, 0.1deg);
+  }
+  100% {
+    transform: scaleY(1) translateY(0) rotate3d(0);
+  }
+}
 @keyframes bgblur {
   0% {
     filter: blur(20px);
   }
   100% {
     filter: blur(0);
+  }
+}
+
+/* Media Query */
+@media (min-width: 768px) {
+  .page-main {
+    .bg {
+      top: -400px;
+      background-image: url(../images/bg_pc_main.jpg);
+      animation:bgScale_pc 3s ease-in-out infinite alternate-reverse,
+              bgblur 4s linear;
+    }
   }
 }
