@@ -62,37 +62,37 @@ a {
   font-family: "Pretendard";
   font-weight: 700;
   font-display: swap;
-  src: local("Pretendard Bold"), url("/Fonts/Pretendard-Bold.woff2") format("woff2"), url("/Fonts/Pretendard-Bold.woff") format("woff"), url("/Fonts/Pretendard-Bold.otf") format("opentype");
+  src: local("Pretendard Bold"), url("/fonts/Pretendard-Bold.woff2") format("woff2"), url("/fonts/Pretendard-Bold.woff") format("woff"), url("/fonts/Pretendard-Bold.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 600;
   font-display: swap;
-  src: local("Pretendard SemiBold"), url("/Fonts/Pretendard-SemiBold.woff2") format("woff2"), url("/Fonts/Pretendard-SemiBold.woff") format("woff"), url("/Fonts/Pretendard-SemiBold.otf") format("opentype");
+  src: local("Pretendard SemiBold"), url("/fonts/Pretendard-SemiBold.woff2") format("woff2"), url("/fonts/Pretendard-SemiBold.woff") format("woff"), url("/fonts/Pretendard-SemiBold.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 500;
   font-display: swap;
-  src: local("Pretendard Medium"), url("/Fonts/Pretendard-Medium.woff2") format("woff2"), url("/Fonts/Pretendard-Medium.woff") format("woff"), url("/Fonts/Pretendard-Medium.otf") format("opentype");
+  src: local("Pretendard Medium"), url("/fonts/Pretendard-Medium.woff2") format("woff2"), url("/fonts/Pretendard-Medium.woff") format("woff"), url("/fonts/Pretendard-Medium.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 400;
   font-display: swap;
-  src: local("Pretendard Regular"), url("/Fonts/Pretendard-Regular.woff2") format("woff2"), url("/Fonts/Pretendard-Regular.woff") format("woff"), url("/Fonts/Pretendard-Regular.otf") format("opentype");
+  src: local("Pretendard Regular"), url("/fonts/Pretendard-Regular.woff2") format("woff2"), url("/fonts/Pretendard-Regular.woff") format("woff"), url("/fonts/Pretendard-Regular.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 300;
   font-display: swap;
-  src: local("Pretendard Light"), url("/Fonts/Pretendard-Light.woff2") format("woff2"), url("/Fonts/Pretendard-Light.woff") format("woff"), url("/Fonts/Pretendard-Light.otf") format("opentype");
+  src: local("Pretendard Light"), url("/fonts/Pretendard-Light.woff2") format("woff2"), url("/fonts/Pretendard-Light.woff") format("woff"), url("/fonts/Pretendard-Light.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 100;
   font-display: swap;
-  src: local("Pretendard Thin"), url("/Fonts/Pretendard-Thin.woff2") format("woff2"), url("/Fonts/Pretendard-Thin.woff") format("woff"), url("/Fonts/Pretendard-Thin.otf") format("opentype");
+  src: local("Pretendard Thin"), url("/fonts/Pretendard-Thin.woff2") format("woff2"), url("/fonts/Pretendard-Thin.woff") format("woff"), url("/fonts/Pretendard-Thin.otf") format("opentype");
 }
 /* Mobile */
 h1 {
@@ -205,13 +205,13 @@ body {
 .nav .inner .btn-m-gnb {
   width: 46px;
   height: 46px;
-  background: url(../Images/svg/Menu_hamberger.svg) no-repeat;
+  background: url(../images/svg/Menu_hamberger.svg) no-repeat;
   color: #fff;
 }
 .nav .inner h1 {
   width: 72px;
   height: 30px;
-  background: url(../Images/svg/Logo_Mbile.svg);
+  background: url(../images/svg/Logo_Mbile.svg);
 }
 .nav.nav-down {
   background-color: #FDFDFD;
@@ -222,7 +222,7 @@ body {
   color: #1F1F1F;
 }
 .container .fullpage section #page-main {
-  background-image: url(../Images/M_main.jpg);
+  background-image: url(../images/M_main.jpg);
   background-repeat: no-repeat;
   background-color: #fdfdfd;
   background-size: cover;
@@ -282,14 +282,14 @@ body {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background: url(../Images/svg/Arrow_L.svg) no-repeat;
+  background: url(../images/svg/Arrow_L.svg) no-repeat;
 }
 .div-cont .nav_btn_wrap .nav_btn a .next::after {
   content: "";
   display: inline-block;
   width: 24px;
   height: 24px;
-  background: url(../Images/svg/Arrow_R.svg) no-repeat;
+  background: url(../images/svg/Arrow_R.svg) no-repeat;
 }
 
 /* Footer */
@@ -301,7 +301,7 @@ footer {
 footer .footer .f-logo {
   width: 72px;
   height: 30px;
-  background: url(../Images/svg/Logo_Mbile.svg);
+  background: url(../images/svg/Logo_Mbile.svg);
   margin: 0 auto;
 }
 footer .footer .f-info {
