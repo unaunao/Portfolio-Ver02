@@ -4,3 +4,26 @@
   width: 24px;
   height: 24px;
 }
+
+@mixin logo {
+  font-weight: map-get($font_wight, medium);
+  text-transform: uppercase;
+  letter-spacing: -0.313rem;
+  text-shadow: 0 5px 5px #fff;
+}
+@mixin logo_m {
+  font-size: map-get($font_size_pc, h3_ko);
+  font-weight: map-get($font_wight, semibold);
+  text-transform: uppercase;
+  letter-spacing: -0.1rem;
+  text-shadow: 5px 3px 9px #fff;
+  line-height: 28px;
+}
+@mixin logo_s {
+  font-size: map-get($font_size_mobile, h3_ko);
+  font-weight: map-get($font_wight, medium);
+  text-transform: uppercase;
+  letter-spacing: -0.1rem;
+  text-shadow: 5px 3px 9px #fff;
+  line-height: 28px;
+}

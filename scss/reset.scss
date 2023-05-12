@@ -7,10 +7,20 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.6em;
   margin-top: 0;
 }
+li, ol {
+  list-style: none;
+}
 a {
   color: inherit;
   text-decoration: none;
 }
+i {
+  font-style: normal;
+}
+input[type="button"] {
+  cursor: pointer;
+}
+
 /* Sikp Navigation */
 .skipNavi {
   height: 0;

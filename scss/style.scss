@@ -7,18 +7,22 @@
 
 /* sub-page Main */
 .page-main {
+  background-color: #fdfdfd;
+  width:100%;
+  z-index: 2;
   .bg {
     position: absolute;
-    left: 0;
+    left: 50%;
     top: 0;
+    transform: translateX(-50%);
     width: 100%;
     height: 100%;
     background-image: url(../images/bg_mobile_main.jpg);
     background-repeat: no-repeat;
-    background-color: #fdfdfd;
     background-size: cover;
-    animation:bgScale_m 3s ease-in-out infinite alternate-reverse,
-              bgblur 4s linear;
+    background-color: #fdfdfd;
+    animation:bgScale 3s 6s ease-in-out infinite alternate-reverse,
+    bgblur 5s linear;
     z-index: -1;
   }
   .div-cont{
@@ -27,12 +31,15 @@
     flex-direction: column;
     justify-content: space-between;
     .main-con{
-      height: 80%;
+      height: 100%;
       display: grid;
       justify-content: center;
       align-items: center;
       .visual-txt{
         text-align: center;
+        h1 {
+          @include logo;
+        }
         h2 {
           text-transform: uppercase;
           font-weight: map-get($font_wight, light);
@@ -51,18 +58,18 @@
           }
           .l {
             left: 25%;
-            animation: gide-arrow-l 1s ease-in-out infinite;
+            animation: gide-arrow-l 2s 8s linear infinite;
             span {
               @include icon;
-              background: url(../images/svg/Arrow_L_02.svg) no-repeat;
+              background: url(../images/svg/arrow_l_02.svg) no-repeat;
             }
           }
           .R {
             left: 75%;
-            animation: gide-arrow-r 1s ease-in-out infinite;
+            animation: gide-arrow-r  2s 8s linear infinite;
             span {
               @include icon;
-              background: url(../images/svg/Arrow_R_02.svg) no-repeat;
+              background: url(../images/svg/arrow_r_02.svg) no-repeat;
             }
           }
           .hand {
@@ -75,7 +82,10 @@
             background: url(../images/svg/swiper.svg) no-repeat;
             background-size: 124%;
             background-position: -5px 0;
-            animation:gide-hand 1.8s linear infinite;
+            animation:gide-hand 2s 8.5s linear infinite,
+            gide-hand-op 2s linear 12 ;
+            transition: 0.35s;
+            opacity: 3%;
           }
         }
       }
@@ -84,79 +94,125 @@
 }
 @keyframes gide-hand {
   0% {
-    // left: 51%;
-    transform: translateX(-50%) rotate(0deg) scale(95%);
+    transform: translateX(-80%) rotate(0deg) scale(84%);
+  }
+  30%{
+    opacity: 5%;
   }
   50% {
-    // left: 49%;
-    transform:translateX(-50%) rotate(10deg) scale(100%);
+    transform:translateX(-30%) rotate(5deg) scale(75%);
+    opacity: 100%;
   }
   100%{
-    // left: 51%;
-    transform:translateX(-50%) rotate(0deg) scale(95%);
+    transform:translateX(-80%) rotate(0deg) scale(84%);
+    opacity: 100%;
   }
 } 
 @keyframes gide-arrow-l {
   0% {
-    left: 26%;
+    left: 25%;
   }
   50% {
     left: 28%;
   }
   100%{
-    left: 26%;
+    left: 25%;
   }
 } 
 @keyframes gide-arrow-r {
   0% {
-    left: 74%;
+    left: 75%;
   }
   50% {
     left: 72%;
   }
   100%{
-    left: 74%;
+    left: 75%;
   }
 } 
-@keyframes bgScale_m {
+@keyframes bgScale {
   0% {
-    transform: scaleY(1) translate(0px) rotate3d(0);
+    transform: scaleY(1) translateY(0%) translateX(-50%) rotate3d(0);
   }
   50% {
-    transform: scaleY(1.01) translate(-1px) rotate3d(1, 1, 1, 0.5deg);
+    transform: scaleY(1.02) translateY(-0.5%) translateX(-50%) rotate3d(1, 1, 1, 0.1deg);
   }
   100% {
-    transform: scaleY(1) translate(0px) rotate3d(0);
-  }
-}
-@keyframes bgScale_pc {
-  0% {
-    transform: scaleY(1) translateY(0) rotate3d(0);
-  }
-  50% {
-    transform: scaleY(1.01) translateY(-1px) rotate3d(1, 1, 1, 0.1deg);
-  }
-  100% {
-    transform: scaleY(1) translateY(0) rotate3d(0);
+    transform: scaleY(1) translateX(-50%) rotate3d(0);
   }
 }
 @keyframes bgblur {
   0% {
-    filter: blur(20px);
+    filter: blur(15px);
+    top:-150px;
+  }
+  80% {
+    filter: blur(0);
   }
   100% {
     filter: blur(0);
+    top:0;
   }
 }
 
+
 /* Media Query */
-@media (min-width: 768px) {
+@media (min-width: 768px){
   .page-main {
     .bg {
-      top: -400px;
-      background-image: url(../images/bg_pc_main.jpg);
-      animation:bgScale_pc 3s ease-in-out infinite alternate-reverse,
+      background-image: url(../images/bg_tablet_main.jpg);
+      background-size: contain;
+      animation:bgScale 3s ease-in-out infinite alternate-reverse,
               bgblur 4s linear;
+    }
+    .div-cont {
+      .main-con{
+        .visual-txt {
+          h2 {
+            font-size: 57px;
+            margin:8px 0;
+          }
+          p {
+            font-size: map-get($font_size_pc, h4);
+          }
+        }
+      }
+    }
+  }
+
+  /* 애니메이션  main*/
+  @keyframes gide-hand {
+    0% {
+      transform: translateX(-30%) rotate(0deg) scale(100%);
+    }
+    50% {
+      transform:translateX(-80%) rotate(5deg) scale(85%);
+      opacity: 5%;
+    }
+    80%{
+      opacity: 100%;
+    }
+    100%{
+      transform:translateX(-30%) rotate(0deg) scale(100%);
+      opacity: 0%;
+    }
+  } 
+}
+@media (min-width: 1200px) {
+  .page-main {
+    .bg {
+      max-width: 1440px;
+      background-image: url(../images/bg_pc_main.jpg);
+      background-size: cover;
+    }
+    .div-cont {
+      width: 1200px;
+      margin:0 auto;
+      .main-con {
+        .visual-txt {
+          padding-top: 150px;
+        }
+      }
     }
   }
 }

@@ -79,7 +79,7 @@ button,h2,h4{
   font-weight: map-get($font_wight, medium);
 }
 h1, button {
-  line-height: 0;
+  line-height: 100%;
 }
 
 /* Tablet */
@@ -88,7 +88,7 @@ h1, button {
 }
 
 /* PC */
-@media (min-width: 1366px) {
+@media (min-width: 768px) {
   h1 {
     font-size: map-get($font_size_pc, h1);
     font-weight: map-get($font_wight, thin);
