@@ -6,7 +6,7 @@
 
 
 /* sub-page Main */
-.page-main {
+.main_wrap {
   background-color: #fdfdfd;
   width:100%;
   z-index: 2;
@@ -52,6 +52,20 @@
           position: relative;
           margin-top: 40px;
           height: 60px;
+          &:after {
+            content: '왼쪽으로 쓸어 넘기세요.';
+            font-size: map-get($font_size_pc, body_sm );
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: 0.35s;
+          }
+          &:hover:after {
+            opacity: 1;
+            bottom: -8px;
+          }
           i {
             position: absolute;
             transform: translateX(-50%);
@@ -96,11 +110,11 @@
   0% {
     transform: translateX(-80%) rotate(0deg) scale(84%);
   }
-  30%{
-    opacity: 5%;
-  }
   50% {
     transform:translateX(-30%) rotate(5deg) scale(75%);
+    opacity: 0;
+  }
+  80%{
     opacity: 100%;
   }
   100%{
@@ -158,7 +172,7 @@
 
 /* Media Query */
 @media (min-width: 768px){
-  .page-main {
+  .main_wrap {
     .bg {
       background-image: url(../images/bg_tablet_main.jpg);
       background-size: contain;
@@ -183,23 +197,23 @@
   /* 애니메이션  main*/
   @keyframes gide-hand {
     0% {
-      transform: translateX(-30%) rotate(0deg) scale(100%);
+      transform: translateX(-80%) rotate(0deg) scale(100%);
     }
     50% {
-      transform:translateX(-80%) rotate(5deg) scale(85%);
-      opacity: 5%;
+      transform:translateX(-30%) rotate(5deg) scale(85%);
+      opacity: 0%;
     }
     80%{
       opacity: 100%;
     }
     100%{
-      transform:translateX(-30%) rotate(0deg) scale(100%);
-      opacity: 0%;
+      transform:translateX(-80%) rotate(0deg) scale(100%);
+      opacity: 100%;
     }
   } 
 }
 @media (min-width: 1200px) {
-  .page-main {
+  .main_wrap {
     .bg {
       max-width: 1440px;
       background-image: url(../images/bg_pc_main.jpg);
@@ -216,3 +230,5 @@
     }
   }
 }
+
+
