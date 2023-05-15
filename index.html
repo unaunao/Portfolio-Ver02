@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="./library/swiper/swiper.min.css">
   <script src="./library/swiper/swiper.min.js" defer></script>
   <!-- Custom Js-->
-  <script src="./js/common.js" defer></script>
 </head>
 <body>
   <div class="skipNavi">
@@ -57,8 +56,8 @@
     <!-- s: fullpage -->
     <div class="fullpage swiper-pages">
       <div class="swiper-wrapper">
-        <section class="main_wrap swiper-slide" >
-          <div class="page-main">
+        <section class="main_wrap swiper-slide" html-include="./pages/page01_main.html" >
+          <!-- <div class="page-main">
             <div class="bg"></div>
             <div class="div-cont">
               <div class="main-con">
@@ -90,43 +89,43 @@
                 </div>
               </nav>
             </div>
-          </div>
+          </div> -->
         </section>
-        <section class="swiper-slide">
-          <div class="page-about">
+        <section class="swiper-slide" html-include="./pages/page02_about.html">
+          <!-- <div class="page-about">
             <h1>두번째 페이지</h1>
             <h4>나머지 내용</h4>
             <p>index.html안에 들어갈 sub페이지</p>
-          </div>
+          </div> -->
         </section>
-        <section class="swiper-slide">
-          <div class="page-work">
+        <section class="swiper-slide" html-include="./pages/page03_work.html">
+          <!-- <div class="page-work">
             <h1>세번째 페이지</h1>
             <h4>나머지 내용</h4>
             <p>index.html안에 들어갈 sub페이지</p>
-          </div>
+          </div> -->
         </section>
-        <section class="page-design swiper-slide">
-          <div class="page-design">
+        <section class="page-design swiper-slide" html-include="./pages/page04_design.html">
+          <!-- <div class="page-design">
             <h1>네번째 페이지</h1>
             <h4>나머지 내용</h4>
             <p>index.html안에 들어갈 sub페이지</p>
-          </div>
+          </div> -->
         </section>
-        <section class="swiper-slide">
-          <div class="page-contact">
+        <section class="swiper-slide" html-include="./pages/page05_contact.html">
+          <!-- <div class="page-contact">
             <h1>다섯번째 페이지</h1>
             <h4>나머지 내용</h4>
             <p>index.html안에 들어갈 sub페이지</p>
-          </div>
+          </div> -->
         </section>
       </div>
       <!-- Add Pagination -->
       <div class="swiper-pagination">
       </div>
       <!-- Add Pagination -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>  
+      <!-- <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>   -->
     </div>
     <!-- e: fullpage -->
     <!-- s: footer -->
@@ -161,5 +160,6 @@
     </footer>
     <!-- e: footer -->
   </div>
+  <script src="./js/common.js"></script>
 </body>
 </html>

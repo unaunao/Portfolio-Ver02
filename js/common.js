@@ -1,24 +1,47 @@
-// JavaScript
+/* 실행 */
 // Navigation bar scrollEvent
-const nav_bar = document.querySelector(".nav");
+$('document').ready(function () {
+  console.log('document ready complete');
 
-function scrollEvent () {
-  document.addEventListener ("scroll", function(){
-    if(document.documentElement.scrollTop > 0) {
-      nav_bar.classList.add("nav-down");
-    } else {
-      nav_bar.classList.remove("nav-down");
-    }
-  });
-}
+  // Sub페이지 불러오기
+  function includeHTML(){
+    let z, elmnt, file, xhttp;
+    z = document.getElementsByTagName("*");
+    for (let i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      file = elmnt.getAttribute("html-include");
+      // if문을 통해 file이 null값이 아니면 다음의 내용을 실행함
+      if (file) {
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /* Remove the attribute, and call this function once more: */
+            elmnt.removeAttribute("html-include");
+            includeHTML();
+          }//if
+        }//onreadystatechange
+  
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        return;
+      }//if - file
+    }//for
 
-function init() {
+  const nav_bar = document.querySelector(".nav");
+
+  function scrollEvent () {
+    document.addEventListener ("scroll", function(){
+      if(document.documentElement.scrollTop > 0) {
+        nav_bar.classList.add("nav-down");
+      } else {
+        nav_bar.classList.remove("nav-down");
+      }
+    });
+  }
+
   scrollEvent();
-}
-init();
-
-// jQuery
-$("document").ready(function () {
 
   /* 메인 body 화면 슬라이드 */
   var swiper = new Swiper('.swiper-pages', {
@@ -30,8 +53,10 @@ $("document").ready(function () {
       clickable: true,
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      // nextEl: '.swiper-button-next',
+      nextEl: '.next_btn',
+      // prevEl: '.swiper-button-prev',
+      prevEl: '.prev_btn'
     },
   });
 
@@ -41,6 +66,9 @@ $("document").ready(function () {
     // 스크롤업 함수 만든것을 불러옴
     scrollUp();
   }
+  
+  swiper.on("slideChangeTransitionStart", activeHeightSet);
+
   // 스크롤 업 함수 
   function scrollUp() {
     // 애니메이션으로 0.001초 만에 body와 html의 스크롤 위치 top 0로 이동
@@ -51,17 +79,8 @@ $("document").ready(function () {
       1
     );
   }
-  swiper.on("slideChangeTransitionStart", activeHeightSet);
 
-  $("#next").on('click',function(){
-    setTimeout(function () {
-    swiper.slideNext();
-    }, 175);
-  })
-  $("#prev").on('click', function(){
-    setTimeout(function () {
-    swiper.slidePrev();
-    }, 175);
-  })
+  }//includeHTML
 
-})
+  includeHTML();
+});
