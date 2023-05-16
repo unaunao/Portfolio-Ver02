@@ -72,7 +72,7 @@
           }
           .l {
             left: 25%;
-            animation: gide-arrow-l 2s 8s linear infinite;
+            animation: gide-arrow-l 2s 6s linear infinite;
             span {
               @include icon;
               background: url(../images/svg/arrow_l_02.svg) no-repeat;
@@ -80,7 +80,7 @@
           }
           .R {
             left: 75%;
-            animation: gide-arrow-r  2s 8s linear infinite;
+            animation: gide-arrow-r  2s 6s linear infinite;
             span {
               @include icon;
               background: url(../images/svg/arrow_r_02.svg) no-repeat;
@@ -96,7 +96,7 @@
             background: url(../images/svg/swiper.svg) no-repeat;
             background-size: 124%;
             background-position: -5px 0;
-            animation:gide-hand 2s 8.5s linear infinite,
+            animation:gide-hand 2s 6s linear infinite,
             gide-hand-op 2s linear 12 ;
             transition: 0.35s;
             opacity: 3%;
@@ -194,7 +194,7 @@
     }
   }
 
-  /* 애니메이션  main*/
+  /* main 가이드*/
   @keyframes gide-hand {
     0% {
       transform: translateX(-80%) rotate(0deg) scale(100%);

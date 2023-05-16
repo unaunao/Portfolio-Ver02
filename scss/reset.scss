@@ -17,8 +17,16 @@ a {
 i {
   font-style: normal;
 }
+button {
+  background: transparent;
+  border: none;
+}
+button,
 input[type="button"] {
   cursor: pointer;
+}
+svg, path {
+  display: inline-block;
 }
 
 /* Sikp Navigation */

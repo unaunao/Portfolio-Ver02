@@ -25,8 +25,18 @@ i {
   font-style: normal;
 }
 
+button {
+  background: transparent;
+  border: none;
+}
+
+button,
 input[type=button] {
   cursor: pointer;
+}
+
+svg, path {
+  display: inline-block;
 }
 
 /* Sikp Navigation */
@@ -224,16 +234,13 @@ body {
   line-height: 100%;
   padding-top: 0;
 }
-.swiper-pages .swiper-pagination::after {
-  content: "";
-  display: inline-block;
-  width: 24px;
-  height: 24px;
+.swiper-pages .swiper-pagination button {
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 100%;
-  padding: 11px;
-  border: 1px solid #000;
+  width: 48px;
+  height: 48px;
+  border: 0.5px solid #1F1F1F;
   border-radius: 50%;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
@@ -241,11 +248,12 @@ body {
   background-position: 50%;
   -webkit-transition: 0.35s;
   transition: 0.35s;
-  cursor: pointer;
 }
-.swiper-pages .swiper-pagination:hover::after {
+.swiper-pages .swiper-pagination button:hover {
   background: url(../images/svg/dark_mode_hover.svg) no-repeat;
   background-position: 50%;
+  -webkit-box-shadow: inset 0 0 1px rgba(52, 39, 61, 0.8), inset 0 0 2px rgba(52, 39, 61, 0.8), inset 0 0 4px rgba(52, 39, 61, 0.8);
+          box-shadow: inset 0 0 1px rgba(52, 39, 61, 0.8), inset 0 0 2px rgba(52, 39, 61, 0.8), inset 0 0 4px rgba(52, 39, 61, 0.8);
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
@@ -305,26 +313,67 @@ body {
 .nav.nav-down {
   background-color: #FDFDFD;
 }
+.nav .mobile-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.nav .mobile-nav-overlay .mobile-nav {
+  display: none;
+}
+.nav .mobile-nav-overlay.on {
+  width: 100%;
+  height: 100%;
+}
+.nav .mobile-nav-overlay.on .mobile-nav {
+  display: block;
+  -webkit-animation: display 2s ease;
+          animation: display 2s ease;
+}
 
+@-webkit-keyframes display {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes display {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* Main Contents Layout */
 .container {
   color: #1F1F1F;
 }
-.container .fullpage section .page-about {
+.container .fullpage section #page-about {
   height: 500px;
   background-color: crimson;
 }
-.container .fullpage section .page-work {
+.container .fullpage section #page-work {
   height: 800px;
-  background-color: #444;
+  background-color: orange;
 }
-.container .fullpage section .page-design {
+.container .fullpage section #page-design {
   height: 3000px;
   background-color: olive;
 }
-.container .fullpage section .page-contact {
-  height: 100vh;
-  background-color: olivedrab;
+.container .fullpage section #page-contact {
+  height: 4000px;
+  background-color: yellow;
 }
 
 /* Bottom Navigation */
@@ -406,7 +455,7 @@ footer .footer .f-info {
   margin: 8px;
 }
 
-:is(header, footer).sns {
+:is(header, footer) .sns {
   display: none;
 }
 
@@ -604,8 +653,8 @@ footer .footer .f-info {
 }
 .main_wrap .div-cont .main-con .visual-txt .gide .l {
   left: 25%;
-  -webkit-animation: gide-arrow-l 2s 8s linear infinite;
-          animation: gide-arrow-l 2s 8s linear infinite;
+  -webkit-animation: gide-arrow-l 2s 6s linear infinite;
+          animation: gide-arrow-l 2s 6s linear infinite;
 }
 .main_wrap .div-cont .main-con .visual-txt .gide .l span {
   content: "";
@@ -616,8 +665,8 @@ footer .footer .f-info {
 }
 .main_wrap .div-cont .main-con .visual-txt .gide .R {
   left: 75%;
-  -webkit-animation: gide-arrow-r 2s 8s linear infinite;
-          animation: gide-arrow-r 2s 8s linear infinite;
+  -webkit-animation: gide-arrow-r 2s 6s linear infinite;
+          animation: gide-arrow-r 2s 6s linear infinite;
 }
 .main_wrap .div-cont .main-con .visual-txt .gide .R span {
   content: "";
@@ -636,8 +685,8 @@ footer .footer .f-info {
   background: url(../images/svg/swiper.svg) no-repeat;
   background-size: 124%;
   background-position: -5px 0;
-  -webkit-animation: gide-hand 2s 8.5s linear infinite, gide-hand-op 2s linear 12;
-          animation: gide-hand 2s 8.5s linear infinite, gide-hand-op 2s linear 12;
+  -webkit-animation: gide-hand 2s 6s linear infinite, gide-hand-op 2s linear 12;
+          animation: gide-hand 2s 6s linear infinite, gide-hand-op 2s linear 12;
   -webkit-transition: 0.35s;
   transition: 0.35s;
   opacity: 3%;
@@ -801,7 +850,7 @@ footer .footer .f-info {
   .main_wrap .div-cont .main-con .visual-txt p {
     font-size: 1.5rem;
   }
-  /* 애니메이션  main*/
+  /* main 가이드*/
   @-webkit-keyframes gide-hand {
     0% {
       -webkit-transform: translateX(-80%) rotate(0deg) scale(100%);
