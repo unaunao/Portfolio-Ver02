@@ -78,6 +78,7 @@ svg, path {
 
 /* font */
 /* color */
+/* spacing */
 /* font */
 /* font */
 @font-face {
@@ -165,7 +166,9 @@ h1, button {
     font-size: 1.5rem;
   }
 }
-/* ===== 공통 레이아웃  ===== */
+/* ===========================
+모든 페이지 공통 요소
+==============================*/
 body {
   font-family: "pretendard", sans-serif;
   color: #1F1F1F;
@@ -179,6 +182,12 @@ body {
 }
 .swiper-pages .swiper-wrapper {
   height: 100vh;
+}
+.swiper-pages .swiper-wrapper .swiper-slide {
+  /* 두번째페이지 넓이 문제 수정 */
+}
+.swiper-pages .swiper-wrapper .swiper-slide:nth-child(3) {
+  width: 100% !important;
 }
 .swiper-pages .swiper-pagination {
   position: fixed;
@@ -322,8 +331,8 @@ body {
   width: 100%;
   height: 0;
   background-color: rgba(0, 0, 0, 0.7);
-  -webkit-backdrop-filter: blur(7px);
-          backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   -webkit-transition: 0.6s;
   transition: 0.6s;
 }
@@ -484,10 +493,6 @@ body {
 .container {
   color: #1F1F1F;
 }
-.container .fullpage section #page-about {
-  height: 500px;
-  background-color: crimson;
-}
 .container .fullpage section #page-work {
   height: 800px;
   background-color: orange;
@@ -584,6 +589,25 @@ footer .footer .f-info {
   display: none;
 }
 
+/* ===========================
+sub 페이지 공통요소
+==============================*/
+.sub-body {
+  margin-bottom: 70px;
+}
+.sub-body .sub-tit {
+  padding: 4.375em 0 4.375em 2em;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sub-body .sub-tit h1 {
+  text-transform: uppercase;
+}
+.sub-body .sub-tit p {
+  font-size: 1.125rem;
+  margin-top: 0.5em;
+}
+
 @media (min-width: 768px) {
   /* Bottom Navigation */
   .div-cont .nav_btn_wrap .nav_btn a {
@@ -604,6 +628,12 @@ footer .footer .f-info {
   }
 }
 @media (max-width: 1300px) {
+  .swiper-pages .swiper-wrapper .swiper-slide {
+    /* 두번째페이지 넓이 문제 수정 */
+  }
+  .swiper-pages .swiper-wrapper .swiper-slide:nth-child(3) {
+    width: 100% !important;
+  }
   .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
     left: -46px !important;
   }
@@ -615,6 +645,8 @@ footer .footer .f-info {
   }
   /* Content box */
   .div-cont {
+    width: 1200px;
+    margin: 0 auto;
     padding: 0 0 130px;
   }
   /* Navigation bar */
@@ -688,7 +720,9 @@ footer .footer .f-info {
     fill: #1F1F1F;
   }
 }
-/* sub-page Main */
+/* ===========================
+page Main 
+============================= */
 .main_wrap {
   background-color: #fdfdfd;
   width: 100%;
@@ -723,7 +757,7 @@ footer .footer .f-info {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.main_wrap .div-cont .main-con {
+.main_wrap .div-cont .visual-con {
   height: 100%;
   display: grid;
   -webkit-box-pack: center;
@@ -733,29 +767,29 @@ footer .footer .f-info {
       -ms-flex-align: center;
           align-items: center;
 }
-.main_wrap .div-cont .main-con .visual-txt {
+.main_wrap .div-cont .visual-con .visual-txt {
   text-align: center;
 }
-.main_wrap .div-cont .main-con .visual-txt h1 {
+.main_wrap .div-cont .visual-con .visual-txt h1 {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: -0.313rem;
   text-shadow: 0 5px 5px #fff;
 }
-.main_wrap .div-cont .main-con .visual-txt h2 {
+.main_wrap .div-cont .visual-con .visual-txt h2 {
   text-transform: uppercase;
   font-weight: 300;
 }
-.main_wrap .div-cont .main-con .visual-txt p {
+.main_wrap .div-cont .visual-con .visual-txt p {
   font-size: 1.125rem;
   font-weight: 500;
 }
-.main_wrap .div-cont .main-con .visual-txt .gide {
+.main_wrap .div-cont .visual-con .visual-txt .gide {
   position: relative;
   margin-top: 40px;
   height: 60px;
 }
-.main_wrap .div-cont .main-con .visual-txt .gide:after {
+.main_wrap .div-cont .visual-con .visual-txt .gide:after {
   content: "왼쪽으로 쓸어 넘기세요.";
   font-size: 0.75rem;
   position: absolute;
@@ -767,40 +801,40 @@ footer .footer .f-info {
   -webkit-transition: 0.35s;
   transition: 0.35s;
 }
-.main_wrap .div-cont .main-con .visual-txt .gide:hover:after {
+.main_wrap .div-cont .visual-con .visual-txt .gide:hover:after {
   opacity: 1;
   bottom: -8px;
 }
-.main_wrap .div-cont .main-con .visual-txt .gide i {
+.main_wrap .div-cont .visual-con .visual-txt .gide i {
   position: absolute;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-.main_wrap .div-cont .main-con .visual-txt .gide .l {
+.main_wrap .div-cont .visual-con .visual-txt .gide .l {
   left: 25%;
   -webkit-animation: gide-arrow-l 2s 6s linear infinite;
           animation: gide-arrow-l 2s 6s linear infinite;
 }
-.main_wrap .div-cont .main-con .visual-txt .gide .l span {
+.main_wrap .div-cont .visual-con .visual-txt .gide .l span {
   content: "";
   display: inline-block;
   width: 24px;
   height: 24px;
   background: url(../images/svg/arrow_l_02.svg) no-repeat;
 }
-.main_wrap .div-cont .main-con .visual-txt .gide .R {
+.main_wrap .div-cont .visual-con .visual-txt .gide .R {
   left: 75%;
   -webkit-animation: gide-arrow-r 2s 6s linear infinite;
           animation: gide-arrow-r 2s 6s linear infinite;
 }
-.main_wrap .div-cont .main-con .visual-txt .gide .R span {
+.main_wrap .div-cont .visual-con .visual-txt .gide .R span {
   content: "";
   display: inline-block;
   width: 24px;
   height: 24px;
   background: url(../images/svg/arrow_r_02.svg) no-repeat;
 }
-.main_wrap .div-cont .main-con .visual-txt .gide .hand {
+.main_wrap .div-cont .visual-con .visual-txt .gide .hand {
   top: -10px;
   left: 51%;
   content: "";
@@ -968,11 +1002,11 @@ footer .footer .f-info {
     -webkit-animation: bgScale 3s ease-in-out infinite alternate-reverse, bgblur 4s linear;
             animation: bgScale 3s ease-in-out infinite alternate-reverse, bgblur 4s linear;
   }
-  .main_wrap .div-cont .main-con .visual-txt h2 {
+  .main_wrap .div-cont .visual-con .visual-txt h2 {
     font-size: 57px;
     margin: 8px 0;
   }
-  .main_wrap .div-cont .main-con .visual-txt p {
+  .main_wrap .div-cont .visual-con .visual-txt p {
     font-size: 1.5rem;
   }
   /* main 가이드*/
@@ -1021,11 +1055,23 @@ footer .footer .f-info {
     background-image: url(../images/bg_pc_main.jpg);
     background-size: cover;
   }
-  .main_wrap .div-cont {
-    width: 1200px;
-    margin: 0 auto;
-  }
-  .main_wrap .div-cont .main-con .visual-txt {
+  .main_wrap .div-cont .visual-con .visual-txt {
     padding-top: 150px;
   }
 }
+/* ===========================
+page About 
+==============================*/
+#page-about .sub-body .sub-tit {
+  background-image: url(../images/Sub_top_visual01.jpg);
+}
+
+/* ===========================
+page Work 
+==============================*/
+/* ===========================
+page Design 
+==============================*/
+/* ===========================
+page Contact 
+==============================*/

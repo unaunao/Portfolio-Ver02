@@ -41,3 +41,7 @@
     fill: map-get($color, dark-text);
   }
 }
+@mixin background {
+  background-repeat: no-repeat;
+  background-size: cover;
+}

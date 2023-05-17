@@ -5,7 +5,9 @@
 @import "layout";
 
 
-/* sub-page Main */
+/* ===========================
+page Main 
+============================= */
 .main_wrap {
   background-color: #fdfdfd;
   width:100%;
@@ -30,7 +32,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    .main-con{
+    .visual-con{
       height: 100%;
       display: grid;
       justify-content: center;
@@ -180,7 +182,7 @@
               bgblur 4s linear;
     }
     .div-cont {
-      .main-con{
+      .visual-con{
         .visual-txt {
           h2 {
             font-size: 57px;
@@ -220,9 +222,7 @@
       background-size: cover;
     }
     .div-cont {
-      width: 1200px;
-      margin:0 auto;
-      .main-con {
+      .visual-con {
         .visual-txt {
           padding-top: 150px;
         }
@@ -231,4 +231,26 @@
   }
 }
 
+/* ===========================
+page About 
+==============================*/
+#page-about {
+  .sub-body {
+    .sub-tit {
+      background-image: url(../images/Sub_top_visual01.jpg);
+    }
+  }
+}
+
+
+
+/* ===========================
+page Work 
+==============================*/
+/* ===========================
+page Design 
+==============================*/
+/* ===========================
+page Contact 
+==============================*/
 
