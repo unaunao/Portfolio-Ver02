@@ -115,7 +115,7 @@ body {
   height: 64px;
   background-color: transparent;
   z-index: 9000;
-  transition: 0.35s;
+  transition: 0.5s;
   .inner {
     display: flex;
     gap: 5px;
@@ -137,26 +137,135 @@ body {
   &.nav-down{
     background-color: #FDFDFD;
   }
+  /* Mobile Navigation */
   .mobile-nav-overlay {
     position: fixed;
     top:0;
     left: 0;
-    width: 0;
+    width: 100%;
     height: 0;
     background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(10px);
-    transition: 0.3s;
+    backdrop-filter: blur(7px);
+    transition: 0.6s;
     .mobile-nav {
       display: none;
+      height: inherit;
+      .inner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .close {
+          svg {
+            width: 24px;
+            height: 24px;
+            path {
+              stroke: map-get($color, dark-text);
+            }
+          }
+        }
+        .menu_list {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          margin: 40px 0 70px 0;
+          .swiper-pagination-bullet{
+            position: relative;
+            background-color: transparent;
+            opacity: 1;
+            &:nth-child(1), &:nth-child(7) {
+              display: none;
+            }
+            &::after {
+              font-size: map-get($font_size_mobile, body);
+              color: map-get($color, dark-text);
+              position: absolute;
+              top: 0;
+              left: 50%;
+              transform: translateX(-50%);
+              display: block;
+            }
+            &:hover::after {
+              color: map-get($color, primary);
+              text-decoration: underline;
+              text-underline-position: under;
+            }
+            &:nth-child(2)::after {
+              content: 'Main';
+            }
+            &:nth-child(3)::after {
+              content: 'About';
+            }
+            &:nth-child(4)::after {
+              content: 'Work';
+            }
+            &:nth-child(5)::after {
+              content: 'Design';
+            }
+            &:nth-child(6)::after {
+              content: 'Contact';
+            }
+          }  
+        }
+        .sns {
+          display: flex;
+          gap: 37px;
+          li{
+            svg {
+              @include svg_dark;
+            }
+          }
+          li:hover{
+            svg {
+              path {
+                fill:map-get($color, primary)
+              }
+            }
+          }
+        }
+        .mode-switch {
+          display: flex;
+          align-items: center;
+          border: 1px solid map-get($color, dark-text);
+          border-radius: 20px;
+          padding: 7px 20px;
+          margin-top: 20px;
+          i {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: url(../images/svg/dark_mode_light.svg) no-repeat;
+            margin-right: 10px;
+          }
+          span:after {
+            content: 'Dark mode';
+            color: map-get($color, dark-text);
+            display: inline-block;
+            line-height: 26px;
+            height: 24px;
+          }
+        }
+        .mode-switch:hover {
+          border: 1px solid map-get($color, primary);
+          background-color: map-get($color, primary);
+        }
+      }  
     }
   }
+  /* Mobile Navihation Open */
   .mobile-nav-overlay.on {
-    width: 100%;
+    // width: 100%;
     height: 100%;
     .mobile-nav {
       display: block;
       animation: display 2s ease;
     }
+    .inner{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .menu_list {
+      }
+    }  
   }
 }
 
@@ -269,6 +378,7 @@ footer {
 :is(header, footer) .sns {
   display: none;
 }
+
 @media (min-width:768px) {
   /* Bottom Navigation */
   .div-cont{
@@ -358,11 +468,7 @@ footer {
       gap: 23px;
       li{
         svg {
-          width: 24px;
-          height: 24px;
-          path {
-            fill: map-get($color, text);
-          }
+          @include svg_light;
         }
       }
     }

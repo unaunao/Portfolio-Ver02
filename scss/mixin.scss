@@ -27,3 +27,17 @@
   text-shadow: 5px 3px 9px #fff;
   line-height: 28px;
 }
+@mixin svg_light {
+  width: 24px;
+  height: 24px;
+  path {
+    fill: map-get($color, text);
+  }
+}
+@mixin svg_dark {
+  width: 24px;
+  height: 24px;
+  path {
+    fill: map-get($color, dark-text);
+  }
+}

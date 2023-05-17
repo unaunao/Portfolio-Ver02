@@ -71,14 +71,21 @@ $('document').ready(function () {
   let closeBtn = document.getElementsByClassName('close')[0];
   navBtn.onclick = function navOpen() {
     mobileNav.classList.add("on");
+    /* 메뉴 버튼 누르면 네비 사라짐 */
+    let x = mobileNav.getElementsByClassName('swiper-pagination-bullet');
+    for(var i = 0; i < x.length; i++) {
+        let closeNav = x[i]
+        closeNav.onclick = function navClose() {
+          console.log(closeNav);
+          mobileNav.classList.remove("on");
+        }
+      }
   };
   closeBtn.onclick = function navOpen() {
-    console.log(mobileNav);
     mobileNav.classList.remove("on");
   };
   window.addEventListener('resize', function(){
     let bodyWidth = document.body.offsetWidth;
-    console.log(bodyWidth);
     if (bodyWidth >= 1183){
       mobileNav.classList.remove("on");
     };
