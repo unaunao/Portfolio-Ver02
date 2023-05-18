@@ -53,8 +53,8 @@ svg, path {
   display: none;
 }
 .blind, table caption {
-  width:1px;
-  height: 1px; 
+  width:0.063rem;
+  height: 0.063rem; 
   overflow: hidden;
   position: absolute;
   top:-9999em;

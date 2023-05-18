@@ -1,42 +1,42 @@
 @mixin icon {
   content: '';
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: map-get($size, px_24);
+  height: map-get($size, px_24);
 }
 
 @mixin logo {
   font-weight: map-get($font_wight, medium);
   text-transform: uppercase;
   letter-spacing: -0.313rem;
-  text-shadow: 0 5px 5px #fff;
+  text-shadow: 0 0.313rem 0.313rem #fff;
 }
 @mixin logo_m {
   font-size: map-get($font_size_pc, h3_ko);
   font-weight: map-get($font_wight, semibold);
   text-transform: uppercase;
   letter-spacing: -0.1rem;
-  text-shadow: 5px 3px 9px #fff;
-  line-height: 28px;
+  text-shadow: 0.313rem 0.188rem 0.563rem #fff;
+  line-height: map-get($size, px_28);
 }
 @mixin logo_s {
   font-size: map-get($font_size_mobile, h3_ko);
   font-weight: map-get($font_wight, medium);
   text-transform: uppercase;
   letter-spacing: -0.1rem;
-  text-shadow: 5px 3px 9px #fff;
-  line-height: 28px;
+  text-shadow: 0.313rem 0.188rem 0.563rem #fff;
+  line-height: map-get($size, px_28);
 }
 @mixin svg_light {
-  width: 24px;
-  height: 24px;
+  width: map-get($size, px_24);
+  height: map-get($size, px_24);
   path {
     fill: map-get($color, text);
   }
 }
 @mixin svg_dark {
-  width: 24px;
-  height: 24px;
+  width: map-get($size, px_24);
+  height: map-get($size, px_24);
   path {
     fill: map-get($color, dark-text);
   }

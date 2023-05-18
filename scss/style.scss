@@ -52,21 +52,21 @@ page Main
         }
         .gide {
           position: relative;
-          margin-top: 40px;
-          height: 60px;
+          margin-top: map-get($size, px_40);
+          height: 3.75rem;
           &:after {
             content: '왼쪽으로 쓸어 넘기세요.';
             font-size: map-get($font_size_pc, body_sm );
             position: absolute;
             left: 50%;
-            bottom: 10px;
+            bottom: 0.625rem;
             transform: translateX(-50%);
             opacity: 0;
             transition: 0.35s;
           }
           &:hover:after {
             opacity: 1;
-            bottom: -8px;
+            bottom: -0.5rem;
           }
           i {
             position: absolute;
@@ -93,11 +93,11 @@ page Main
             left: 51%;
             content: '';
             display: inline-block;
-            width: 54px;
-            height: 54px;
+            width: 3.375rem;
+            height: 3.375rem;
             background: url(../images/svg/swiper.svg) no-repeat;
             background-size: 124%;
-            background-position: -5px 0;
+            background-position: -0.313rem 0;
             animation:gide-hand 2s 6s linear infinite,
             gide-hand-op 2s linear 12 ;
             transition: 0.35s;
@@ -159,8 +159,8 @@ page Main
 }
 @keyframes bgblur {
   0% {
-    filter: blur(15px);
-    top:-150px;
+    filter: blur(0.938rem);
+    top:-9.375rem;
   }
   80% {
     filter: blur(0);
@@ -185,8 +185,8 @@ page Main
       .visual-con{
         .visual-txt {
           h2 {
-            font-size: 57px;
-            margin:8px 0;
+            font-size: 3.563rem;
+            margin:map-get($size, px_8 ) 0;
           }
           p {
             font-size: map-get($font_size_pc, h4);
@@ -224,7 +224,7 @@ page Main
     .div-cont {
       .visual-con {
         .visual-txt {
-          padding-top: 150px;
+          padding-top: 9.375rem;
         }
       }
     }

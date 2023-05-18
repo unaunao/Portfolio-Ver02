@@ -193,18 +193,18 @@ body {
   position: fixed;
   -webkit-transform: rotate(90deg) translateX(-50%);
           transform: rotate(90deg) translateX(-50%);
-  padding-right: 30px;
+  padding-right: 2rem;
 }
 .swiper-pages .swiper-pagination .swiper-pagination-bullet {
   position: relative;
   background: transparent;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  margin-top: 10px;
-  width: 12px;
+  margin-top: 0.625rem;
+  width: 0.75rem;
   height: 0;
   opacity: 1;
-  margin: 0 6px !important;
+  margin: 0 0.375rem !important;
 }
 .swiper-pages .swiper-pagination .swiper-pagination-bullet::after {
   font-size: 0.75rem;
@@ -231,11 +231,11 @@ body {
   content: "Contact";
 }
 .swiper-pages .swiper-pagination .swiper-pagination-bullet-active {
-  width: 40px;
+  width: 2.5rem;
   margin-left: 0 !important;
 }
 .swiper-pages .swiper-pagination .swiper-pagination-bullet-active::after {
-  left: 10px;
+  left: 2.5rem;
   font-size: 1.5rem;
   font-weight: 500;
   text-decoration: underline;
@@ -245,7 +245,7 @@ body {
 }
 .swiper-pages .swiper-pagination button {
   position: absolute;
-  bottom: -5px;
+  bottom: -0.313rem;
   left: 100%;
   width: 48px;
   height: 48px;
@@ -593,9 +593,10 @@ footer .footer .f-info {
 sub 페이지 공통요소
 ==============================*/
 .sub-body {
-  margin-bottom: 70px;
+  margin-bottom: 4.375rem;
 }
 .sub-body .sub-tit {
+  margin-top: 0.5rem;
   padding: 4.375em 0 4.375em 2em;
   background-repeat: no-repeat;
   background-size: cover;
@@ -786,15 +787,15 @@ page Main
 }
 .main_wrap .div-cont .visual-con .visual-txt .gide {
   position: relative;
-  margin-top: 40px;
-  height: 60px;
+  margin-top: 2.5rem;
+  height: 3.75rem;
 }
 .main_wrap .div-cont .visual-con .visual-txt .gide:after {
   content: "왼쪽으로 쓸어 넘기세요.";
   font-size: 0.75rem;
   position: absolute;
   left: 50%;
-  bottom: 10px;
+  bottom: 0.625rem;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   opacity: 0;
@@ -803,7 +804,7 @@ page Main
 }
 .main_wrap .div-cont .visual-con .visual-txt .gide:hover:after {
   opacity: 1;
-  bottom: -8px;
+  bottom: -0.5rem;
 }
 .main_wrap .div-cont .visual-con .visual-txt .gide i {
   position: absolute;
@@ -839,11 +840,11 @@ page Main
   left: 51%;
   content: "";
   display: inline-block;
-  width: 54px;
-  height: 54px;
+  width: 3.375rem;
+  height: 3.375rem;
   background: url(../images/svg/swiper.svg) no-repeat;
   background-size: 124%;
-  background-position: -5px 0;
+  background-position: -0.313rem 0;
   -webkit-animation: gide-hand 2s 6s linear infinite, gide-hand-op 2s linear 12;
           animation: gide-hand 2s 6s linear infinite, gide-hand-op 2s linear 12;
   -webkit-transition: 0.35s;
@@ -964,9 +965,9 @@ page Main
 }
 @-webkit-keyframes bgblur {
   0% {
-    -webkit-filter: blur(15px);
-            filter: blur(15px);
-    top: -150px;
+    -webkit-filter: blur(0.938rem);
+            filter: blur(0.938rem);
+    top: -9.375rem;
   }
   80% {
     -webkit-filter: blur(0);
@@ -980,9 +981,9 @@ page Main
 }
 @keyframes bgblur {
   0% {
-    -webkit-filter: blur(15px);
-            filter: blur(15px);
-    top: -150px;
+    -webkit-filter: blur(0.938rem);
+            filter: blur(0.938rem);
+    top: -9.375rem;
   }
   80% {
     -webkit-filter: blur(0);
@@ -1003,8 +1004,8 @@ page Main
             animation: bgScale 3s ease-in-out infinite alternate-reverse, bgblur 4s linear;
   }
   .main_wrap .div-cont .visual-con .visual-txt h2 {
-    font-size: 57px;
-    margin: 8px 0;
+    font-size: 3.563rem;
+    margin: 0.5rem 0;
   }
   .main_wrap .div-cont .visual-con .visual-txt p {
     font-size: 1.5rem;
@@ -1056,7 +1057,7 @@ page Main
     background-size: cover;
   }
   .main_wrap .div-cont .visual-con .visual-txt {
-    padding-top: 150px;
+    padding-top: 9.375rem;
   }
 }
 /* ===========================
