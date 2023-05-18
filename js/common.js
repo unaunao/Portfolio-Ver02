@@ -124,6 +124,7 @@ $('document').ready(function () {
         nav_bar.classList.remove("nav-down");
       }
     });
+
     
   }//scrollEvent
   

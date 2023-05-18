@@ -239,6 +239,40 @@ page About
     .sub-tit {
       background-image: url(../images/Sub_top_visual01.jpg);
     }
+    .sub-con {
+      .content {
+        .con01 {
+          .profil {
+            position: relative;
+            .name {
+              position: absolute;
+              top: 9.375rem;
+              left: 50%;
+              transform: translateX(-180%);
+              span{
+                display: block;
+                width: map-get($size, px_80);
+                font-size: map-get($font_size_mobile, body_lg);
+                text-align: right;
+                line-height: 140%;
+              }
+            }
+            .photo {
+              width: 21.188rem;
+              height: 22rem;
+              margin:0 auto;
+              background-image: url(../images/profile_photo.png);
+              @include background;
+            }
+          }
+          .about-text {
+            h2 {
+              margin: map-get($size, px_40) 0  map-get($size, px_32)  0;
+            }
+          }
+        }
+      }
+    }
   }
 }
 

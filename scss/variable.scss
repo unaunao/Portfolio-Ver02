@@ -37,6 +37,7 @@ $font_wight : (
 $color: (
   primary:rgba(205,156,252,0.8),
   secondary:rgba(233,221,243,0.9),
+  tertiary: rgba(184,142,224,0.8),
   primary-point:#7900EC,
   text:#1F1F1F,
   dark-bg:#1C1515,
@@ -56,9 +57,10 @@ $size: (
   px_32: 2rem,
   px_40: 2.5rem,
   px_48: 3rem,
+  px_50: 3.125rem,
   px_56: 3.5rem,
   px_60:3.75rem,
-  px_64: 4rem
+  px_64: 4rem,
   px_72: 4.5rem,
   px_80: 5rem,
 );
