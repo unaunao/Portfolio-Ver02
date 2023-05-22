@@ -45,6 +45,7 @@ $('document').ready(function () {
       prevEl: '.prev_btn'
     },
     on: {
+      /* 다음 슬라이드로 넘어갈때 항상위로)(일반화면및 버튼적용) */
       slideChange: function () {
         $("body, html").stop(true).animate(
           {
@@ -87,7 +88,6 @@ $('document').ready(function () {
     for(var i = 0; i < x.length; i++) {
         let closeNav = x[i]
         closeNav.onclick = function navClose() {
-          console.log(closeNav);
           mobileNav.classList.remove("on");
         }
       }
@@ -102,6 +102,52 @@ $('document').ready(function () {
     };
   })
 
+     /* 다음 슬라이드로 넘어갈때 항상위로 */
+  //  높이를 측정하여 스크롤 업 하는 함수 (네비게이션 메뉴에 적용됨)
+  function activeHeightSet() {
+    // 스크롤업 함수 만든것을 불러옴
+    scrollUp();
+  }
+  
+  swiper.on("slideChangeTransitionStart", activeHeightSet);
+
+  // 스크롤 업 함수 
+  function scrollUp() {
+    // 애니메이션으로 0.001초 만에 body와 html의 스크롤 위치 top 0로 이동
+    $("body, html").stop(true).animate(
+      {
+        scrollTop: "0",
+      },
+      1
+    );
+  }
+
+  /* Tab 버튼 황성화 애니메이션 */
+  let tabs = document.getElementsByClassName('tab');
+  let leftTab = tabs[0];
+  let rightTab = tabs[1];
+  
+  let con02 = document.getElementsByClassName('con02')[1];
+  
+  leftTab.addEventListener('click', (e)=>{
+    if(!leftTab.classList.contains('active')){
+      leftTab.classList.add('active');
+    }
+
+    if(rightTab.classList.contains('active')){
+      rightTab.classList.remove('active');
+    }
+  });
+
+  rightTab.addEventListener('click', ()=>{
+    if(!rightTab.classList.contains('active')){
+      rightTab.classList.add('active');
+    }
+
+    if(leftTab.classList.contains('active')){
+      leftTab.classList.remove('active');
+    }
+  });
 
   }//includeHTML
 

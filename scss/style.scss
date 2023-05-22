@@ -269,6 +269,21 @@ page About
             h2 {
               margin: map-get($size, px_40) 0  map-get($size, px_32)  0;
             }
+            button {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: map-get($font_size_mobile, btn_md);
+              color: #fff;
+              width: 100%;
+              border-radius: map-get($size, px_50);
+              padding:0.75rem 0;
+              margin-top: map-get($size, px_50);
+              background-color: map-get($color, primary-point);
+              span {
+                margin-right: map-get($size, px_8);
+              }
+            }
           }
         }
       }
