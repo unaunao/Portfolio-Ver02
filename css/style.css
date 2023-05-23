@@ -1247,6 +1247,7 @@ page About
   background-size: cover;
 }
 #page-about .sub-body .sub-con .content .con01 .about-text h2 {
+  font-size: 3rem;
   margin: 2.5rem 0 2rem 0;
 }
 #page-about .sub-body .sub-con .content .con01 .about-text button {

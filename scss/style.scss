@@ -267,6 +267,7 @@ page About
           }
           .about-text {
             h2 {
+              font-size: map-get($font_size_pc, h2_ko);
               margin: map-get($size, px_40) 0  map-get($size, px_32)  0;
             }
             button {
