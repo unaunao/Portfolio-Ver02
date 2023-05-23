@@ -125,27 +125,54 @@ $('document').ready(function () {
   /* Tab 버튼 황성화 애니메이션 */
   let tabs = document.getElementsByClassName('tab');
   let leftTab = tabs[0];
-  let rightTab = tabs[1];
+  let centerTab = tabs[1];
+  let rightTab = tabs[2];
+  let con01 = document.getElementsByClassName('con01')[0];
+  let con02 = document.getElementsByClassName('con02')[0];
+  let con03 = document.getElementsByClassName('con03')[0];
   
-  let con02 = document.getElementsByClassName('con02')[1];
-  
-  leftTab.addEventListener('click', (e)=>{
+  leftTab.addEventListener('click', ()=>{
     if(!leftTab.classList.contains('active')){
       leftTab.classList.add('active');
+      con01.classList.add('active');
     }
-
+    if(centerTab.classList.contains('active')){
+      centerTab.classList.remove('active');
+      con02.classList.remove('active');
+    }
     if(rightTab.classList.contains('active')){
       rightTab.classList.remove('active');
+      con03.classList.remove('active');
     }
   });
 
-  rightTab.addEventListener('click', ()=>{
-    if(!rightTab.classList.contains('active')){
-      rightTab.classList.add('active');
+  centerTab.addEventListener('click', ()=>{
+    if(!centerTab.classList.contains('active')){
+      centerTab.classList.add('active');
+      con02.classList.add('active');
     }
 
     if(leftTab.classList.contains('active')){
       leftTab.classList.remove('active');
+      con01.classList.remove('active');
+    }
+    if(rightTab.classList.contains('active')){
+      rightTab.classList.remove('active');
+      con03.classList.remove('active');
+    }
+  });
+  rightTab.addEventListener('click', ()=>{
+    if(!rightTab.classList.contains('active')){
+      rightTab.classList.add('active');
+      con03.classList.add('active');
+    }
+    if(centerTab.classList.contains('active')){
+      centerTab.classList.remove('active');
+      con02.classList.remove('active');
+    }
+    if(leftTab.classList.contains('active')){
+      leftTab.classList.remove('active');
+      con01.classList.remove('active');
     }
   });
 

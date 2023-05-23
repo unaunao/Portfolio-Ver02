@@ -235,10 +235,10 @@ page Main
 page About 
 ==============================*/
 #page-about {
-  .sub-body {
     .sub-tit {
       background-image: url(../images/Sub_top_visual01.jpg);
     }
+  .sub-body {
     .sub-con {
       .content {
         .con01 {
@@ -290,8 +290,87 @@ page About
     }
   }
 }
-
-
+@media (min-width:768px) {
+  #page-about {
+    .div-cont {
+      .sub-body { 
+        nav {
+          .tab-list {
+            .tab{
+              &:nth-child(1) span::before {
+                background-image: url(../images/svg/about_me.svg);
+              }
+              &:nth-child(2) span::before {
+                background-image: url(../images/svg/tech_stack.svg);
+              }
+            }
+          }
+        }
+        .content {
+          .con01 {
+            .profil {
+              .name {
+                top: 7.5rem;
+                left: 50%;
+                transform: translateX(100%);
+                span{
+                  width: 6.563rem;
+                  font-size: map-get($font_size_pc, h4);
+                  font-weight: map-get($font_wight, medium);
+                  line-height: 120%;
+                }
+              }
+              .photo {
+                width: 36.725rem;
+                height: 27.5rem;
+                background-image: url(../images/pc_profile_photo.png);
+              }
+            }
+          }
+        }
+      }   
+    }  
+  }
+}
+@media (min-width: 1200px) {
+  #page-about {
+    .sub-tit {
+      background-image: url(../images/pc_sub_top_visual01.jpg);
+    }
+    .div-cont {
+      .sub-body { 
+        .content {
+          padding: map-get($size , px_72) 0.625rem 0;
+          .con01 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            .about-text {
+              padding-left: map-get($size, px_64);
+              h2 {
+                margin: map-get($size, px_40) 0  map-get($size, px_32)  0;
+              }
+              p {
+                font-size: map-get($font_size_pc, body_lg);
+                line-height: 150%;
+                max-width: 430px;
+              }
+              button {
+                font-size: map-get($font_size_pc, btn_sm);
+                width: 13.75rem;
+                padding:1rem 0;
+                margin-top: map-get($size, px_50);
+                background-color: map-get($color, primary-point);
+                span {
+                  margin-right: map-get($size, px_8);
+                }
+              }
+            }
+          }
+        }
+      }   
+    }  
+  }  
+} //min-width: 1200px
 
 /* ===========================
 page Work 
