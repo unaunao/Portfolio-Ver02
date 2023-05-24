@@ -287,6 +287,102 @@ page About
             }
           }
         }
+        .con02 {
+          margin-top: map-get($size, px_20 );
+          .tech-wrap {
+            .tech-box {
+              h2 {
+                font-weight: map-get($font_wight, light);
+                b {
+                  font-weight: map-get($font_wight, medium);
+                }
+              }
+              .tech-explain {
+                border-top: 1px solid map-get($color, text);
+                margin-top: map-get($size, px_28);
+                padding-top: map-get($size, px_28);
+                li {
+                  display: grid;
+                  grid-template-columns: map-get($size, px_24) 1fr;
+                  margin-bottom: map-get($size, px_16);
+                  i {
+                    @include icon;
+                    background-image: url(../images/svg/list-bullet.svg);
+                    background-position-y: -0.063rem;
+                  }
+                  span {
+                    line-height: 1.5;
+                  }
+                }
+              }
+              .tech-icon {
+                margin-top: map-get($size, px_24);
+                span{
+                  display: inline-block;
+                  width: map-get($size, px_40);    
+                  height: map-get($size, px_40);
+                  @include background;
+                  margin: 0.75rem 0.75rem 0 0;    
+                }
+              }  
+            }
+            li:nth-child(1).tech-box {
+              .tech-icon {
+                span:nth-child(1){
+                  background-image: url(../images/svg/skill-icons_html5.svg);
+                }
+                span:nth-child(2){
+                  background-image: url(../images/svg/skill-icons_css3.svg);
+                }
+                span:nth-child(3){
+                  background-image: url(../images/svg/skill-icons_javascript.svg);
+                }
+                span:nth-child(4){
+                  background-image: url(../images/svg/skill-icons_scss2.svg);
+                }
+                span:nth-child(5){
+                  background-image: url(../images/svg/skill-icons_jquery.svg);
+                  width: 9.901rem;
+                }
+                span:nth-child(6){
+                  background-image: url(../images/svg/skill-icons_github_big.svg);
+                  width: 2.619rem;
+                }
+                span:nth-child(7){
+                  background-image: url(../images/svg/skill-icons_bootstrap.svg);
+                  width: 3.138rem;
+                }
+              }
+            }
+            li:nth-child(2).tech-box {
+              margin-top: map-get($size, px_64);
+              .tech-icon {
+                span:nth-child(1){
+                  background-image: url(../images/svg/skill-icons_photoshop.svg);
+                }
+                span:nth-child(2){
+                  background-image: url(../images/svg/skill-icons_illustrator.svg);
+                }
+                span:nth-child(3){
+                  background-image: url(../images/svg/skill-icons_premiere.svg);
+                }
+                span:nth-child(4){
+                  background-image: url(../images/svg/skill-icons_xd.svg);
+                }
+                span:nth-child(5){
+                  background-image: url(../images/svg/skill-icons_figma-dark.svg);
+                }
+                span:nth-child(6){
+                  background-image: url(../images/svg/skill-icons_canvar.svg);
+                }
+                span:nth-child(7){
+                  background-image: url(../images/svg/skill-icons_zeplin.svg);
+                  width: 3.122rem;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -311,7 +407,7 @@ page About
           .con01 {
             .profil {
               .name {
-                top: 7.5rem;
+                top: map-get($size, px_120);
                 left: 50%;
                 transform: translateX(100%);
                 span{
@@ -328,11 +424,31 @@ page About
               }
             }
           }
+          .con02 {
+            .tech-wrap {
+              .tech-box {
+                .tech-explain {
+                  max-width: 50rem;
+                  li {
+                    span {
+                      font-size: map-get($font_size_pc, body_lg);
+                    }
+                  }
+                }
+                .tech-icon {
+                  margin-top: map-get($size, px_28);
+                }  
+              }
+              li:nth-child(2).tech-box {
+                margin-top: map-get($size, px_120);
+              }
+            }
+          }
         }
       }   
     }  
   }
-}
+} //min-width:768px
 @media (min-width: 1200px) {
   #page-about {
     .sub-tit {
@@ -363,6 +479,19 @@ page About
                 background-color: map-get($color, primary-point);
                 span {
                   margin-right: map-get($size, px_8);
+                }
+              }
+            }
+          }
+          .con02 {
+            margin-top: map-get($size, px_28);
+            .tech-wrap {
+              .tech-box {
+                display: grid;
+                grid-template-columns: 1fr 1.9fr;
+                margin-top: map-get($size, px_28);
+                .tech-explain {
+                  margin-top: 0;
                 }
               }
             }

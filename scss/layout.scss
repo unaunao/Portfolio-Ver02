@@ -521,7 +521,7 @@ sub 페이지 공통요소
       }
     }
   }
-}
+}//min-width:768px
 @media (max-width:1300px) {
   .swiper-pages {
     .swiper-wrapper {
@@ -618,7 +618,7 @@ page About
       }
     }
     .sub-body {
-      margin-bottom: 7.5rem;
+      margin-bottom: map-get($size, px_120);
       font-size: map-get($font_size_mobile, body);
       .sub-con {
         nav {

@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
 * {
+  word-break: keep-all;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
@@ -1274,6 +1275,96 @@ page About
 #page-about .sub-body .sub-con .content .con01 .about-text button span {
   margin-right: 0.5rem;
 }
+#page-about .sub-body .sub-con .content .con02 {
+  margin-top: 1.25rem;
+}
+#page-about .sub-body .sub-con .content .con02 .tech-wrap .tech-box h2 {
+  font-weight: 300;
+}
+#page-about .sub-body .sub-con .content .con02 .tech-wrap .tech-box h2 b {
+  font-weight: 500;
+}
+#page-about .sub-body .sub-con .content .con02 .tech-wrap .tech-box .tech-explain {
+  border-top: 1px solid #1F1F1F;
+  margin-top: 1.75rem;
+  padding-top: 1.75rem;
+}
+#page-about .sub-body .sub-con .content .con02 .tech-wrap .tech-box .tech-explain li {
+  display: grid;
+  grid-template-columns: 1.5rem 1fr;
+  margin-bottom: 1rem;
+}
+#page-about .sub-body .sub-con .content .con02 .tech-wrap .tech-box .tech-explain li i {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(../images/svg/list-bullet.svg);
+  background-position-y: -0.063rem;
+}
+#page-about .sub-body .sub-con .content .con02 .tech-wrap .tech-box .tech-explain li span {
+  line-height: 1.5;
+}
+#page-about .sub-body .sub-con .content .con02 .tech-wrap .tech-box .tech-icon {
+  margin-top: 1.5rem;
+}
+#page-about .sub-body .sub-con .content .con02 .tech-wrap .tech-box .tech-icon span {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0.75rem 0.75rem 0 0;
+}
+#page-about .sub-body .sub-con .content .con02 .tech-wrap li:nth-child(1).tech-box .tech-icon span:nth-child(1) {
+  background-image: url(../images/svg/skill-icons_html5.svg);
+}
+#page-about .sub-body .sub-con .content .con02 .tech-wrap li:nth-child(1).tech-box .tech-icon span:nth-child(2) {
+  background-image: url(../images/svg/skill-icons_css3.svg);
+}
+#page-about .sub-body .sub-con .content .con02 .tech-wrap li:nth-child(1).tech-box .tech-icon span:nth-child(3) {
+  background-image: url(../images/svg/skill-icons_javascript.svg);
+}
+#page-about .sub-body .sub-con .content .con02 .tech-wrap li:nth-child(1).tech-box .tech-icon span:nth-child(4) {
+  background-image: url(../images/svg/skill-icons_scss2.svg);
+}
+#page-about .sub-body .sub-con .content .con02 .tech-wrap li:nth-child(1).tech-box .tech-icon span:nth-child(5) {
+  background-image: url(../images/svg/skill-icons_jquery.svg);
+  width: 9.901rem;
+}
+#page-about .sub-body .sub-con .content .con02 .tech-wrap li:nth-child(1).tech-box .tech-icon span:nth-child(6) {
+  background-image: url(../images/svg/skill-icons_github_big.svg);
+  width: 2.619rem;
+}
+#page-about .sub-body .sub-con .content .con02 .tech-wrap li:nth-child(1).tech-box .tech-icon span:nth-child(7) {
+  background-image: url(../images/svg/skill-icons_bootstrap.svg);
+  width: 3.138rem;
+}
+#page-about .sub-body .sub-con .content .con02 .tech-wrap li:nth-child(2).tech-box {
+  margin-top: 4rem;
+}
+#page-about .sub-body .sub-con .content .con02 .tech-wrap li:nth-child(2).tech-box .tech-icon span:nth-child(1) {
+  background-image: url(../images/svg/skill-icons_photoshop.svg);
+}
+#page-about .sub-body .sub-con .content .con02 .tech-wrap li:nth-child(2).tech-box .tech-icon span:nth-child(2) {
+  background-image: url(../images/svg/skill-icons_illustrator.svg);
+}
+#page-about .sub-body .sub-con .content .con02 .tech-wrap li:nth-child(2).tech-box .tech-icon span:nth-child(3) {
+  background-image: url(../images/svg/skill-icons_premiere.svg);
+}
+#page-about .sub-body .sub-con .content .con02 .tech-wrap li:nth-child(2).tech-box .tech-icon span:nth-child(4) {
+  background-image: url(../images/svg/skill-icons_xd.svg);
+}
+#page-about .sub-body .sub-con .content .con02 .tech-wrap li:nth-child(2).tech-box .tech-icon span:nth-child(5) {
+  background-image: url(../images/svg/skill-icons_figma-dark.svg);
+}
+#page-about .sub-body .sub-con .content .con02 .tech-wrap li:nth-child(2).tech-box .tech-icon span:nth-child(6) {
+  background-image: url(../images/svg/skill-icons_canvar.svg);
+}
+#page-about .sub-body .sub-con .content .con02 .tech-wrap li:nth-child(2).tech-box .tech-icon span:nth-child(7) {
+  background-image: url(../images/svg/skill-icons_zeplin.svg);
+  width: 3.122rem;
+}
 
 @media (min-width: 768px) {
   #page-about .div-cont .sub-body nav .tab-list .tab:nth-child(1) span::before {
@@ -1298,6 +1389,18 @@ page About
     width: 36.725rem;
     height: 27.5rem;
     background-image: url(../images/pc_profile_photo.png);
+  }
+  #page-about .div-cont .sub-body .content .con02 .tech-wrap .tech-box .tech-explain {
+    max-width: 50rem;
+  }
+  #page-about .div-cont .sub-body .content .con02 .tech-wrap .tech-box .tech-explain li span {
+    font-size: 1.125rem;
+  }
+  #page-about .div-cont .sub-body .content .con02 .tech-wrap .tech-box .tech-icon {
+    margin-top: 1.75rem;
+  }
+  #page-about .div-cont .sub-body .content .con02 .tech-wrap li:nth-child(2).tech-box {
+    margin-top: 7.5rem;
   }
 }
 @media (min-width: 1200px) {
@@ -1331,6 +1434,17 @@ page About
   }
   #page-about .div-cont .sub-body .content .con01 .about-text button span {
     margin-right: 0.5rem;
+  }
+  #page-about .div-cont .sub-body .content .con02 {
+    margin-top: 1.75rem;
+  }
+  #page-about .div-cont .sub-body .content .con02 .tech-wrap .tech-box {
+    display: grid;
+    grid-template-columns: 1fr 1.9fr;
+    margin-top: 1.75rem;
+  }
+  #page-about .div-cont .sub-body .content .con02 .tech-wrap .tech-box .tech-explain {
+    margin-top: 0;
   }
 }
 /* ===========================
