@@ -900,8 +900,8 @@ page Main
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #fdfdfd;
-  -webkit-animation: bgScale 3s 4s ease-in-out infinite alternate-reverse, bgblur 5s linear;
-          animation: bgScale 3s 4s ease-in-out infinite alternate-reverse, bgblur 5s linear;
+  -webkit-animation: bgScale 3s 3s ease-in-out infinite alternate-reverse, bgblur 5s linear;
+          animation: bgScale 3s 3s ease-in-out infinite alternate-reverse, bgblur 5s linear;
   z-index: -1;
 }
 .main_wrap .div-cont {
@@ -972,8 +972,8 @@ page Main
 }
 .main_wrap .div-cont .visual-con .visual-txt .gide .l {
   left: 25%;
-  -webkit-animation: gide-arrow-l 2s 4s linear infinite;
-          animation: gide-arrow-l 2s 4s linear infinite;
+  -webkit-animation: gide-arrow-l 2s 3s linear infinite;
+          animation: gide-arrow-l 2s 3s linear infinite;
 }
 .main_wrap .div-cont .visual-con .visual-txt .gide .l span {
   content: "";
@@ -984,8 +984,8 @@ page Main
 }
 .main_wrap .div-cont .visual-con .visual-txt .gide .R {
   left: 75%;
-  -webkit-animation: gide-arrow-r 2s 4s linear infinite;
-          animation: gide-arrow-r 2s 4s linear infinite;
+  -webkit-animation: gide-arrow-r 2s 3s linear infinite;
+          animation: gide-arrow-r 2s 3s linear infinite;
 }
 .main_wrap .div-cont .visual-con .visual-txt .gide .R span {
   content: "";
@@ -1004,8 +1004,8 @@ page Main
   background: url(../images/svg/swiper.svg) no-repeat;
   background-size: 124%;
   background-position: -0.313rem 0;
-  -webkit-animation: gide-hand 2s 4s linear infinite, gide-hand-op 2s linear 12;
-          animation: gide-hand 2s 4s linear infinite, gide-hand-op 2s linear 12;
+  -webkit-animation: gide-hand 2s 3s linear infinite, gide-hand-op 2s linear 12;
+          animation: gide-hand 2s 3s linear infinite, gide-hand-op 2s linear 12;
   -webkit-transition: 0.35s;
   transition: 0.35s;
   opacity: 3%;
