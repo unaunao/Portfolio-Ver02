@@ -499,10 +499,6 @@ body {
 .container {
   color: #1F1F1F;
 }
-.container .fullpage section #page-work {
-  height: 800px;
-  background-color: orange;
-}
 .container .fullpage section #page-design {
   height: 3000px;
   background-color: olive;
@@ -1463,6 +1459,15 @@ page About
 /* ===========================
 page Work 
 ==============================*/
+#page-work .sub-tit {
+  background-image: url(../images/sub_top_visual02.jpg);
+}
+
+@media (min-width: 768px) {
+  #page-work .sub-tit {
+    background-image: url(../images/pc_sub_top_visual02.jpg);
+  }
+}
 /* ===========================
 page Design 
 ==============================*/
