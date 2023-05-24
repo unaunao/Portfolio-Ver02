@@ -598,7 +598,7 @@ footer .footer .f-info {
 sub 페이지 공통요소
 ==============================*/
 .sub-tit {
-  margin: 0.625rem 0.5rem 0.5rem;
+  margin: 4rem 0.5rem 0.5rem;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -850,6 +850,9 @@ sub 페이지 공통요소
   /* ===========================
   page About 
   ==============================*/
+  .sub-tit {
+    margin: 0.625rem 0.5rem 0.5rem;
+  }
   .sub-tit .inner {
     width: 1200px;
     margin: 0 auto;
@@ -896,8 +899,8 @@ page Main
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #fdfdfd;
-  -webkit-animation: bgScale 3s 6s ease-in-out infinite alternate-reverse, bgblur 5s linear;
-          animation: bgScale 3s 6s ease-in-out infinite alternate-reverse, bgblur 5s linear;
+  -webkit-animation: bgScale 3s 4s ease-in-out infinite alternate-reverse, bgblur 5s linear;
+          animation: bgScale 3s 4s ease-in-out infinite alternate-reverse, bgblur 5s linear;
   z-index: -1;
 }
 .main_wrap .div-cont {
@@ -968,8 +971,8 @@ page Main
 }
 .main_wrap .div-cont .visual-con .visual-txt .gide .l {
   left: 25%;
-  -webkit-animation: gide-arrow-l 2s 6s linear infinite;
-          animation: gide-arrow-l 2s 6s linear infinite;
+  -webkit-animation: gide-arrow-l 2s 4s linear infinite;
+          animation: gide-arrow-l 2s 4s linear infinite;
 }
 .main_wrap .div-cont .visual-con .visual-txt .gide .l span {
   content: "";
@@ -980,8 +983,8 @@ page Main
 }
 .main_wrap .div-cont .visual-con .visual-txt .gide .R {
   left: 75%;
-  -webkit-animation: gide-arrow-r 2s 6s linear infinite;
-          animation: gide-arrow-r 2s 6s linear infinite;
+  -webkit-animation: gide-arrow-r 2s 4s linear infinite;
+          animation: gide-arrow-r 2s 4s linear infinite;
 }
 .main_wrap .div-cont .visual-con .visual-txt .gide .R span {
   content: "";
@@ -1000,8 +1003,8 @@ page Main
   background: url(../images/svg/swiper.svg) no-repeat;
   background-size: 124%;
   background-position: -0.313rem 0;
-  -webkit-animation: gide-hand 2s 6s linear infinite, gide-hand-op 2s linear 12;
-          animation: gide-hand 2s 6s linear infinite, gide-hand-op 2s linear 12;
+  -webkit-animation: gide-hand 2s 4s linear infinite, gide-hand-op 2s linear 12;
+          animation: gide-hand 2s 4s linear infinite, gide-hand-op 2s linear 12;
   -webkit-transition: 0.35s;
   transition: 0.35s;
   opacity: 3%;

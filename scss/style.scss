@@ -23,7 +23,7 @@ page Main
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #fdfdfd;
-    animation:bgScale 3s 6s ease-in-out infinite alternate-reverse,
+    animation:bgScale 3s 4s ease-in-out infinite alternate-reverse,
     bgblur 5s linear;
     z-index: -1;
   }
@@ -74,7 +74,7 @@ page Main
           }
           .l {
             left: 25%;
-            animation: gide-arrow-l 2s 6s linear infinite;
+            animation: gide-arrow-l 2s 4s linear infinite;
             span {
               @include icon;
               background: url(../images/svg/arrow_l_02.svg) no-repeat;
@@ -82,7 +82,7 @@ page Main
           }
           .R {
             left: 75%;
-            animation: gide-arrow-r  2s 6s linear infinite;
+            animation: gide-arrow-r  2s 4s linear infinite;
             span {
               @include icon;
               background: url(../images/svg/arrow_r_02.svg) no-repeat;
@@ -98,7 +98,7 @@ page Main
             background: url(../images/svg/swiper.svg) no-repeat;
             background-size: 124%;
             background-position: -0.313rem 0;
-            animation:gide-hand 2s 6s linear infinite,
+            animation:gide-hand 2s 4s linear infinite,
             gide-hand-op 2s linear 12 ;
             transition: 0.35s;
             opacity: 3%;
@@ -235,9 +235,9 @@ page Main
 page About 
 ==============================*/
 #page-about {
-    .sub-tit {
-      background-image: url(../images/Sub_top_visual01.jpg);
-    }
+  .sub-tit {
+    background-image: url(../images/Sub_top_visual01.jpg);
+  }
   .sub-body {
     .sub-con {
       .content {
