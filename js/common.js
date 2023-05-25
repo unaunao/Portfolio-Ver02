@@ -106,9 +106,9 @@ $('document').ready(function () {
     let pagebtn = document.getElementsByClassName('swiper-pagination-bullet');
 
     for ( var i = 1; i <= 5; i++) {
-      let height = slideH[i].clientHeight;
       let mBtn = pagebtn[i];
       mBtn.addEventListener('click', ()=> {
+        let height = slideH[i].clientHeight;
         swiperW.style.height = height + 'px';
       })
     }
