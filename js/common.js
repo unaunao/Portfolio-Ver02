@@ -36,7 +36,6 @@ $('document').ready(function () {
     touchRatio: 0.2,
     pagination: {
       el: '.swiper-pagination',
-      // el: '.menu_list',
       clickable: true,
     },
     navigation: {
@@ -58,10 +57,9 @@ $('document').ready(function () {
     }
   });//Swiper(swiper-pages)
 
-
+/* 모바일 네비 페이지 네이션 */
   var swiper = new Swiper('.fullpage', {
     pagination: {
-      // el: '.swiper-pagination',
       el: '.menu_list',
       clickable: true,
     },
@@ -96,12 +94,26 @@ $('document').ready(function () {
   closeBtn.onclick = function navOpen() {
     mobileNav.classList.remove("on");
   };
+  let bodyWidth = document.body.offsetWidth;
   window.addEventListener('resize', function(){
-    let bodyWidth = document.body.offsetWidth;
     if (bodyWidth >= 1183){
       mobileNav.classList.remove("on");
     };
-  })
+  });
+  /* 모바일 각 슬라이드 높이  swiper-wrapper에 다시 넣어 주기 */
+  if (bodyWidth <= 1183){
+    let slideH = document.getElementsByClassName('swiper-slide');
+    let pagebtn = document.getElementsByClassName('swiper-pagination-bullet');
+
+    for ( var i = 1; i <= 5; i++) {
+      let height = slideH[i].clientHeight;
+      let mBtn = pagebtn[i];
+      mBtn.addEventListener('click', ()=> {
+        swiperW.style.height = height + 'px';
+      })
+    }
+  };
+  
 
      /* 다음 슬라이드로 넘어갈때 항상위로 */
   //  높이를 측정하여 스크롤 업 하는 함수 (네비게이션 메뉴에 적용됨)
@@ -131,7 +143,6 @@ $('document').ready(function () {
   let con01 = document.getElementsByClassName('con01')[0];
   let con02 = document.getElementsByClassName('con02')[0];
   let swiperW = document.getElementsByClassName('swiper-wrapper')[0];
-  console.log(swiperW);
   // let con03 = document.getElementsByClassName('con03')[0];
   
   leftTab.addEventListener('click', ()=>{
@@ -144,7 +155,7 @@ $('document').ready(function () {
       con02.classList.remove('active');
     }
     /* swiper-wrapper 높이 변경해 주기 */
-    var clientHeight = document.getElementsByClassName('swiper-slide-active')[0].clientHeight;
+    let clientHeight = document.getElementsByClassName('swiper-slide-active')[0].clientHeight;
     swiperW.style.height= clientHeight +'px';
     // if(rightTab.classList.contains('active')){
     //   rightTab.classList.remove('active');
