@@ -137,7 +137,6 @@ $('document').ready(function () {
 
   /* Tab 버튼 황성화 애니메이션 */
   let tabs = document.getElementsByClassName('tab');
-  console.log(tabs);
   let leftTab = tabs[0];
   let centerTab = tabs[1];
   // let rightTab = tabs[2];
@@ -173,7 +172,23 @@ $('document').ready(function () {
     var clientHeight = document.getElementsByClassName('swiper-slide-active')[0].clientHeight;
     swiperH.style.height= clientHeight +'px';
   });
- 
+
+  /* sub work slide */
+  var swiper = new Swiper('.rps_web_slider', {
+    direction: 'vertical',
+    autoHeight: true,
+    spaceBetween: 0,
+    mousewheel: true,
+    pagination: {
+      el: '.work-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      },
+    },
+  });//Swiper(rps_web_slider)
+
+
   }//includeHTML
 
   /* Navigation bar scrollEvent 네비게이션 바 색상 넣기 */

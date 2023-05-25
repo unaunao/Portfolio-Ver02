@@ -86,37 +86,37 @@ svg, path {
   font-family: "Pretendard";
   font-weight: 700;
   font-display: swap;
-  src: local("Pretendard Bold"), url("/fonts/Pretendard-Bold.woff2") format("woff2"), url("/fonts/Pretendard-Bold.woff") format("woff"), url("/fonts/Pretendard-Bold.otf") format("opentype");
+  src: local("Pretendard Bold"), url("../fonts/Pretendard-Bold.woff2") format("woff2"), url("../fonts/Pretendard-Bold.woff") format("woff"), url("../fonts/Pretendard-Bold.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 600;
   font-display: swap;
-  src: local("Pretendard SemiBold"), url("/fonts/Pretendard-SemiBold.woff2") format("woff2"), url("/fonts/Pretendard-SemiBold.woff") format("woff"), url("/fonts/Pretendard-SemiBold.otf") format("opentype");
+  src: local("Pretendard SemiBold"), url("../fonts/Pretendard-SemiBold.woff2") format("woff2"), url("../fonts/Pretendard-SemiBold.woff") format("woff"), url("../fonts/Pretendard-SemiBold.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 500;
   font-display: swap;
-  src: local("Pretendard Medium"), url("/fonts/Pretendard-Medium.woff2") format("woff2"), url("/fonts/Pretendard-Medium.woff") format("woff"), url("/fonts/Pretendard-Medium.otf") format("opentype");
+  src: local("Pretendard Medium"), url("../fonts/Pretendard-Medium.woff2") format("woff2"), url("../fonts/Pretendard-Medium.woff") format("woff"), url("../fonts/Pretendard-Medium.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 400;
   font-display: swap;
-  src: local("Pretendard Regular"), url("/fonts/Pretendard-Regular.woff2") format("woff2"), url("/fonts/Pretendard-Regular.woff") format("woff"), url("/fonts/Pretendard-Regular.otf") format("opentype");
+  src: local("Pretendard Regular"), url("../fonts/Pretendard-Regular.woff2") format("woff2"), url("../fonts/Pretendard-Regular.woff") format("woff"), url("../fonts/Pretendard-Regular.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 300;
   font-display: swap;
-  src: local("Pretendard Light"), url("/fonts/Pretendard-Light.woff2") format("woff2"), url("/fonts/Pretendard-Light.woff") format("woff"), url("/fonts/Pretendard-Light.otf") format("opentype");
+  src: local("Pretendard Light"), url("../fonts/Pretendard-Light.woff2") format("woff2"), url("../fonts/Pretendard-Light.woff") format("woff"), url("../fonts/Pretendard-Light.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 100;
   font-display: swap;
-  src: local("Pretendard Thin"), url("/fonts/Pretendard-Thin.woff2") format("woff2"), url("/fonts/Pretendard-Thin.woff") format("woff"), url("/fonts/Pretendard-Thin.otf") format("opentype");
+  src: local("Pretendard Thin"), url("../fonts/Pretendard-Thin.woff2") format("woff2"), url("../fonts/Pretendard-Thin.woff") format("woff"), url("../fonts/Pretendard-Thin.otf") format("opentype");
 }
 /* Mobile */
 h1 {
@@ -896,8 +896,8 @@ page Main
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #fdfdfd;
-  -webkit-animation: bgScale 3s 3s ease-in-out infinite alternate-reverse, bgblur 5s linear;
-          animation: bgScale 3s 3s ease-in-out infinite alternate-reverse, bgblur 5s linear;
+  -webkit-animation: bgScale 3s 3s ease-in-out infinite alternate-reverse, bgblur 4s linear;
+          animation: bgScale 3s 3s ease-in-out infinite alternate-reverse, bgblur 4s linear;
   z-index: -1;
 }
 .main_wrap .div-cont {
@@ -1364,10 +1364,10 @@ page About
 
 @media (min-width: 768px) {
   #page-about .div-cont .sub-body nav .tab-list .tab:nth-child(1) span::before {
-    background-image: url(../images/svg/about_me.svg);
+    background-image: url(../images/svg/tab_about-me.svg);
   }
   #page-about .div-cont .sub-body nav .tab-list .tab:nth-child(2) span::before {
-    background-image: url(../images/svg/tech_stack.svg);
+    background-image: url(../images/svg/tab_tech-stack.svg);
   }
   #page-about .div-cont .sub-body .content .con01 .profil .name {
     top: 7.5rem;
@@ -1462,10 +1462,51 @@ page Work
 #page-work .sub-tit {
   background-image: url(../images/sub_top_visual02.jpg);
 }
+#page-work .div-cont .sub-body .content .work-slider {
+  overflow: hidden;
+}
+#page-work .div-cont .sub-body .content .work-slider .swiper-slide:nth-child(1) {
+  height: 400px;
+  background-color: royalblue;
+}
+#page-work .div-cont .sub-body .content .work-slider .swiper-slide:nth-child(2) {
+  height: 700px;
+  background-color: rosybrown;
+}
+#page-work .div-cont .sub-body .content .work-slider .swiper-slide:nth-child(3) {
+  height: 400px;
+  background-color: rebeccapurple;
+}
+#page-work .div-cont .sub-body .content .work-slider .work-pagination {
+  position: absolute;
+}
+#page-work .div-cont .sub-body .content .work-slider .work-pagination .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+#page-work .div-cont .sub-body .content .work-slider .work-pagination .swiper-pagination-bullet-active {
+  color: #fff;
+  background: #7900EC;
+}
 
 @media (min-width: 768px) {
   #page-work .sub-tit {
     background-image: url(../images/pc_sub_top_visual02.jpg);
+  }
+  #page-work .div-cont .sub-body nav .tab-list .tab:nth-child(1) span::before {
+    background-image: url(../images/svg/tab_responsive.svg);
+  }
+  #page-work .div-cont .sub-body nav .tab-list .tab:nth-child(2) span::before {
+    background-image: url(../images/svg/tab_web.svg);
+  }
+  #page-work .div-cont .sub-body nav .tab-list .tab:nth-child(3) span::before {
+    background-image: url(../images/svg/tab_mobile.svg);
   }
 }
 /* ===========================
