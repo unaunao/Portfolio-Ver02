@@ -86,37 +86,37 @@ svg, path {
   font-family: "Pretendard";
   font-weight: 700;
   font-display: swap;
-  src: local("Pretendard Bold"), url("../fonts/Pretendard-Bold.woff2") format("woff2"), url("../fonts/Pretendard-Bold.woff") format("woff"), url("../fonts/Pretendard-Bold.otf") format("opentype");
+  src: local("Pretendard Bold"), url("./fonts/Pretendard-Bold.woff2") format("woff2"), url("./fonts/Pretendard-Bold.woff") format("woff"), url("./fonts/Pretendard-Bold.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 600;
   font-display: swap;
-  src: local("Pretendard SemiBold"), url("../fonts/Pretendard-SemiBold.woff2") format("woff2"), url("../fonts/Pretendard-SemiBold.woff") format("woff"), url("../fonts/Pretendard-SemiBold.otf") format("opentype");
+  src: local("Pretendard SemiBold"), url("./fonts/Pretendard-SemiBold.woff2") format("woff2"), url("./fonts/Pretendard-SemiBold.woff") format("woff"), url("./fonts/Pretendard-SemiBold.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 500;
   font-display: swap;
-  src: local("Pretendard Medium"), url("../fonts/Pretendard-Medium.woff2") format("woff2"), url("../fonts/Pretendard-Medium.woff") format("woff"), url("../fonts/Pretendard-Medium.otf") format("opentype");
+  src: local("Pretendard Medium"), url("./fonts/Pretendard-Medium.woff2") format("woff2"), url("./fonts/Pretendard-Medium.woff") format("woff"), url("./fonts/Pretendard-Medium.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 400;
   font-display: swap;
-  src: local("Pretendard Regular"), url("../fonts/Pretendard-Regular.woff2") format("woff2"), url("../fonts/Pretendard-Regular.woff") format("woff"), url("../fonts/Pretendard-Regular.otf") format("opentype");
+  src: local("Pretendard Regular"), url("./fonts/Pretendard-Regular.woff2") format("woff2"), url("./fonts/Pretendard-Regular.woff") format("woff"), url("./fonts/Pretendard-Regular.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 300;
   font-display: swap;
-  src: local("Pretendard Light"), url("../fonts/Pretendard-Light.woff2") format("woff2"), url("../fonts/Pretendard-Light.woff") format("woff"), url("../fonts/Pretendard-Light.otf") format("opentype");
+  src: local("Pretendard Light"), url("./fonts/Pretendard-Light.woff2") format("woff2"), url("./fonts/Pretendard-Light.woff") format("woff"), url("./fonts/Pretendard-Light.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 100;
   font-display: swap;
-  src: local("Pretendard Thin"), url("../fonts/Pretendard-Thin.woff2") format("woff2"), url("../fonts/Pretendard-Thin.woff") format("woff"), url("../fonts/Pretendard-Thin.otf") format("opentype");
+  src: local("Pretendard Thin"), url("./fonts/Pretendard-Thin.woff2") format("woff2"), url("./fonts/Pretendard-Thin.woff") format("woff"), url("./fonts/Pretendard-Thin.otf") format("opentype");
 }
 /* Mobile */
 h1 {
@@ -147,6 +147,10 @@ button, h2, h4 {
 
 h1, button {
   line-height: 100%;
+}
+
+p {
+  line-height: 1.5;
 }
 
 /* Tablet */
@@ -1462,23 +1466,45 @@ page Work
 #page-work .sub-tit {
   background-image: url(../images/sub_top_visual02.jpg);
 }
+#page-work .div-cont .sub-body .content .title-wrap {
+  margin: 1.25rem 0 3.125rem 0;
+  text-align: center;
+}
+#page-work .div-cont .sub-body .content .title-wrap span {
+  display: block;
+  font-size: 1.125rem;
+  margin-top: 0.5rem;
+}
 #page-work .div-cont .sub-body .content .work-slider {
+  position: relative;
+  padding: 5rem 0 3.125rem 0;
   overflow: hidden;
 }
-#page-work .div-cont .sub-body .content .work-slider .swiper-slide:nth-child(1) {
-  height: 400px;
-  background-color: royalblue;
+#page-work .div-cont .sub-body .content .work-slider::before, #page-work .div-cont .sub-body .content .work-slider::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-#page-work .div-cont .sub-body .content .work-slider .swiper-slide:nth-child(2) {
-  height: 700px;
-  background-color: rosybrown;
+#page-work .div-cont .sub-body .content .work-slider::before {
+  top: 0;
+  width: 2.813rem;
+  height: 21.25rem;
+  background-image: url(../images/svg/center_line-top.svg);
 }
-#page-work .div-cont .sub-body .content .work-slider .swiper-slide:nth-child(3) {
-  height: 400px;
-  background-color: rebeccapurple;
+#page-work .div-cont .sub-body .content .work-slider::after {
+  bottom: 0;
+  width: 2.188rem;
+  height: 8.75rem;
+  background-image: url(../images/svg/center_line-buttom.svg);
 }
 #page-work .div-cont .sub-body .content .work-slider .work-pagination {
   position: absolute;
+  right: 0.875rem;
+  z-index: 1;
 }
 #page-work .div-cont .sub-body .content .work-slider .work-pagination .swiper-pagination-bullet {
   width: 20px;

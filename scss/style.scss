@@ -528,24 +528,43 @@ page Work
     .sub-body {
       .content {
         .title-wrap{
-
+          margin: map-get($size, px_20) 0 map-get($size, px_50) 0;
+          text-align: center;
+          span {
+            display: block;
+            font-size: map-get($font_size_pc, body_lg);
+            margin-top: map-get($size, px_8);
+          }
         }
         .work-slider {
+          position:relative;
+          padding: map-get($size, px_80) 0 map-get($size, px_50) 0;
           overflow:hidden;
-          .swiper-slide:nth-child(1) {
-            height: 400px;
-            background-color: royalblue;
+          &::before, &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            @include background;
           }
-          .swiper-slide:nth-child(2) {
-            height: 700px;
-            background-color: rosybrown;
+          &::before {
+            top: 0;
+            width: 2.813rem;
+            height: 21.25rem;
+            background-image: url(../images/svg/center_line-top.svg);
           }
-          .swiper-slide:nth-child(3) {
-            height: 400px;
-            background-color: rebeccapurple;
+          &::after {
+            bottom:0;
+            width: 2.188rem;
+            height: 8.75rem;
+            background-image: url(../images/svg/center_line-buttom.svg);
+          }
+          .swiper-slide {
           }
           .work-pagination {
             position: absolute;
+            right: 0.875rem;
+            z-index: 1;
             .swiper-pagination-bullet {
               width: 20px;
               height: 20px;

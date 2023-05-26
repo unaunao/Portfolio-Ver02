@@ -81,7 +81,9 @@ button,h2,h4{
 h1, button {
   line-height: 100%;
 }
-
+p {
+  line-height: 1.5;
+}
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1366px) {
   
