@@ -1503,7 +1503,6 @@ page Work
 }
 #page-work .div-cont .sub-body .content .work-slider .work-pagination {
   position: absolute;
-  right: 0.875rem;
   z-index: 1;
 }
 #page-work .div-cont .sub-body .content .work-slider .work-pagination .swiper-pagination-bullet {
