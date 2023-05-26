@@ -179,7 +179,8 @@ $('document').ready(function () {
     autoHeight: true,
     spaceBetween: 0,
     mousewheel: true,
-    touchRatio: 0,
+    effect: 'fade',
+    // touchRatio: 0,
     pagination: {
       el: '.work-pagination',
       clickable: true,

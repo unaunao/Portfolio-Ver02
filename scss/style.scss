@@ -539,7 +539,8 @@ page Work
         .work-slider {
           position:relative;
           padding: map-get($size, px_80) 0 map-get($size, px_50) 0;
-          overflow:hidden;
+          margin-bottom: 500px;
+          // overflow:hidden;
           &::before, &::after {
             content: '';
             position: absolute;
@@ -560,6 +561,35 @@ page Work
             background-image: url(../images/svg/center_line-buttom.svg);
           }
           .swiper-slide {
+            height: 200px !important;
+            .img-box {
+              height: 100%;
+            }
+            .text-box {
+              opacity: 0;
+              transition: 0.35s;
+              pointer-events: none;
+            }
+            &:nth-child(1) {
+              .img-box {
+                background-color: aqua;
+              }
+            }
+            &:nth-child(2) {
+              .img-box {
+                background-color: rebeccapurple;
+              }
+            }
+            &:nth-child(3) {
+              .img-box {
+                background-color: goldenrod;
+              }
+            }
+          }
+          .swiper-slide-active {
+            .text-box {
+              opacity: 1;
+            }
           }
           .work-pagination {
             position: absolute;
