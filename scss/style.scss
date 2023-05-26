@@ -565,11 +565,11 @@ page Work
             .img-box {
               height: 100%;
               @include background;
-              
               .text-box {
                 opacity: 0;
                 transition: 0.35s;
                 pointer-events: none;
+                touch-action: none;
               }
               &:nth-child(1) {
                 .img-box {
@@ -638,7 +638,6 @@ page Work
             }
           }
         }
-        
       }
     }    
   }

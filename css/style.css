@@ -1508,6 +1508,8 @@ page Work
   -webkit-transition: 0.35s;
   transition: 0.35s;
   pointer-events: none;
+  -ms-touch-action: none;
+      touch-action: none;
 }
 #page-work .div-cont .sub-body .content .work-slider .swiper-slide .img-box:nth-child(1) .img-box {
   background-image: url(../images/pc_work-responsive01.jpg);
