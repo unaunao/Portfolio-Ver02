@@ -1503,7 +1503,7 @@ page Work
   background-repeat: no-repeat;
   background-size: cover;
 }
-#page-work .div-cont .sub-body .content .work-slider .swiper-slide .img-box .text-box {
+#page-work .div-cont .sub-body .content .work-slider .swiper-slide .text-box {
   opacity: 0;
   -webkit-transition: 0.35s;
   transition: 0.35s;
@@ -1511,7 +1511,7 @@ page Work
   -ms-touch-action: none;
       touch-action: none;
 }
-#page-work .div-cont .sub-body .content .work-slider .swiper-slide .img-box:nth-child(1) .img-box {
+#page-work .div-cont .sub-body .content .work-slider .swiper-slide:nth-child(1) .img-box {
   background-image: url(../images/pc_work-responsive01.jpg);
 }
 #page-work .div-cont .sub-body .content .work-slider .swiper-slide:nth-child(2) .img-box {
