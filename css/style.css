@@ -1477,7 +1477,7 @@ page Work
 }
 #page-work .div-cont .sub-body .content .work-slider {
   position: relative;
-  padding: 5rem 0 3.125rem 0;
+  padding: 4.5rem 0 3.125rem 0;
   margin-bottom: 500px;
 }
 #page-work .div-cont .sub-body .content .work-slider::before, #page-work .div-cont .sub-body .content .work-slider::after {
@@ -1491,30 +1491,26 @@ page Work
 }
 #page-work .div-cont .sub-body .content .work-slider::before {
   top: 0;
-  width: 2.813rem;
-  height: 21.25rem;
-  background-image: url(../images/svg/center_line-top.svg);
-}
-#page-work .div-cont .sub-body .content .work-slider::after {
-  bottom: 0;
   width: 2.188rem;
-  height: 8.75rem;
-  background-image: url(../images/svg/center_line-buttom.svg);
+  height: 22.188rem;
+  background-image: url(../images/svg/center_line.svg);
 }
 #page-work .div-cont .sub-body .content .work-slider .swiper-slide {
-  height: 200px !important;
+  height: 240px !important;
 }
 #page-work .div-cont .sub-body .content .work-slider .swiper-slide .img-box {
   height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-#page-work .div-cont .sub-body .content .work-slider .swiper-slide .text-box {
+#page-work .div-cont .sub-body .content .work-slider .swiper-slide .img-box .text-box {
   opacity: 0;
   -webkit-transition: 0.35s;
   transition: 0.35s;
   pointer-events: none;
 }
-#page-work .div-cont .sub-body .content .work-slider .swiper-slide:nth-child(1) .img-box {
-  background-color: aqua;
+#page-work .div-cont .sub-body .content .work-slider .swiper-slide .img-box:nth-child(1) .img-box {
+  background-image: url(../images/pc_work-responsive01.jpg);
 }
 #page-work .div-cont .sub-body .content .work-slider .swiper-slide:nth-child(2) .img-box {
   background-color: rebeccapurple;

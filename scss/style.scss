@@ -538,7 +538,7 @@ page Work
         }
         .work-slider {
           position:relative;
-          padding: map-get($size, px_80) 0 map-get($size, px_50) 0;
+          padding: map-get($size, px_72) 0 map-get($size, px_50) 0;
           margin-bottom: 500px;
           // overflow:hidden;
           &::before, &::after {
@@ -550,29 +550,31 @@ page Work
           }
           &::before {
             top: 0;
-            width: 2.813rem;
-            height: 21.25rem;
-            background-image: url(../images/svg/center_line-top.svg);
-          }
-          &::after {
-            bottom:0;
             width: 2.188rem;
-            height: 8.75rem;
-            background-image: url(../images/svg/center_line-buttom.svg);
+            height: 22.188rem;
+            background-image: url(../images/svg/center_line.svg);
           }
+          // &::after {
+          //   bottom:0;
+          //   width: 2.188rem;
+          //   height: 8.75rem;
+          //   background-image: url(../images/svg/center_line-buttom.svg);
+          // }
           .swiper-slide {
-            height: 200px !important;
+            height: 240px !important;
             .img-box {
               height: 100%;
-            }
-            .text-box {
-              opacity: 0;
-              transition: 0.35s;
-              pointer-events: none;
-            }
-            &:nth-child(1) {
-              .img-box {
-                background-color: aqua;
+              @include background;
+              
+              .text-box {
+                opacity: 0;
+                transition: 0.35s;
+                pointer-events: none;
+              }
+              &:nth-child(1) {
+                .img-box {
+                  background-image: url(../images/pc_work-responsive01.jpg);
+                }
               }
             }
             &:nth-child(2) {
