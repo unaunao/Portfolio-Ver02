@@ -778,7 +778,14 @@ page Design
       }
     }
   }
-}  
+}
+@media (min-width:768px) {
+  #page-design {
+    .sub-tit {
+      background-image: url(../images/pc_sub_top_visual03.jpg);
+    }
+  }
+}        
 /* ===========================
 page Contact 
 ==============================*/

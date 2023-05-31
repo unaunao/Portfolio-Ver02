@@ -1694,6 +1694,11 @@ page Design
 #page-design .sub-tit {
   background-image: url(../images/sub_top_visual03.jpg);
 }
+@media (min-width: 768px) {
+  #page-design .sub-tit {
+    background-image: url(../images/pc_sub_top_visual03.jpg);
+  }
+}
 /* ===========================
 page Contact 
 ==============================*/
