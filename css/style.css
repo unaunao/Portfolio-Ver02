@@ -1522,6 +1522,7 @@ page Work
 }
 #page-work .div-cont .sub-body .content .work-slider .swiper-slide-active .text-box {
   opacity: 1;
+  margin-top: 80px;
 }
 #page-work .div-cont .sub-body .content .work-slider .work-pagination {
   position: absolute;
@@ -1554,6 +1555,65 @@ page Work
   }
   #page-work .div-cont .sub-body nav .tab-list .tab:nth-child(3) span::before {
     background-image: url(../images/svg/tab_mobile.svg);
+  }
+}
+@media (min-width: 1200px) {
+  #page-work .div-cont .sub-body .content .work-slider {
+    padding: 0;
+    margin-bottom: 0;
+  }
+  #page-work .div-cont .sub-body .content .work-slider::before {
+    height: 47.938rem;
+    background-image: url(../images/svg/pc_center_line.svg);
+  }
+  #page-work .div-cont .sub-body .content .work-slider .swiper-slide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    height: 767px !important;
+  }
+  #page-work .div-cont .sub-body .content .work-slider .swiper-slide .img-box {
+    height: 28.125rem;
+  }
+  #page-work .div-cont .sub-body .content .work-slider .swiper-slide .text-box {
+    opacity: 0;
+    -webkit-transition: 0.35s;
+    transition: 0.35s;
+    pointer-events: auto;
+    -ms-touch-action: auto;
+        touch-action: auto;
+  }
+  #page-work .div-cont .sub-body .content .work-slider .swiper-slide:nth-child(1) .img-box {
+    background-image: url(../images/pc_work-responsive01.jpg);
+  }
+  #page-work .div-cont .sub-body .content .work-slider .swiper-slide:nth-child(2) .img-box {
+    background-color: rebeccapurple;
+  }
+  #page-work .div-cont .sub-body .content .work-slider .swiper-slide:nth-child(3) .img-box {
+    background-color: goldenrod;
+  }
+  #page-work .div-cont .sub-body .content .work-slider .swiper-slide-active .text-box {
+    opacity: 1;
+    margin-top: 80px;
+  }
+  #page-work .div-cont .sub-body .content .work-slider .work-pagination {
+    position: absolute;
+    z-index: 1;
+  }
+  #page-work .div-cont .sub-body .content .work-slider .work-pagination .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  #page-work .div-cont .sub-body .content .work-slider .work-pagination .swiper-pagination-bullet-active {
+    color: #fff;
+    background: #7900EC;
   }
 }
 /* ===========================

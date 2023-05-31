@@ -591,6 +591,7 @@ page Work
           .swiper-slide-active {
             .text-box {
               opacity: 1;
+              margin-top:80px;
             }
           }
           .work-pagination {
@@ -642,7 +643,79 @@ page Work
     }    
   }
 }
-
+// 필요없는 부분은 삭제 하면서 정리중
+@media (min-width:1200px) {
+  #page-work {
+    .div-cont {
+      .sub-body {
+        .content {
+          .work-slider {
+            padding: 0;
+            margin-bottom: 0;
+            &::before {
+              height: 47.938rem;
+              background-image: url(../images/svg/pc_center_line.svg);
+            }
+            .swiper-slide {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              align-content: center;
+              height: 767px !important;
+              .img-box {
+                height: 28.125rem;
+              }
+              .text-box {
+                opacity: 0;
+                transition: 0.35s;
+                pointer-events:auto;
+                touch-action: auto;
+              }
+              &:nth-child(1) {
+                .img-box {
+                  background-image: url(../images/pc_work-responsive01.jpg);
+                }
+              }
+              &:nth-child(2) {
+                .img-box {
+                  background-color: rebeccapurple;
+                }
+              }
+              &:nth-child(3) {
+                .img-box {
+                  background-color: goldenrod;
+                }
+              }
+            }
+            .swiper-slide-active {
+              .text-box {
+                opacity: 1;
+                margin-top:80px;
+              }
+            }
+            .work-pagination {
+              position: absolute;
+              z-index: 1;
+              .swiper-pagination-bullet {
+                width: 20px;
+                height: 20px;
+                text-align: center;
+                line-height: 20px;
+                font-size: 12px;
+                color:#000;
+                opacity: 1;
+                background: rgba(0,0,0,0.2);
+              }
+              .swiper-pagination-bullet-active {
+                color:#fff;
+                background: map-get($color, primary-point);
+              }
+            }
+          }
+        }
+      }
+    }
+  }  
+}
 /* ===========================
 page Design 
 ==============================*/
