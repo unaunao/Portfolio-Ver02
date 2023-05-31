@@ -45,3 +45,21 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+@mixin normal_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: map-get($font_size_mobile, btn_md);
+  color: #fff;
+  width: 100%;
+  border-radius: map-get($size, px_50);
+  padding:0.75rem 0;
+  margin-top: map-get($size, px_50);
+  background-color: map-get($color, primary-point);
+}
+@mixin pc_normal_button {
+  width: 13.75rem;
+  padding:1rem 0;
+  margin-top: map-get($size, px_50);
+  background-color: map-get($color, primary-point);
+}
