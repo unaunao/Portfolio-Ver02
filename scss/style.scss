@@ -768,6 +768,17 @@ page Work
 /* ===========================
 page Design 
 ==============================*/
+#page-design {
+  .sub-tit {
+    background-image: url(../images/sub_top_visual03.jpg);
+  }
+  .div-cont {
+    .sub-body {
+      .content {
+      }
+    }
+  }
+}  
 /* ===========================
 page Contact 
 ==============================*/

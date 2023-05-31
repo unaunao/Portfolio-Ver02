@@ -290,10 +290,6 @@ body {
   color: map-get($color, text);
   .fullpage{
     section{
-      #page-design {
-        height: 3000px;
-        background-color: olive;
-      }
       #page-contact {
         height: 4000px;
         background-color: yellow;
@@ -601,7 +597,7 @@ sub 페이지 공통요소
   }
 
 /* ===========================
-page About 
+page 공통 
 ==============================*/
     .sub-tit {
       margin: map-get($size, px_10) map-get($size, px_8) map-get($size, px_8);

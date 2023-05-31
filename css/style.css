@@ -503,10 +503,6 @@ body {
 .container {
   color: #1F1F1F;
 }
-.container .fullpage section #page-design {
-  height: 3000px;
-  background-color: olive;
-}
 .container .fullpage section #page-contact {
   height: 4000px;
   background-color: yellow;
@@ -849,7 +845,7 @@ sub 페이지 공통요소
     fill: #1F1F1F;
   }
   /* ===========================
-  page About 
+  page 공통 
   ==============================*/
   .sub-tit {
     margin: 0.625rem 0.5rem 0.5rem;
@@ -1695,6 +1691,9 @@ page Work
 /* ===========================
 page Design 
 ==============================*/
+#page-design .sub-tit {
+  background-image: url(../images/sub_top_visual03.jpg);
+}
 /* ===========================
 page Contact 
 ==============================*/
