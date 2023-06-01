@@ -880,11 +880,11 @@ page Design
   }
   .desgin-modal-inner {
     width: 100%;
-    height: 600px;
+    height: 60%;
     border-radius: map-get($size, px_10);
     overflow-y: auto;
     img {
-      width: 100vw;
+      width: 100%;
     }
   }
 }
