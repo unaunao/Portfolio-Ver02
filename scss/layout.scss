@@ -287,6 +287,7 @@ body {
 
 /* Main Contents Layout */
 .container{
+  position: relative;
   color: map-get($color, text);
   .fullpage{
     section{
@@ -633,3 +634,6 @@ page 공통
       }
     }
 } // min-width:1200px
+
+
+/* 연습 */

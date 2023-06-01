@@ -775,7 +775,116 @@ page Design
   .div-cont {
     .sub-body {
       .content {
+        .design-list {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap:map-get($size, px_8);
+          .design-item {
+            position: relative;
+            filter: grayscale(80%);
+            transition: 0.3s ease;
+            overflow: hidden;
+            &:hover {
+              border:0.063rem solid map-get($color, primary-point);
+              border-radius: map-get($size, px_20);
+              filter: grayscale(0);
+              a {
+                transform: scale(110%);
+              }
+            }
+            &::before {
+              position: absolute;
+              right:  map-get($size, px_8);
+              top:  map-get($size, px_8);
+              content: '';
+              width: map-get($size, px_16);
+              height: map-get($size, px_16);
+              @include background;
+              background-image: url(../images/svg/more.svg);
+            }
+            &::after{
+              display: block;
+              content: '';
+              padding-bottom: 100%;
+            }
+            .design-item-link {
+              display: block;
+              width: 100%;
+              height: 100%;
+              @include background;
+              transition: 0.5s;
+            }
+            &:nth-child(1) .design-item-link {
+              background-image: url(../images/desgin-item01.jpg);
+            }
+            &:nth-child(2) .design-item-link {
+              background-image: url(../images/desgin-item02.jpg);
+            }
+            &:nth-child(3) .design-item-link {
+              background-image: url(../images/desgin-item03.jpg);
+            }
+            &:nth-child(4) .design-item-link {
+              background-image: url(../images/desgin-item04.jpg);
+            }
+            &:nth-child(5) .design-item-link {
+              background-image: url(../images/desgin-item05.jpg);
+            }
+            &:nth-child(6) .design-item-link {
+              background-image: url(../images/desgin-item06.jpg);
+            }
+            &:nth-child(7) .design-item-link {
+              background-image: url(../images/desgin-item07.jpg);
+            }
+            &:nth-child(8) .design-item-link {
+              background-image: url(../images/desgin-item08.jpg);
+            }
+            &:nth-child(9) .design-item-link {
+              background-image: url(../images/desgin-item09.jpg);
+            }
+          }
+        }
       }
+    }
+  }
+}
+.desgin-modal{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 2rem;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 999999;
+  overflow-y: hidden;
+  &.active {
+    display: flex;
+  }
+  .desgin-modal-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: map-get($size, px_40);
+    height: map-get($size, px_40);
+    border-radius: 50%;
+    background-color: #e1e1e1;
+    cursor: pointer;
+    svg {
+      width: map-get($size, px_24);
+      height: map-get($size, px_24);
+    }
+  }
+  .desgin-modal-inner {
+    width: 100%;
+    height: 600px;
+    border-radius: map-get($size, px_10);
+    overflow-y: auto;
+    img {
+      width: 100vw;
     }
   }
 }
@@ -783,6 +892,24 @@ page Design
   #page-design {
     .sub-tit {
       background-image: url(../images/pc_sub_top_visual03.jpg);
+    }
+    .div-cont {
+      .sub-body {
+        .content {
+          margin:map-get($size, px_80) 0 map-get($size, px_10);
+          .design-list {
+            grid-template-columns: 1fr 1fr 1fr;
+            .design-item {
+              &::before {
+                right:  map-get($size, px_16);
+                top:  map-get($size, px_16);
+                width: map-get($size, px_24);
+                height: map-get($size, px_24);
+              }
+            }
+          }
+        }
+      }
     }
   }
 }        
