@@ -592,6 +592,21 @@ footer .footer .f-info {
   display: none;
 }
 
+/* Modal */
+.modal .desgin-modal-inner::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.modal .desgin-modal-inner::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 4px;
+}
+.modal .desgin-modal-inner::-webkit-scrollbar-thumb {
+  background-color: #383838;
+  border-radius: 4px;
+  background-clip: padding-box;
+  border: 1px solid transparent;
+}
+
 /* ===========================
 sub 페이지 공통요소
 ==============================*/
@@ -1784,20 +1799,16 @@ page Design
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 0.5rem;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  padding: 0 2rem;
+  height: 100vh;
+  padding: 0 1.125rem;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 999999;
-  overflow-y: hidden;
-}
-.desgin-modal.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  overflow: hidden;
 }
 .desgin-modal .desgin-modal-close {
   display: -webkit-box;
@@ -1821,12 +1832,23 @@ page Design
 }
 .desgin-modal .desgin-modal-inner {
   width: 100%;
-  height: 60%;
+  height: 70%;
   border-radius: 0.625rem;
   overflow-y: auto;
 }
 .desgin-modal .desgin-modal-inner img {
   width: 100%;
+  border-radius: 0.625rem;
+}
+
+.container.modal {
+  height: 100vh;
+  overflow: hidden;
+}
+.container.modal .desgin-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (min-width: 768px) {

@@ -190,6 +190,25 @@ $('document').ready(function () {
     },
   });//Swiper(rps_web_slider)
 
+  /* Modal design */
+  const modalBody = document.getElementsByClassName('container')[0];
+  const modalClose = document.getElementsByClassName('desgin-modal-close')[0];
+  let design = document.getElementsByClassName('design-item');
+  let design01 = design[0]
+  let design02 = design[1]
+  let design03 = design[2]
+  let design04 = design[3]
+  let design05 = design[4]
+  let design06 = design[5]
+  let design07 = design[6]
+  let design08 = design[7]
+  let design09 = design[8]
+  modalClose.addEventListener('click',()=>{
+    modalBody.classList.remove('modal');
+  })
+  design01.addEventListener('click',()=>{
+    modalBody.classList.add('modal');
+  })
 
   }//includeHTML
 
@@ -212,4 +231,6 @@ $('document').ready(function () {
   includeHTML();
   scrollEvent();
 });
+
+/* Modal */
 
