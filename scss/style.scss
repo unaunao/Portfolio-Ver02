@@ -943,4 +943,70 @@ page Design
 /* ===========================
 page Contact 
 ==============================*/
+#page-contact {
+  height: 80vh;
+  @include background;
+  background-image: url(../images/bg_pc_contact.jpg);
+  background-position: center;
+  .sub-tit {
+    margin-top: 0;
+    padding-top: 4rem;
+  }
+  .btn-box {
+    display: grid;
+    gap:map-get($size, px_8);
+    padding: 0 map-get($size, px_10);
+    li{
+      display: block;
+      @include normal_button;
+      margin:0;
+      a {
+        span {
+          font-size: map-get($font_size_mobile, btn_md);
+          line-height:map-get($size, px_24);
+          i {
+            display: block;
+            width: map-get($size, px_24);
+            height: map-get($size, px_24);
+            @include background;
+          }
+          &:first-child {
+            display: flex;
+            gap:map-get($size, px_20);
+          }
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+      &:nth-child(1) {
+        span {
+          i {
+            background-image: url(../images/svg/dark-mail.svg);
+          }
+        }
+      }
+      &:nth-child(2) {
+        span {
+          i {
+            background-image: url(../images/svg/dark-github.svg);
+          }
+        }
+      }
+      &:nth-child(3) {
+        span {
+          i {
+            background-image: url(../images/svg/dark-call.svg);
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width:1200px){
+  #page-contact {
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
 
+  }
+}

@@ -371,7 +371,7 @@ footer {
       width: map-get($size, px_8);
     }
     &::-webkit-scrollbar-track {
-      background-color: #fff;
+      background-color: map-get($color, dark-text);
       border-radius: 4px;
     }
     &::-webkit-scrollbar-thumb {

@@ -593,7 +593,7 @@ footer .footer .f-info {
   width: 0.5rem;
 }
 .modal .inner-img::-webkit-scrollbar-track {
-  background-color: #fff;
+  background-color: #E3E3E3;
   border-radius: 4px;
 }
 .modal .inner-img::-webkit-scrollbar-thumb {
@@ -1886,3 +1886,68 @@ page Design
 /* ===========================
 page Contact 
 ==============================*/
+#page-contact {
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/bg_pc_contact.jpg);
+  background-position: center;
+}
+#page-contact .sub-tit {
+  margin-top: 0;
+  padding-top: 4rem;
+}
+#page-contact .btn-box {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0 0.625rem;
+}
+#page-contact .btn-box li {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  color: #fff;
+  width: 100%;
+  border-radius: 3.125rem;
+  padding: 0.75rem 0;
+  margin-top: 3.125rem;
+  background-color: #7900EC;
+  margin: 0;
+}
+#page-contact .btn-box li a span {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+#page-contact .btn-box li a span i {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#page-contact .btn-box li a span:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.25rem;
+}
+#page-contact .btn-box li a span:last-child {
+  display: none;
+}
+#page-contact .btn-box li:nth-child(1) span i {
+  background-image: url(../images/svg/dark-mail.svg);
+}
+#page-contact .btn-box li:nth-child(2) span i {
+  background-image: url(../images/svg/dark-github.svg);
+}
+#page-contact .btn-box li:nth-child(3) span i {
+  background-image: url(../images/svg/dark-call.svg);
+}
