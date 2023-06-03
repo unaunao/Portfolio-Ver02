@@ -33,7 +33,7 @@ $('document').ready(function () {
     autoHeight: true, //enable auto height
     spaceBetween: 0,
     loop: true,
-    touchRatio: 0.2,
+    touchRatio: 0.1,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -194,6 +194,7 @@ $('document').ready(function () {
   const modalBody = document.getElementsByClassName('container')[0];
   const modalClose = document.getElementsByClassName('desgin-modal-close')[0];
   let design = document.getElementsByClassName('design-item');
+  const modalImg = document.getElementsByClassName('desgin-modal-img')[0];
   let design01 = design[0]
   let design02 = design[1]
   let design03 = design[2]
@@ -203,11 +204,41 @@ $('document').ready(function () {
   let design07 = design[6]
   let design08 = design[7]
   let design09 = design[8]
+  for ( var i= 0; i < design.length; i++){
+    let designItems = design[i];
+    designItems.addEventListener('click',()=>{
+      modalBody.classList.add('modal');
+    })
+  }
   modalClose.addEventListener('click',()=>{
     modalBody.classList.remove('modal');
   })
   design01.addEventListener('click',()=>{
-    modalBody.classList.add('modal');
+    modalImg.src = "./images/design_detail01.jpg";
+  })
+  design02.addEventListener('click',()=>{
+    modalImg.src = "./images/design_detail02.jpg";
+  })
+  design03.addEventListener('click',()=>{
+    modalImg.src = "./images/design_detail03.jpg";
+  })
+  design04.addEventListener('click',()=>{
+    modalImg.src = "./images/design_detail04.jpg";
+  })
+  design05.addEventListener('click',()=>{
+    modalImg.src = "./images/design_detail05.jpg";
+  })
+  design06.addEventListener('click',()=>{
+    modalImg.src = "./images/design_detail06.jpg";
+  })
+  design07.addEventListener('click',()=>{
+    modalImg.src = "./images/design_detail07.jpg";
+  })
+  design08.addEventListener('click',()=>{
+    modalImg.src = "./images/design_detail08.jpg";
+  })
+  design09.addEventListener('click',()=>{
+    modalImg.src = "./images/design_detail09.jpg";
   })
 
   }//includeHTML

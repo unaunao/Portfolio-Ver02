@@ -289,14 +289,6 @@ body {
 .container{
   position: relative;
   color: map-get($color, text);
-  .fullpage{
-    section{
-      #page-contact {
-        height: 4000px;
-        background-color: yellow;
-      }
-    }  
-  }
 }//Main Contents Layout
 
 /* Bottom Navigation */
@@ -374,10 +366,7 @@ footer {
 
 /* Modal */
 .modal {
-  .desgin-modal-inner{
-    // width: 100%;
-    // height: 100%;
-    // overflow: auto;
+  .inner-img{
     &::-webkit-scrollbar {
       width: map-get($size, px_8);
     }

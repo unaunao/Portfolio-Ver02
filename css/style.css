@@ -504,10 +504,6 @@ body {
   position: relative;
   color: #1F1F1F;
 }
-.container .fullpage section #page-contact {
-  height: 4000px;
-  background-color: yellow;
-}
 
 /* Bottom Navigation */
 .div-cont {
@@ -593,14 +589,14 @@ footer .footer .f-info {
 }
 
 /* Modal */
-.modal .desgin-modal-inner::-webkit-scrollbar {
+.modal .inner-img::-webkit-scrollbar {
   width: 0.5rem;
 }
-.modal .desgin-modal-inner::-webkit-scrollbar-track {
+.modal .inner-img::-webkit-scrollbar-track {
   background-color: #fff;
   border-radius: 4px;
 }
-.modal .desgin-modal-inner::-webkit-scrollbar-thumb {
+.modal .inner-img::-webkit-scrollbar-thumb {
   background-color: #383838;
   border-radius: 4px;
   background-clip: padding-box;
@@ -1833,10 +1829,15 @@ page Design
 .desgin-modal .desgin-modal-inner {
   width: 100%;
   height: 70%;
-  border-radius: 0.625rem;
-  overflow-y: auto;
+  border-radius: 0.625rem 0 0 0.625rem;
+  overflow: hidden;
 }
-.desgin-modal .desgin-modal-inner img {
+.desgin-modal .desgin-modal-inner .inner-img {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+.desgin-modal .desgin-modal-inner .inner-img img {
   width: 100%;
   border-radius: 0.625rem;
 }
@@ -1866,6 +1867,20 @@ page Design
     top: 1rem;
     width: 1.5rem;
     height: 1.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .desgin-modal {
+    gap: 1.75rem;
+    padding: 0;
+  }
+  .desgin-modal .desgin-modal-inner {
+    width: 72rem;
+    height: 80%;
+  }
+  .desgin-modal .desgin-modal-inner .inner-img img {
+    max-width: 100%;
+    border-radius: 0.625rem;
   }
 }
 /* ===========================
