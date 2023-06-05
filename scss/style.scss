@@ -952,6 +952,16 @@ page Contact
     margin-top: 0;
     padding-top: 4rem;
   }
+  .tit-box {
+    padding: 8.375em 0 4.375em 2em;
+    h1 {
+      text-transform: uppercase;
+    }
+    p {
+      font-size: map-get($font_size_mobile, body_lg);
+      margin-top: 0.5em;
+    }
+  }
   .btn-box {
     display: grid;
     gap:map-get($size, px_8);
@@ -961,6 +971,10 @@ page Contact
       @include normal_button;
       margin:0;
       a {
+        display: grid;
+        justify-content: center;
+        width: 100%;
+        padding: 0 map-get($size, px_32);
         span {
           font-size: map-get($font_size_mobile, btn_md);
           line-height:map-get($size, px_24);
@@ -1003,10 +1017,52 @@ page Contact
     }
   }
 }
-@media (min-width:1200px){
+@media (min-width:768px){
   #page-contact {
-    // display: grid;
-    // grid-template-columns: 1fr 1fr;
-
+    .tit-box {
+    }
+    .btn-box {
+      li{
+        width: 33.125rem;
+        height: map-get($size, px_60);
+        a {
+          grid-template-columns: 1fr 3fr;
+          gap:map-get($size, px_64);
+          justify-content:center;
+          span {
+            &:first-child {
+              font-size: map-get($font_size_pc, btn_md);
+              width: 6rem;
+            }
+            &:last-child {
+              font-size: map-get($font_size_pc, btn_md);
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width:1200px){
+    #page-contact {
+    .sub-con {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .btn-box {
+        li{
+          a {
+            span {
+              &:first-child {
+              }
+              &:last-child {
+                font-size: map-get($font_size_pc, btn_lg);
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

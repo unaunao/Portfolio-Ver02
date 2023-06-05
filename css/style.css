@@ -1897,6 +1897,16 @@ page Contact
   margin-top: 0;
   padding-top: 4rem;
 }
+#page-contact .tit-box {
+  padding: 8.375em 0 4.375em 2em;
+}
+#page-contact .tit-box h1 {
+  text-transform: uppercase;
+}
+#page-contact .tit-box p {
+  font-size: 1.125rem;
+  margin-top: 0.5em;
+}
 #page-contact .btn-box {
   display: grid;
   gap: 0.5rem;
@@ -1921,6 +1931,14 @@ page Contact
   margin-top: 3.125rem;
   background-color: #7900EC;
   margin: 0;
+}
+#page-contact .btn-box li a {
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 0 2rem;
 }
 #page-contact .btn-box li a span {
   font-size: 1rem;
@@ -1950,4 +1968,36 @@ page Contact
 }
 #page-contact .btn-box li:nth-child(3) span i {
   background-image: url(../images/svg/dark-call.svg);
+}
+
+@media (min-width: 768px) {
+  #page-contact .btn-box li {
+    width: 33.125rem;
+    height: 3.75rem;
+  }
+  #page-contact .btn-box li a {
+    grid-template-columns: 1fr 3fr;
+    gap: 4rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #page-contact .btn-box li a span:first-child {
+    font-size: 1.125rem;
+    width: 6rem;
+  }
+  #page-contact .btn-box li a span:last-child {
+    font-size: 1.125rem;
+    display: inline-block;
+  }
+}
+@media (min-width: 1200px) {
+  #page-contact .sub-con {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #page-contact .sub-con .btn-box li a span:last-child {
+    font-size: 1.5rem;
+    display: inline-block;
+  }
 }
