@@ -963,7 +963,8 @@ page Contact
     }
   }
   .btn-box {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap:map-get($size, px_8);
     padding: 0 map-get($size, px_10);
     li{
