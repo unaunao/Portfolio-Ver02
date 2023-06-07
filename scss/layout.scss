@@ -648,4 +648,8 @@ page 공통
 } // min-width:1200px
 
 
-/* 연습 */
+/* Dark Mode */
+.container.dark {
+  color:map-get($color, dark-text);
+  background-color: map-get($color, dark-bg);
+}

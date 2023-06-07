@@ -1037,6 +1037,9 @@ page Contact
   #page-contact {
     .div-cont {
       .tit-box {
+        p {
+          font-size: map-get($font_size_pc, h4_ko);
+        }
       }
       .btn-box {
         li{
@@ -1075,9 +1078,6 @@ page Contact
         height: 100%;
         .tit-box {
           padding: 8.375em 0 4.375em 0;
-          p {
-            font-size: map-get($font_size_pc, h4_ko);
-          }
         }
         .btn-box {
           justify-content: center;

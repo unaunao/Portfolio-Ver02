@@ -71,10 +71,22 @@ $('document').ready(function () {
   function addTag() {
     const modeTag = document.getElementsByClassName('swiper-pagination')[0];
     const htmlBtn = document.createElement('button');
+    htmlBtn.classList.add('mode_btn');
     modeTag.appendChild(htmlBtn);
   }
-
   addTag();
+
+  /* Dark Mode */
+  const container =  document.getElementsByClassName('container')[0];
+  let modeBtn = document.getElementsByClassName('mode_btn')[0];
+  modeBtn.addEventListener ('click', () => {
+    if (container.classList.contains('dark')) {
+      container.classList.remove('dark');
+    } else {
+      container.classList.add('dark');
+    }
+  });
+
 
   /* Navigation class on 넣어 열고 닫기*/
   let navBtn = document.getElementsByClassName('btn-m-gnb')[0];
@@ -191,7 +203,7 @@ $('document').ready(function () {
   });//Swiper(rps_web_slider)
 
   /* Modal design */
-  const modalBody = document.getElementsByClassName('container')[0];
+  // const modalBody = document.getElementsByClassName('container')[0];
   const modalClose = document.getElementsByClassName('desgin-modal-close')[0];
   let design = document.getElementsByClassName('design-item');
   const modalImg = document.getElementsByClassName('desgin-modal-img')[0];
@@ -207,11 +219,11 @@ $('document').ready(function () {
   for ( var i= 0; i < design.length; i++){
     let designItems = design[i];
     designItems.addEventListener('click',()=>{
-      modalBody.classList.add('modal');
+      container.classList.add('modal');
     })
   }
   modalClose.addEventListener('click',()=>{
-    modalBody.classList.remove('modal');
+    container.classList.remove('modal');
   })
   design01.addEventListener('click',()=>{
     modalImg.src = "./images/design_detail01.jpg";
@@ -240,6 +252,7 @@ $('document').ready(function () {
   design09.addEventListener('click',()=>{
     modalImg.src = "./images/design_detail09.jpg";
   })
+
 
   }//includeHTML
 
