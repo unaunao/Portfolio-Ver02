@@ -944,100 +944,117 @@ page Design
 page Contact 
 ==============================*/
 #page-contact {
-  height: 80vh;
+  height: 100vh;
   @include background;
   background-image: url(../images/bg_pc_contact.jpg);
   background-position: center;
-  .sub-tit {
-    margin-top: 0;
-    padding-top: 4rem;
-  }
-  .tit-box {
-    padding: 8.375em 0 4.375em 2em;
-    h1 {
-      text-transform: uppercase;
-    }
-    p {
-      font-size: map-get($font_size_mobile, body_lg);
-      margin-top: 0.5em;
-    }
-  }
-  .btn-box {
+  .div-cont {
     display: flex;
     flex-direction: column;
-    gap:map-get($size, px_8);
-    padding: 0 map-get($size, px_10);
-    li{
-      display: block;
-      @include normal_button;
-      margin:0;
-      a {
-        display: grid;
-        justify-content: center;
-        width: 100%;
-        padding: 0 map-get($size, px_32);
-        span {
-          font-size: map-get($font_size_mobile, btn_md);
-          line-height:map-get($size, px_24);
-          i {
-            display: block;
-            width: map-get($size, px_24);
-            height: map-get($size, px_24);
-            @include background;
-          }
-          &:first-child {
-            display: flex;
-            gap:map-get($size, px_20);
-          }
-          &:last-child {
-            display: none;
+    justify-content: space-between;
+    height: 100%;
+    .sub-tit {
+      margin-top: 0;
+      padding-top: 4rem;
+    }
+    .tit-box {
+      padding: 8.375em 0 4.375em 2em;
+      h1 {
+        text-transform: uppercase;
+      }
+      p {
+        font-size: map-get($font_size_mobile, body_lg);
+        margin-top: 0.5em;
+      }
+    }
+    .btn-box {
+      display: flex;
+      flex-direction: column;
+      gap:map-get($size, px_8);
+      padding: 0 map-get($size, px_10);
+      li{
+        display: block;
+        @include normal_button;
+        margin:0;
+        a {
+          display: grid;
+          justify-content: center;
+          width: 100%;
+          padding: 0 map-get($size, px_32);
+          span {
+            font-size: map-get($font_size_mobile, btn_md);
+            line-height:map-get($size, px_24);
+            i {
+              display: block;
+              width: map-get($size, px_24);
+              height: map-get($size, px_24);
+              @include background;
+            }
+            &:first-child {
+              display: flex;
+              gap:map-get($size, px_20);
+            }
+            &:last-child {
+              display: none;
+            }
           }
         }
-      }
-      &:nth-child(1) {
-        span {
-          i {
-            background-image: url(../images/svg/dark-mail.svg);
+        &:nth-child(1) {
+          span {
+            i {
+              background-image: url(../images/svg/dark-mail.svg);
+            }
           }
         }
-      }
-      &:nth-child(2) {
-        span {
-          i {
-            background-image: url(../images/svg/dark-github.svg);
+        &:nth-child(2) {
+          span {
+            i {
+              background-image: url(../images/svg/dark-github.svg);
+            }
           }
         }
-      }
-      &:nth-child(3) {
-        span {
-          i {
-            background-image: url(../images/svg/dark-call.svg);
+        &:nth-child(3) {
+          span {
+            i {
+              background-image: url(../images/svg/dark-call.svg);
+            }
           }
         }
       }
     }
   }
 }
+@media (max-height:667px){
+  #page-contact {
+    .div-cont {
+      .tit-box {
+        padding: 8.375em 0 2em 2em;
+      }
+    }
+  }
+}
 @media (min-width:768px){
   #page-contact {
-    .tit-box {
-    }
-    .btn-box {
-      li{
-        width: 33.125rem;
-        height: map-get($size, px_60);
-        a {
-          grid-template-columns: 1fr 3fr;
-          gap:map-get($size, px_64);
-          justify-content:center;
-          span {
-            &:first-child {
-              font-size: map-get($font_size_pc, btn_md);
-              width: 6rem;
-            }
-            &:last-child {
-              font-size: map-get($font_size_pc, btn_md);
-              display: inline-block;
+    .div-cont {
+      .tit-box {
+      }
+      .btn-box {
+        li{
+          width: 33.125rem;
+          height: map-get($size, px_60);
+          a {
+            grid-template-columns: 1fr 3fr;
+            gap:map-get($size, px_64);
+            justify-content:center;
+            span {
+              &:first-child {
+                font-size: map-get($font_size_pc, btn_md);
+                width: 6rem;
+              }
+              &:last-child {
+                font-size: map-get($font_size_pc, btn_md);
+                display: inline-block;
+              }
             }
           }
         }
@@ -1046,19 +1063,35 @@ page Contact
   }
 }
 @media (min-width:1200px){
-    #page-contact {
-    .sub-con {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      .btn-box {
-        li{
-          a {
-            span {
-              &:first-child {
-              }
-              &:last-child {
-                font-size: map-get($font_size_pc, btn_lg);
-                display: inline-block;
+  #page-contact {
+    display: flex;
+    align-items: end;
+    .sub-body {
+      height: 100%;
+      .sub-con {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        height: 100%;
+        .tit-box {
+          padding: 8.375em 0 4.375em 0;
+          p {
+            font-size: map-get($font_size_pc, h4_ko);
+          }
+        }
+        .btn-box {
+          justify-content: center;
+          align-items: end;
+          padding: 8em 0 0 0;
+          li{
+            a {
+              span {
+                &:first-child {
+                }
+                &:last-child {
+                  font-size: map-get($font_size_pc, btn_lg);
+                  display: inline-block;
+                }
               }
             }
           }

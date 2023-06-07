@@ -1887,27 +1887,40 @@ page Design
 page Contact 
 ==============================*/
 #page-contact {
-  height: 80vh;
+  height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../images/bg_pc_contact.jpg);
   background-position: center;
 }
-#page-contact .sub-tit {
+#page-contact .div-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+#page-contact .div-cont .sub-tit {
   margin-top: 0;
   padding-top: 4rem;
 }
-#page-contact .tit-box {
+#page-contact .div-cont .tit-box {
   padding: 8.375em 0 4.375em 2em;
 }
-#page-contact .tit-box h1 {
+#page-contact .div-cont .tit-box h1 {
   text-transform: uppercase;
 }
-#page-contact .tit-box p {
+#page-contact .div-cont .tit-box p {
   font-size: 1.125rem;
   margin-top: 0.5em;
 }
-#page-contact .btn-box {
+#page-contact .div-cont .btn-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1918,7 +1931,7 @@ page Contact
   gap: 0.5rem;
   padding: 0 0.625rem;
 }
-#page-contact .btn-box li {
+#page-contact .div-cont .btn-box li {
   display: block;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1938,7 +1951,7 @@ page Contact
   background-color: #7900EC;
   margin: 0;
 }
-#page-contact .btn-box li a {
+#page-contact .div-cont .btn-box li a {
   display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1946,63 +1959,98 @@ page Contact
   width: 100%;
   padding: 0 2rem;
 }
-#page-contact .btn-box li a span {
+#page-contact .div-cont .btn-box li a span {
   font-size: 1rem;
   line-height: 1.5rem;
 }
-#page-contact .btn-box li a span i {
+#page-contact .div-cont .btn-box li a span i {
   display: block;
   width: 1.5rem;
   height: 1.5rem;
   background-repeat: no-repeat;
   background-size: cover;
 }
-#page-contact .btn-box li a span:first-child {
+#page-contact .div-cont .btn-box li a span:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 1.25rem;
 }
-#page-contact .btn-box li a span:last-child {
+#page-contact .div-cont .btn-box li a span:last-child {
   display: none;
 }
-#page-contact .btn-box li:nth-child(1) span i {
+#page-contact .div-cont .btn-box li:nth-child(1) span i {
   background-image: url(../images/svg/dark-mail.svg);
 }
-#page-contact .btn-box li:nth-child(2) span i {
+#page-contact .div-cont .btn-box li:nth-child(2) span i {
   background-image: url(../images/svg/dark-github.svg);
 }
-#page-contact .btn-box li:nth-child(3) span i {
+#page-contact .div-cont .btn-box li:nth-child(3) span i {
   background-image: url(../images/svg/dark-call.svg);
 }
 
+@media (max-height: 667px) {
+  #page-contact .div-cont .tit-box {
+    padding: 8.375em 0 2em 2em;
+  }
+}
 @media (min-width: 768px) {
-  #page-contact .btn-box li {
+  #page-contact .div-cont .btn-box li {
     width: 33.125rem;
     height: 3.75rem;
   }
-  #page-contact .btn-box li a {
+  #page-contact .div-cont .btn-box li a {
     grid-template-columns: 1fr 3fr;
     gap: 4rem;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  #page-contact .btn-box li a span:first-child {
+  #page-contact .div-cont .btn-box li a span:first-child {
     font-size: 1.125rem;
     width: 6rem;
   }
-  #page-contact .btn-box li a span:last-child {
+  #page-contact .div-cont .btn-box li a span:last-child {
     font-size: 1.125rem;
     display: inline-block;
   }
 }
 @media (min-width: 1200px) {
-  #page-contact .sub-con {
+  #page-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+  }
+  #page-contact .sub-body {
+    height: 100%;
+  }
+  #page-contact .sub-body .sub-con {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
   }
-  #page-contact .sub-con .btn-box li a span:last-child {
+  #page-contact .sub-body .sub-con .tit-box {
+    padding: 8.375em 0 4.375em 0;
+  }
+  #page-contact .sub-body .sub-con .tit-box p {
+    font-size: 1.375rem;
+  }
+  #page-contact .sub-body .sub-con .btn-box {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    padding: 8em 0 0 0;
+  }
+  #page-contact .sub-body .sub-con .btn-box li a span:last-child {
     font-size: 1.5rem;
     display: inline-block;
   }
