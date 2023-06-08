@@ -77,6 +77,10 @@ svg, path {
   line-height: 0;
 }
 
+.scrollLock {
+  overflow: hidden;
+}
+
 /* font */
 /* color */
 /* spacing */
@@ -170,6 +174,12 @@ p {
   h4 {
     font-size: 1.5rem;
   }
+  .container.dark h2 {
+    font-weight: 400;
+  }
+  .container.dark h3 {
+    font-weight: 500;
+  }
 }
 /* ===========================
 모든 페이지 공통 요소
@@ -195,16 +205,17 @@ body {
   width: 100% !important;
 }
 .swiper-pages .swiper-pagination {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
   position: fixed;
-  -webkit-transform: rotate(90deg) translateX(-50%);
-          transform: rotate(90deg) translateX(-50%);
   padding-right: 2rem;
 }
 .swiper-pages .swiper-pagination .swiper-pagination-bullet {
   position: relative;
-  background: transparent;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
   margin-top: 0.625rem;
   width: 0.75rem;
   height: 0;
@@ -213,6 +224,7 @@ body {
 }
 .swiper-pages .swiper-pagination .swiper-pagination-bullet::after {
   font-size: 0.75rem;
+  font-weight: 500;
   color: #1F1F1F;
   position: absolute;
   top: 0;
@@ -237,12 +249,13 @@ body {
 }
 .swiper-pages .swiper-pagination .swiper-pagination-bullet-active {
   width: 2.5rem;
-  margin-left: 0 !important;
+  height: 0.625rem;
+  margin-left: -0.313rem !important;
+  background-color: transparent;
 }
 .swiper-pages .swiper-pagination .swiper-pagination-bullet-active::after {
   left: 0.625rem;
   font-size: 1.5rem;
-  font-weight: 500;
   text-decoration: underline;
   text-underline-position: under;
   line-height: 100%;
@@ -250,14 +263,11 @@ body {
 }
 .swiper-pages .swiper-pagination button {
   position: absolute;
-  bottom: -0.313rem;
-  left: 100%;
+  bottom: -6rem;
   width: 3rem;
   height: 3rem;
   border: 0.031rem solid #1F1F1F;
   border-radius: 50%;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
   background: url(../images/svg/dark_mode.svg) no-repeat;
   background-position: 50%;
   -webkit-transition: 0.35s;
@@ -271,14 +281,13 @@ body {
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
-  bottom: 44% !important;
-  left: 0 !important;
+  bottom: 48% !important;
+  left: 1.5rem !important;
   width: auto !important;
 }
 
-.swiper-button-next,
-.swiper-button-prev,
-.swiper-pagination {
+.swiper-pages .swiper-button-next,
+.swiper-pages .swiper-button-prev {
   display: none;
 }
 
@@ -603,6 +612,13 @@ footer .footer .f-info {
   border: 1px solid transparent;
 }
 
+.container.dark .modal .inner-img::-webkit-scrollbar-track {
+  background-color: #484848;
+}
+.container.dark .modal .inner-img::-webkit-scrollbar-thumb {
+  background-color: #E3E3E3;
+}
+
 /* ===========================
 sub 페이지 공통요소
 ==============================*/
@@ -772,13 +788,15 @@ sub 페이지 공통요소
     width: 100% !important;
   }
   .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
-    left: -2.875rem !important;
+    left: 1rem !important;
   }
 }
 @media (min-width: 1200px) {
   /* Body Swiper Silder Custom */
-  .swiper-pagination {
-    display: block;
+  .swiper-pages .swiper-pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   /* Content box */
   .div-cont {
@@ -892,8 +910,104 @@ sub 페이지 공통요소
 .container.dark {
   color: #E3E3E3;
   background-color: #1C1515;
+  /* Navigation bar */
+  /* Bottom Navigation */
+}
+.container.dark .swiper-pages .swiper-pagination .swiper-pagination-bullet::after {
+  font-weight: 400;
+  color: #E3E3E3;
+}
+.container.dark .swiper-pages .swiper-pagination button {
+  border: 0.031rem solid #E3E3E3;
+  background: url(../images/svg/dark-sunny.svg) no-repeat;
+  background-position: 50%;
+}
+.container.dark .swiper-pages .swiper-pagination button:hover {
+  background: url(../images/svg/dark-sunny_hover.svg) no-repeat;
+  background-position: 50%;
+  -webkit-box-shadow: inset 0 0 0.063rem #E3E3E3, inset 0 0 0.125rem #E3E3E3, inset 0 0 0.25rem #E3E3E3;
+          box-shadow: inset 0 0 0.063rem #E3E3E3, inset 0 0 0.125rem #E3E3E3, inset 0 0 0.25rem #E3E3E3;
+}
+.container.dark .nav {
+  background-color: transparent;
+}
+.container.dark .nav .inner .btn-m-gnb {
+  background: url(../images/svg/dark-menu.svg) no-repeat;
+}
+.container.dark .nav .inner h1 a {
+  text-shadow: none;
+}
+.container.dark .nav.nav-down {
+  background-color: #1C1515;
+}
+.container.dark .div-cont .nav_btn_wrap .nav_btn a {
+  background-color: rgba(52, 39, 61, 0.8);
+}
+.container.dark .div-cont .nav_btn_wrap .nav_btn a span {
+  font-weight: 400;
+}
+.container.dark .div-cont .nav_btn_wrap .nav_btn a .privious::before {
+  background: url(../images/svg/dark-arrow_r.svg) no-repeat;
+}
+.container.dark .div-cont .nav_btn_wrap .nav_btn a .next::after {
+  background: url(../images/svg/dark-arrow_l.svg) no-repeat;
+}
+.container.dark .div-cont .nav_btn_wrap .nav_btn a:hover {
+  background-color: #510A94;
+}
+.container.dark :is(header, footer) .sns li svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.container.dark :is(header, footer) .sns li svg path {
+  fill: #E3E3E3;
+}
+.container.dark footer {
+  border-top: 0.03rem solid #E3E3E3;
+}
+.container.dark footer .footer .f-logo {
+  text-shadow: none;
+}
+.container.dark .sub-body .sub-con nav .tab-container .tab-list {
+  background: rgba(52, 39, 61, 0.8);
+}
+.container.dark .sub-body .sub-con nav .tab-container .tab-list .tab {
+  font-weight: 400;
+  background: rgba(52, 39, 61, 0.8);
+}
+.container.dark .sub-body .sub-con nav .tab-container .tab-list .tab::before {
+  background: #510A94;
+}
+.container.dark .sub-body .sub-con nav .tab-container .tab-list .tab:hover::before {
+  background: #470c80;
+}
+.container.dark .sub-body .sub-con .content {
+  padding: 3.125rem 0.625rem 0;
+}
+.container.dark .sub-body .sub-con .content :is(.con01, .con02).active {
+  display: grid !important;
+}
+.container.dark .sub-body .sub-con .content :is(.con01, .con02) {
+  display: none !important;
+}
+.container.dark .nav {
+  /* Mobile Navigation */
+}
+.container.dark .nav .mobile-nav-overlay .mobile-nav .inner .mode-switch i {
+  background: url(../images/svg/dark-sunny.svg) no-repeat;
+}
+.container.dark .nav .mobile-nav-overlay .mobile-nav .inner .mode-switch span:after {
+  content: "Light mode";
 }
 
+@media (min-width: 1200px) {
+  .container.dark {
+    /* Navigation bar */
+  }
+  .container.dark .nav {
+    background-color: transparent;
+  }
+}
 /* ===========================
 page Main 
 ============================= */
@@ -1168,6 +1282,30 @@ page Main
     top: 0;
   }
 }
+.container.dark .main_wrap {
+  background-color: #1C1515;
+}
+.container.dark .main_wrap .bg {
+  background-image: url(../images/dark_bg_mobile_main.jpg);
+  background-color: #1C1515;
+}
+.container.dark .main_wrap .div-cont .visual-con .visual-txt {
+  text-align: center;
+}
+.container.dark .main_wrap .div-cont .visual-con .visual-txt h1 {
+  text-shadow: none;
+}
+.container.dark .main_wrap .div-cont .visual-con .visual-txt .gide .l span {
+  background: url(../images/svg/dark-arrow_l_02.svg) no-repeat;
+}
+.container.dark .main_wrap .div-cont .visual-con .visual-txt .gide .R span {
+  background: url(../images/svg/dark-arrow_r_02.svg) no-repeat;
+}
+.container.dark .main_wrap .div-cont .visual-con .visual-txt .gide .hand {
+  background: url(../images/svg/dark-swiper.svg) no-repeat;
+  background-position: -0.313rem -0.313rem;
+}
+
 /* Media Query */
 @media (min-width: 768px) {
   .main_wrap .bg {
@@ -1182,6 +1320,9 @@ page Main
   }
   .main_wrap .div-cont .visual-con .visual-txt p {
     font-size: 1.5rem;
+  }
+  .container.dark .main_wrap .bg {
+    background-image: url(../images/dark_bg_tablet_main.jpg);
   }
   /* main 가이드*/
   @-webkit-keyframes gide-hand {
@@ -1231,6 +1372,10 @@ page Main
   }
   .main_wrap .div-cont .visual-con .visual-txt {
     padding-top: 9.375rem;
+  }
+  /* Dark Mode */
+  .container.dark .main_wrap .bg {
+    background-image: url(../images/dark_bg_pc_main.jpg);
   }
 }
 /* ===========================
@@ -1380,6 +1525,33 @@ page About
   width: 3.122rem;
 }
 
+.container.dark #page-about .sub-tit {
+  background-image: url(../images/dark_sub_top_visual01.jpg);
+}
+.container.dark #page-about .sub-body .sub-con .content .con01 .about-text h2 {
+  font-weight: 400;
+}
+.container.dark #page-about .sub-body .sub-con .content .con02 {
+  margin-top: 1.25rem;
+}
+.container.dark #page-about .sub-body .sub-con .content .con02 .tech-wrap .tech-box h2 {
+  font-weight: 100;
+}
+.container.dark #page-about .sub-body .sub-con .content .con02 .tech-wrap .tech-box h2 b {
+  font-weight: 400;
+}
+.container.dark #page-about .sub-body .sub-con .content .con02 .tech-wrap .tech-box .tech-explain {
+  border-top: 1px solid;
+}
+.container.dark #page-about .sub-body .sub-con .content .con02 .tech-wrap li:nth-child(1).tech-box .tech-icon span:nth-child(5) {
+  background-image: url(../images/svg/dark-skill-icons_jquery.svg);
+  width: 9.901rem;
+}
+.container.dark #page-about .sub-body .sub-con .content .con02 .tech-wrap li:nth-child(1).tech-box .tech-icon span:nth-child(6) {
+  background-image: url(../images/svg/dark-skill-icons_github_big.svg);
+  width: 2.619rem;
+}
+
 @media (min-width: 768px) {
   #page-about .div-cont .sub-body nav .tab-list .tab:nth-child(1) span::before {
     background-image: url(../images/svg/tab_about-me.svg);
@@ -1429,6 +1601,12 @@ page About
   #page-about .div-cont .sub-body .content .con02 .tech-wrap li:nth-child(2).tech-box {
     margin-top: 7.5rem;
   }
+  .container.dark #page-about .div-cont .sub-body nav .tab-list .tab:nth-child(1) span::before {
+    background-image: url(../images/svg/dark-about-me.svg);
+  }
+  .container.dark #page-about .div-cont .sub-body nav .tab-list .tab:nth-child(2) span::before {
+    background-image: url(../images/svg/dark-tech-stack.svg);
+  }
 }
 @media (min-width: 1200px) {
   #page-about .sub-tit {
@@ -1469,6 +1647,9 @@ page About
   }
   #page-about .div-cont .sub-body .content .con02 .tech-wrap .tech-box .tech-explain {
     margin-top: 0;
+  }
+  .container.dark #page-about .sub-tit {
+    background-image: url(../images/dark_pc_sub_top_visual01.jpg);
   }
 }
 /* ===========================
@@ -1624,6 +1805,17 @@ page Work
   background: #7900EC;
 }
 
+.container.dark #page-work .sub-tit {
+  background-image: url(../images/dark_sub_top_visual02.jpg);
+}
+.container.dark #page-work .div-cont .sub-body .content .work-slider .work-pagination .swiper-pagination-bullet {
+  background: #D9D9D9;
+}
+.container.dark #page-work .div-cont .sub-body .content .work-slider .work-pagination .swiper-pagination-bullet-active {
+  color: #fff;
+  background: #7900EC;
+}
+
 @media (min-width: 768px) {
   #page-work .sub-tit {
     background-image: url(../images/pc_sub_top_visual02.jpg);
@@ -1636,6 +1828,18 @@ page Work
   }
   #page-work .div-cont .sub-body nav .tab-list .tab:nth-child(3) span::before {
     background-image: url(../images/svg/tab_mobile.svg);
+  }
+  .container.dark #page-work .sub-tit {
+    background-image: url(../images/dark_pc_sub_top_visual02.jpg);
+  }
+  .container.dark #page-work .div-cont .sub-body nav .tab-list .tab:nth-child(1) span::before {
+    background-image: url(../images/svg/dark-responsive.svg);
+  }
+  .container.dark #page-work .div-cont .sub-body nav .tab-list .tab:nth-child(2) span::before {
+    background-image: url(../images/svg/dark-web.svg);
+  }
+  .container.dark #page-work .div-cont .sub-body nav .tab-list .tab:nth-child(3) span::before {
+    background-image: url(../images/svg/dark-mobile.svg);
   }
 }
 @media (min-width: 1200px) {
@@ -1857,6 +2061,10 @@ page Design
   display: flex;
 }
 
+.container.dark #page-design .sub-tit {
+  background-image: url(../images/dark_sub_top_visual03.jpg);
+}
+
 @media (min-width: 768px) {
   #page-design .sub-tit {
     background-image: url(../images/pc_sub_top_visual03.jpg);
@@ -1872,6 +2080,9 @@ page Design
     top: 1rem;
     width: 1.5rem;
     height: 1.5rem;
+  }
+  .container.dark #page-design .sub-tit {
+    background-image: url(../images/dark_pc_sub_top_visual03.jpg);
   }
 }
 @media (min-width: 1200px) {
@@ -1992,6 +2203,10 @@ page Contact
 }
 #page-contact .div-cont .btn-box li:nth-child(3) span i {
   background-image: url(../images/svg/dark-call.svg);
+}
+
+.container.dark #page-contact {
+  background-image: url(../images/dark_bg_pc_contact.jpg);
 }
 
 @media (max-height: 667px) {

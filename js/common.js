@@ -79,6 +79,7 @@ $('document').ready(function () {
   /* Dark Mode */
   const container =  document.getElementsByClassName('container')[0];
   let modeBtn = document.getElementsByClassName('mode_btn')[0];
+  let modeBtn02 = document.getElementsByClassName('mode-switch')[0];
   modeBtn.addEventListener ('click', () => {
     if (container.classList.contains('dark')) {
       container.classList.remove('dark');
@@ -86,30 +87,43 @@ $('document').ready(function () {
       container.classList.add('dark');
     }
   });
-
+  modeBtn02.addEventListener ('click', () => {
+    if (container.classList.contains('dark')) {
+      container.classList.remove('dark');
+      mobileNav.classList.remove("on");
+    } else {
+      container.classList.add('dark');
+      mobileNav.classList.remove("on");
+    }
+  });
 
   /* Navigation class on 넣어 열고 닫기*/
+  const body = document.getElementsByTagName('body')[0];
   let navBtn = document.getElementsByClassName('btn-m-gnb')[0];
   let mobileNav = document.getElementsByClassName('mobile-nav-overlay')[0];
   let closeBtn = document.getElementsByClassName('close')[0];
   navBtn.onclick = function navOpen() {
     mobileNav.classList.add("on");
+    body.classList.add("scrollLock");
     /* 메뉴 버튼 누르면 네비 사라짐 */
     let x = mobileNav.getElementsByClassName('swiper-pagination-bullet');
     for(var i = 0; i < x.length; i++) {
         let closeNav = x[i]
         closeNav.onclick = function navClose() {
           mobileNav.classList.remove("on");
+          body.classList.remove("scrollLock");
         }
       }
   };
   closeBtn.onclick = function navOpen() {
     mobileNav.classList.remove("on");
+    body.classList.remove("scrollLock");
   };
   let bodyWidth = document.body.offsetWidth;
   window.addEventListener('resize', function(){
     if (bodyWidth >= 1183){
       mobileNav.classList.remove("on");
+      body.classList.remove("scrollLock");
     };
   });
   /* 모바일 각 슬라이드 높이  swiper-wrapper에 다시 넣어 주기 */
@@ -226,31 +240,59 @@ $('document').ready(function () {
     container.classList.remove('modal');
   })
   design01.addEventListener('click',()=>{
-    modalImg.src = "./images/design_detail01.jpg";
+    if (container.classList.contains('dark')) {
+      modalImg.src = "./images/dark_design_detail01.jpg";
+    } else {
+      modalImg.src = "./images/design_detail01.jpg";
+    }
   })
   design02.addEventListener('click',()=>{
-    modalImg.src = "./images/design_detail02.jpg";
+    if (container.classList.contains('dark')) {
+      modalImg.src = "./images/dark_design_detail02.jpg";
+    } else {
+      modalImg.src = "./images/design_detail02.jpg";
+    }
   })
   design03.addEventListener('click',()=>{
     modalImg.src = "./images/design_detail03.jpg";
   })
   design04.addEventListener('click',()=>{
-    modalImg.src = "./images/design_detail04.jpg";
+    if (container.classList.contains('dark')) {
+      modalImg.src = "./images/dark_design_detail04.jpg";
+    } else {
+      modalImg.src = "./images/design_detail04.jpg";
+    }
   })
   design05.addEventListener('click',()=>{
-    modalImg.src = "./images/design_detail05.jpg";
+    if (container.classList.contains('dark')) {
+      modalImg.src = "./images/dark_design_detail05.jpg";
+    } else {
+      modalImg.src = "./images/design_detail05.jpg";
+    }
   })
   design06.addEventListener('click',()=>{
-    modalImg.src = "./images/design_detail06.jpg";
+    if (container.classList.contains('dark')) {
+      modalImg.src = "./images/dark_design_detail06.jpg";
+    } else {
+      modalImg.src = "./images/design_detail06.jpg";
+    }
   })
   design07.addEventListener('click',()=>{
     modalImg.src = "./images/design_detail07.jpg";
   })
   design08.addEventListener('click',()=>{
-    modalImg.src = "./images/design_detail08.jpg";
+    if (container.classList.contains('dark')) {
+      modalImg.src = "./images/dark_design_detail08.jpg";
+    } else {
+      modalImg.src = "./images/design_detail08.jpg";
+    }
   })
   design09.addEventListener('click',()=>{
-    modalImg.src = "./images/design_detail09.jpg";
+    if (container.classList.contains('dark')) {
+      modalImg.src = "./images/dark_design_detail09.jpg";
+    } else {
+      modalImg.src = "./images/design_detail09.jpg";
+    }
   })
 
 

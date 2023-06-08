@@ -171,6 +171,41 @@ page Main
   }
 }
 
+.container.dark {
+  .main_wrap {
+    background-color: map-get($color, dark-bg);
+    .bg {
+      background-image: url(../images/dark_bg_mobile_main.jpg);
+      background-color: map-get($color, dark-bg);
+    }
+    .div-cont{
+      .visual-con{
+        .visual-txt{
+          text-align: center;
+          h1 {
+            text-shadow: none;
+          }
+          .gide {
+            .l {
+              span {
+                background: url(../images/svg/dark-arrow_l_02.svg) no-repeat;
+              }
+            }
+            .R {
+              span {
+                background: url(../images/svg/dark-arrow_r_02.svg) no-repeat;
+              }
+            }
+            .hand {
+              background: url(../images/svg/dark-swiper.svg) no-repeat;
+              background-position: -0.313rem -0.313rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 /* Media Query */
 @media (min-width: 768px){
@@ -195,7 +230,13 @@ page Main
       }
     }
   }
-
+  .container.dark {
+    .main_wrap {
+      .bg {
+        background-image: url(../images/dark_bg_tablet_main.jpg);
+      }
+    }
+  }    
   /* main 가이드*/
   @keyframes gide-hand {
     0% {
@@ -229,6 +270,14 @@ page Main
       }
     }
   }
+  /* Dark Mode */
+  .container.dark {
+    .main_wrap {
+      .bg {
+        background-image: url(../images/dark_bg_pc_main.jpg);
+      }
+    }
+  }    
 }
 
 /* ===========================
@@ -378,6 +427,54 @@ page About
     }
   }
 }
+.container.dark {
+  #page-about {
+    .sub-tit {
+      background-image: url(../images/dark_sub_top_visual01.jpg);
+    }
+    .sub-body {
+      .sub-con {
+        .content {
+          .con01 {
+            .about-text {
+              h2 {
+                font-weight: map-get($font_wight, regular);
+              }
+            }
+          }
+          .con02 {
+            margin-top: map-get($size, px_20 );
+            .tech-wrap {
+              .tech-box {
+                h2 {
+                  font-weight: map-get($font_wight, thin);
+                  b {
+                    font-weight: map-get($font_wight, regular);
+                  }
+                }
+                .tech-explain {
+                  border-top: 1px solid map-get($color, dark_text);
+                }
+              }
+              li:nth-child(1).tech-box {
+                .tech-icon {
+                  span:nth-child(5){
+                    background-image: url(../images/svg/dark-skill-icons_jquery.svg);
+                    width: 9.901rem;
+                  }
+                  span:nth-child(6){
+                    background-image: url(../images/svg/dark-skill-icons_github_big.svg);
+                    width: 2.619rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }  
+}
 @media (min-width:768px) {
   #page-about {
     .div-cont {
@@ -454,6 +551,26 @@ page About
       }   
     }  
   }
+  .container.dark {
+    #page-about {
+      .div-cont {
+        .sub-body { 
+          nav {
+            .tab-list {
+              .tab{
+                &:nth-child(1) span::before {
+                  background-image: url(../images/svg/dark-about-me.svg);
+                }
+                &:nth-child(2) span::before {
+                  background-image: url(../images/svg/dark-tech-stack.svg);
+                }
+              }
+            }
+          }
+        }
+      }
+    }      
+  }
 } //min-width:768px
 @media (min-width: 1200px) {
   #page-about {
@@ -499,8 +616,16 @@ page About
         }
       }   
     }  
+  }
+  .container.dark {
+    #page-about {
+      .sub-tit {
+        background-image: url(../images/dark_pc_sub_top_visual01.jpg);
+      }
+    }  
   }  
 } //min-width: 1200px
+
 
 /* ===========================
 page Work 
@@ -661,6 +786,30 @@ page Work
     }
   }
 }
+.container.dark {
+  #page-work {
+    .sub-tit {
+      background-image: url(../images/dark_sub_top_visual02.jpg);
+    }
+    .div-cont {
+      .sub-body {
+        .content {
+          .work-slider {
+            .work-pagination {
+              .swiper-pagination-bullet {
+                background: #D9D9D9;
+              }
+              .swiper-pagination-bullet-active {
+                color:#fff;
+                background: map-get($color, primary-point);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 @media (min-width:768px) {
   #page-work {
     .sub-tit {
@@ -685,6 +834,32 @@ page Work
         }
       }
     }    
+  }
+  .container.dark {
+    #page-work {
+      .sub-tit {
+        background-image: url(../images/dark_pc_sub_top_visual02.jpg);
+      }
+      .div-cont {
+        .sub-body { 
+          nav {
+            .tab-list {
+              .tab{
+                &:nth-child(1) span::before {
+                  background-image: url(../images/svg/dark-responsive.svg);
+                }
+                &:nth-child(2) span::before {
+                  background-image: url(../images/svg/dark-web.svg);
+                }
+                &:nth-child(3) span::before {
+                  background-image: url(../images/svg/dark-mobile.svg);
+                }
+              }
+            }
+          }
+        }
+      } 
+    }
   }
 }
 // 필요없는 부분은 삭제 하면서 정리중
@@ -899,6 +1074,13 @@ page Design
     display: flex;
   }
 }
+.container.dark {
+  #page-design {
+    .sub-tit {
+      background-image: url(../images/dark_sub_top_visual03.jpg);
+    }
+  }
+}  
 @media (min-width:768px) {
   #page-design {
     .sub-tit {
@@ -923,6 +1105,13 @@ page Design
       }
     }
   }
+  .container.dark {
+    #page-design {
+      .sub-tit {
+        background-image: url(../images/dark_pc_sub_top_visual03.jpg);
+      }
+    }
+  }  
 }
 @media (min-width:1200px) {
   .desgin-modal{
@@ -1022,6 +1211,11 @@ page Contact
         }
       }
     }
+  }
+}
+.container.dark {
+  #page-contact {
+    background-image: url(../images/dark_bg_pc_contact.jpg);
   }
 }
 @media (max-height:667px){
