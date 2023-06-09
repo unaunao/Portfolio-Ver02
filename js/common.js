@@ -129,7 +129,6 @@ $('document').ready(function () {
     };
   });
   /* 모바일 각 슬라이드 높이  swiper-wrapper에 다시 넣어 주기 */
-  // if (bodyWidth <= 1183){
     let slideH01 = document.getElementsByClassName('fullpage-slide')[1];
     let slideH02 = document.getElementsByClassName('fullpage-slide')[2];
     let slideH03 = document.getElementsByClassName('fullpage-slide')[3];
@@ -162,17 +161,6 @@ $('document').ready(function () {
       swiperH.style.height= clientHeight +'px';
     });
 
-    // for ( var i = 1; i <= 5; i++) {
-    //   let mBtn = pagebtn[i];
-    //   let height = slideH[i].clientHeight;
-    //   mBtn.addEventListener('click', ()=> {
-    //     swiperH.style.height = height + 'px';
-    //     if(mBtn = pagebtn[4]){
-    //       swiperH.style.height = height[4] + 'px';
-    //     }
-    //   })
-    // }
-  // };
 
      /* 다음 슬라이드로 넘어갈때 항상위로 */
   //  높이를 측정하여 스크롤 업 하는 함수 (네비게이션 메뉴에 적용됨)
