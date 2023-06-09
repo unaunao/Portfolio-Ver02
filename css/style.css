@@ -1543,6 +1543,9 @@ page About
 .container.dark #page-about .sub-body .sub-con .content .con02 .tech-wrap .tech-box .tech-explain {
   border-top: 1px solid;
 }
+.container.dark #page-about .sub-body .sub-con .content .con02 .tech-wrap .tech-box .tech-explain li i {
+  background-image: url(../images/svg/dark-list-bullet.svg);
+}
 .container.dark #page-about .sub-body .sub-con .content .con02 .tech-wrap li:nth-child(1).tech-box .tech-icon span:nth-child(5) {
   background-image: url(../images/svg/dark-skill-icons_jquery.svg);
   width: 9.901rem;

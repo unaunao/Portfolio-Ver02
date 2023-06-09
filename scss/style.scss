@@ -454,6 +454,11 @@ page About
                 }
                 .tech-explain {
                   border-top: 1px solid map-get($color, dark_text);
+                  li {
+                    i {
+                      background-image: url(../images/svg/dark-list-bullet.svg);
+                    }
+                  }
                 }
               }
               li:nth-child(1).tech-box {
