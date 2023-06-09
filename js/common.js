@@ -91,9 +91,11 @@ $('document').ready(function () {
     if (container.classList.contains('dark')) {
       container.classList.remove('dark');
       mobileNav.classList.remove("on");
+      body.classList.remove("scrollLock");
     } else {
       container.classList.add('dark');
       mobileNav.classList.remove("on");
+      body.classList.remove("scrollLock");
     }
   });
 
@@ -128,17 +130,48 @@ $('document').ready(function () {
   });
   /* 모바일 각 슬라이드 높이  swiper-wrapper에 다시 넣어 주기 */
   // if (bodyWidth <= 1183){
-    let slideH = document.getElementsByClassName('swiper-slide');
-    let pagebtn = document.getElementsByClassName('swiper-pagination-bullet');
+    let slideH01 = document.getElementsByClassName('fullpage-slide')[1];
+    let slideH02 = document.getElementsByClassName('fullpage-slide')[2];
+    let slideH03 = document.getElementsByClassName('fullpage-slide')[3];
+    let slideH04 = document.getElementsByClassName('fullpage-slide')[4];
+    let slideH05 = document.getElementsByClassName('fullpage-slide')[5];
+    let pagebtn01 = document.getElementsByClassName('swiper-pagination-bullet')[1];
+    let pagebtn02 = document.getElementsByClassName('swiper-pagination-bullet')[2];
+    let pagebtn03 = document.getElementsByClassName('swiper-pagination-bullet')[3];
+    let pagebtn04 = document.getElementsByClassName('swiper-pagination-bullet')[4];
+    let pagebtn05 = document.getElementsByClassName('swiper-pagination-bullet')[5];
     let swiperH = document.getElementsByClassName('swiper-wrapper')[0];
+    pagebtn01.addEventListener('click', ()=>{
+      let clientHeight = slideH01.clientHeight;
+      swiperH.style.height= clientHeight +'px';
+    });
+    pagebtn02.addEventListener('click', ()=>{
+      let clientHeight = slideH02.clientHeight;
+      swiperH.style.height= clientHeight +'px';
+    });
+    pagebtn03.addEventListener('click', ()=>{
+      let clientHeight = slideH03.clientHeight;
+      swiperH.style.height= clientHeight +'px';
+    });
+    pagebtn04.addEventListener('click', ()=>{
+      let clientHeight = slideH04.clientHeight;
+      swiperH.style.height= clientHeight +'px';
+    });
+    pagebtn05.addEventListener('click', ()=>{
+      let clientHeight = slideH05.clientHeight;
+      swiperH.style.height= clientHeight +'px';
+    });
 
-    for ( var i = 1; i <= 5; i++) {
-      let mBtn = pagebtn[i];
-      let height = slideH[i].clientHeight;
-      mBtn.addEventListener('click', ()=> {
-        swiperH.style.height = height + 'px';
-      })
-    }
+    // for ( var i = 1; i <= 5; i++) {
+    //   let mBtn = pagebtn[i];
+    //   let height = slideH[i].clientHeight;
+    //   mBtn.addEventListener('click', ()=> {
+    //     swiperH.style.height = height + 'px';
+    //     if(mBtn = pagebtn[4]){
+    //       swiperH.style.height = height[4] + 'px';
+    //     }
+    //   })
+    // }
   // };
 
      /* 다음 슬라이드로 넘어갈때 항상위로 */
