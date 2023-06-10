@@ -3,114 +3,114 @@
 /* font */
 // 최상위 부터의 경로로 올려야 git url에서 문제 없이 나옴
 // 대부분의 최신 웹 브라우저에서 지원되는 woff와 ttf 개선으로 나온 많은 운영체제에서 지원이 되는 otf로 폰트 설정
-@font-face {
-  font-family: 'Pretendard';
-	font-weight: 700;
-	font-display: swap;
-	src: local('Pretendard Bold'), 
-  url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Bold.woff2') format('woff2'), 
-  url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Bold.woff') format('woff'),
-  url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Bold.otf') format('opentype');
-}
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 600;
-  font-display: swap;
-  src: local('Pretendard SemiBold'), 
-  url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-SemiBold.woff2') format('woff2'), 
-  url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-SemiBold.woff') format('woff'),
-  url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-SemiBold.otf') format('opentype');
-}
-@font-face {
-	font-family: 'Pretendard';
-	font-weight: 500;
-	font-display: swap;
-	src: local('Pretendard Medium'), 
-  url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Medium.woff2') format('woff2'), 
-  url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Medium.woff') format('woff'),
-  url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Medium.otf') format('opentype');
-}
-@font-face {
-	font-family: 'Pretendard';
-	font-weight: 400;
-	font-display: swap;
-	src: local('Pretendard Regular'), 
-  url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Regular.woff2') format('woff2'), 
-  url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Regular.woff') format('woff'),
-  url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Regular.otf') format('opentype');
-}
-@font-face {
-	font-family: 'Pretendard';
-	font-weight: 300;
-	font-display: swap;
-	src: local('Pretendard Light'), 
-  url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Light.woff2') format('woff2'), 
-  url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Light.woff') format('woff'),
-  url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Light.otf') format('opentype');
-}
-@font-face {
-	font-family: 'Pretendard';
-	font-weight: 100;
-	font-display: swap;
-	src: local('Pretendard Thin'), 
-  url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Thin.woff2') format('woff2'), 
-  url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Thin.woff') format('woff'),
-  url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Thin.otf') format('opentype');
-}
 // @font-face {
 //   font-family: 'Pretendard';
 // 	font-weight: 700;
 // 	font-display: swap;
 // 	src: local('Pretendard Bold'), 
-//   url('./fonts/Pretendard-Bold.woff2') format('woff2'), 
-//   url('./fonts/Pretendard-Bold.woff') format('woff'),
-//   url('./fonts/Pretendard-Bold.otf') format('opentype');
+//   url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Bold.woff2') format('woff2'), 
+//   url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Bold.woff') format('woff'),
+//   url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Bold.otf') format('opentype');
 // }
 // @font-face {
 //   font-family: 'Pretendard';
 //   font-weight: 600;
 //   font-display: swap;
 //   src: local('Pretendard SemiBold'), 
-//   url('./fonts/Pretendard-SemiBold.woff2') format('woff2'), 
-//   url('./fonts/Pretendard-SemiBold.woff') format('woff'),
-//   url('./fonts/Pretendard-SemiBold.otf') format('opentype');
+//   url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-SemiBold.woff2') format('woff2'), 
+//   url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-SemiBold.woff') format('woff'),
+//   url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-SemiBold.otf') format('opentype');
 // }
 // @font-face {
 // 	font-family: 'Pretendard';
 // 	font-weight: 500;
 // 	font-display: swap;
 // 	src: local('Pretendard Medium'), 
-//   url('./fonts/Pretendard-Medium.woff2') format('woff2'), 
-//   url('./fonts/Pretendard-Medium.woff') format('woff'),
-//   url('./fonts/Pretendard-Medium.otf') format('opentype');
+//   url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Medium.woff2') format('woff2'), 
+//   url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Medium.woff') format('woff'),
+//   url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Medium.otf') format('opentype');
 // }
 // @font-face {
 // 	font-family: 'Pretendard';
 // 	font-weight: 400;
 // 	font-display: swap;
 // 	src: local('Pretendard Regular'), 
-//   url('./fonts/Pretendard-Regular.woff2') format('woff2'), 
-//   url('./fonts/Pretendard-Regular.woff') format('woff'),
-//   url('./fonts/Pretendard-Regular.otf') format('opentype');
+//   url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Regular.woff2') format('woff2'), 
+//   url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Regular.woff') format('woff'),
+//   url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Regular.otf') format('opentype');
 // }
 // @font-face {
 // 	font-family: 'Pretendard';
 // 	font-weight: 300;
 // 	font-display: swap;
 // 	src: local('Pretendard Light'), 
-//   url('./fonts/Pretendard-Light.woff2') format('woff2'), 
-//   url('./fonts/Pretendard-Light.woff') format('woff'),
-//   url('./fonts/Pretendard-Light.otf') format('opentype');
+//   url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Light.woff2') format('woff2'), 
+//   url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Light.woff') format('woff'),
+//   url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Light.otf') format('opentype');
 // }
 // @font-face {
 // 	font-family: 'Pretendard';
 // 	font-weight: 100;
 // 	font-display: swap;
 // 	src: local('Pretendard Thin'), 
-//   url('./fonts/Pretendard-Thin.woff2') format('woff2'), 
-//   url('./fonts/Pretendard-Thin.woff') format('woff'),
-//   url('./fonts/Pretendard-Thin.otf') format('opentype');
+//   url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Thin.woff2') format('woff2'), 
+//   url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Thin.woff') format('woff'),
+//   url('https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Thin.otf') format('opentype');
 // }
+@font-face {
+  font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), 
+  url('./fonts/Pretendard-Bold.woff2') format('woff2'), 
+  url('./fonts/Pretendard-Bold.woff') format('woff'),
+  url('./fonts/Pretendard-Bold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 600;
+  font-display: swap;
+  src: local('Pretendard SemiBold'), 
+  url('./fonts/Pretendard-SemiBold.woff2') format('woff2'), 
+  url('./fonts/Pretendard-SemiBold.woff') format('woff'),
+  url('./fonts/Pretendard-SemiBold.otf') format('opentype');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard Medium'), 
+  url('./fonts/Pretendard-Medium.woff2') format('woff2'), 
+  url('./fonts/Pretendard-Medium.woff') format('woff'),
+  url('./fonts/Pretendard-Medium.otf') format('opentype');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), 
+  url('./fonts/Pretendard-Regular.woff2') format('woff2'), 
+  url('./fonts/Pretendard-Regular.woff') format('woff'),
+  url('./fonts/Pretendard-Regular.otf') format('opentype');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Pretendard Light'), 
+  url('./fonts/Pretendard-Light.woff2') format('woff2'), 
+  url('./fonts/Pretendard-Light.woff') format('woff'),
+  url('./fonts/Pretendard-Light.otf') format('opentype');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 100;
+	font-display: swap;
+	src: local('Pretendard Thin'), 
+  url('./fonts/Pretendard-Thin.woff2') format('woff2'), 
+  url('./fonts/Pretendard-Thin.woff') format('woff'),
+  url('./fonts/Pretendard-Thin.otf') format('opentype');
+}
 /* Mobile */
 h1 {
   font-size: map-get($font_size_mobile, h1);
