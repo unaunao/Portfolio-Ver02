@@ -90,37 +90,37 @@ svg, path {
   font-family: "Pretendard";
   font-weight: 700;
   font-display: swap;
-  src: local("Pretendard Bold"), url("./fonts/Pretendard-Bold.woff2") format("woff2"), url("./fonts/Pretendard-Bold.woff") format("woff"), url("./fonts/Pretendard-Bold.otf") format("opentype");
+  src: local("Pretendard Bold"), url("https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Bold.woff2") format("woff2"), url("https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Bold.woff") format("woff"), url("https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Bold.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 600;
   font-display: swap;
-  src: local("Pretendard SemiBold"), url("./fonts/Pretendard-SemiBold.woff2") format("woff2"), url("./fonts/Pretendard-SemiBold.woff") format("woff"), url("./fonts/Pretendard-SemiBold.otf") format("opentype");
+  src: local("Pretendard SemiBold"), url("https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-SemiBold.woff2") format("woff2"), url("https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-SemiBold.woff") format("woff"), url("https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-SemiBold.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 500;
   font-display: swap;
-  src: local("Pretendard Medium"), url("./fonts/Pretendard-Medium.woff2") format("woff2"), url("./fonts/Pretendard-Medium.woff") format("woff"), url("./fonts/Pretendard-Medium.otf") format("opentype");
+  src: local("Pretendard Medium"), url("https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Medium.woff2") format("woff2"), url("https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Medium.woff") format("woff"), url("https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Medium.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 400;
   font-display: swap;
-  src: local("Pretendard Regular"), url("./fonts/Pretendard-Regular.woff2") format("woff2"), url("./fonts/Pretendard-Regular.woff") format("woff"), url("./fonts/Pretendard-Regular.otf") format("opentype");
+  src: local("Pretendard Regular"), url("https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Regular.woff2") format("woff2"), url("https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Regular.woff") format("woff"), url("https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Regular.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 300;
   font-display: swap;
-  src: local("Pretendard Light"), url("./fonts/Pretendard-Light.woff2") format("woff2"), url("./fonts/Pretendard-Light.woff") format("woff"), url("./fonts/Pretendard-Light.otf") format("opentype");
+  src: local("Pretendard Light"), url("https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Light.woff2") format("woff2"), url("https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Light.woff") format("woff"), url("https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Light.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 100;
   font-display: swap;
-  src: local("Pretendard Thin"), url("./fonts/Pretendard-Thin.woff2") format("woff2"), url("./fonts/Pretendard-Thin.woff") format("woff"), url("./fonts/Pretendard-Thin.otf") format("opentype");
+  src: local("Pretendard Thin"), url("https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Thin.woff2") format("woff2"), url("https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Thin.woff") format("woff"), url("https://unaunao.github.io/Portfolio-Ver02/fonts/Pretendard-Thin.otf") format("opentype");
 }
 /* Mobile */
 h1 {
@@ -739,10 +739,10 @@ sub 페이지 공통요소
 .sub-body .sub-con .content {
   padding: 3.125rem 0.625rem 0;
 }
-.sub-body .sub-con .content :is(.con01, .con02).active {
+.sub-body .sub-con .content :is(.con01, .con02, .con03).active {
   display: grid !important;
 }
-.sub-body .sub-con .content :is(.con01, .con02) {
+.sub-body .sub-con .content :is(.con01, .con02, .con03) {
   display: none !important;
 }
 
@@ -984,10 +984,10 @@ sub 페이지 공통요소
 .container.dark .sub-body .sub-con .content {
   padding: 3.125rem 0.625rem 0;
 }
-.container.dark .sub-body .sub-con .content :is(.con01, .con02).active {
+.container.dark .sub-body .sub-con .content :is(.con01, .con02, .con03).active {
   display: grid !important;
 }
-.container.dark .sub-body .sub-con .content :is(.con01, .con02) {
+.container.dark .sub-body .sub-con .content :is(.con01, .con02, .con03) {
   display: none !important;
 }
 .container.dark .nav {
@@ -1751,7 +1751,6 @@ page Work
   font-weight: 500;
 }
 #page-work .div-cont .sub-body .content .work-slider .swiper-slide .text-box button {
-  pointer-events: auto;
   -ms-touch-action: auto;
       touch-action: auto;
   display: -webkit-box;
@@ -1774,14 +1773,42 @@ page Work
 #page-work .div-cont .sub-body .content .work-slider .swiper-slide .text-box button span {
   margin-right: 0.5rem;
 }
+#page-work .div-cont .sub-body .content .work-slider .swiper-slide .text-box button i {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(../images/svg/link02.svg);
+}
 #page-work .div-cont .sub-body .content .work-slider .swiper-slide:nth-child(1) .img-box {
-  background-image: url(../images/pc_work-responsive01.jpg);
+  background-image: url(../images/work-responsive10_m.jpg);
 }
 #page-work .div-cont .sub-body .content .work-slider .swiper-slide:nth-child(2) .img-box {
-  background-color: rebeccapurple;
+  background-image: url(../images/work-responsive09.jpg);
 }
 #page-work .div-cont .sub-body .content .work-slider .swiper-slide:nth-child(3) .img-box {
-  background-color: goldenrod;
+  background-image: url(../images/work-responsive08.jpg);
+}
+#page-work .div-cont .sub-body .content .work-slider .swiper-slide:nth-child(4) .img-box {
+  background-image: url(../images/work-responsive07.jpg);
+}
+#page-work .div-cont .sub-body .content .work-slider .swiper-slide:nth-child(5) .img-box {
+  background-image: url(../images/work-responsive06.jpg);
+}
+#page-work .div-cont .sub-body .content .work-slider .swiper-slide:nth-child(6) .img-box {
+  background-image: url(../images/work-responsive05.jpg);
+}
+#page-work .div-cont .sub-body .content .work-slider .swiper-slide:nth-child(7) .img-box {
+  background-image: url(../images/work-responsive04.jpg);
+}
+#page-work .div-cont .sub-body .content .work-slider .swiper-slide:nth-child(8) .img-box {
+  background-image: url(../images/work-responsive03.jpg);
+}
+#page-work .div-cont .sub-body .content .work-slider .swiper-slide:nth-child(9) .img-box {
+  background-image: url(../images/work-responsive02.jpg);
+}
+#page-work .div-cont .sub-body .content .work-slider .swiper-slide:nth-child(10) .img-box {
+  background-image: url(../images/work-responsive01.jpg);
 }
 #page-work .div-cont .sub-body .content .work-slider .swiper-slide-active .img-box, #page-work .div-cont .sub-body .content .work-slider .swiper-slide-active .text-box {
   opacity: 1;
@@ -1792,6 +1819,7 @@ page Work
 #page-work .div-cont .sub-body .content .work-slider .work-pagination {
   position: absolute;
   z-index: 1;
+  top: 53%;
 }
 #page-work .div-cont .sub-body .content .work-slider .work-pagination .swiper-pagination-bullet {
   width: 20px;
@@ -1801,7 +1829,7 @@ page Work
   font-size: 12px;
   color: #000;
   opacity: 1;
-  background: rgba(0, 0, 0, 0.2);
+  background: #f4eafd;
 }
 #page-work .div-cont .sub-body .content .work-slider .work-pagination .swiper-pagination-bullet-active {
   color: #fff;
@@ -1862,13 +1890,26 @@ page Work
     height: 47.938rem !important;
   }
   #page-work .div-cont .sub-body .content .work-slider .swiper-slide .img-box {
-    height: 28.125rem;
+    height: 33.625rem;
+  }
+  #page-work .div-cont .sub-body .content .work-slider .swiper-slide:nth-child(1) .img-box {
+    background-image: url(../images/work-responsive10.jpg);
   }
   #page-work .div-cont .sub-body .content .work-slider .swiper-slide .text-box {
     pointer-events: auto;
     -ms-touch-action: auto;
         touch-action: auto;
     margin-left: 2.5rem;
+  }
+  #page-work .div-cont .sub-body .content .work-slider .swiper-slide .text-box button {
+    width: 13.75rem;
+    padding: 1rem 0;
+    margin-top: 3.125rem;
+    background-color: #7900EC;
+  }
+  #page-work .div-cont .sub-body .content .work-slider .swiper-slide-active {
+    z-index: 99999;
+    opacity: 1 !important;
   }
   #page-work .div-cont .sub-body .content .work-slider .swiper-slide-active .text-box {
     display: grid;
@@ -1896,21 +1937,8 @@ page Work
     border: 1px solid rgba(205, 156, 252, 0.8);
     border-radius: 1.25rem;
   }
-  #page-work .div-cont .sub-body .content .work-slider .swiper-slide-active .text-box button {
-    width: 13.75rem;
-    padding: 1rem 0;
-    margin-top: 3.125rem;
-    background-color: #7900EC;
-  }
-  #page-work .div-cont .sub-body .content .work-slider .work-pagination .swiper-pagination-bullet {
-    width: 0.625rem;
-    height: 0.625rem;
-    line-height: 0;
-    font-size: 0;
-    color: transparent;
-  }
-  #page-work .div-cont .sub-body .content .work-slider .work-pagination .swiper-pagination-bullet-active {
-    color: transparent;
+  #page-work .div-cont .sub-body .content .work-slider .work-pagination {
+    top: 53%;
   }
 }
 /* ===========================

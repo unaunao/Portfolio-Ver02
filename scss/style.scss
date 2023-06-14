@@ -735,27 +735,66 @@ page Work
                 }
               }
               button {
-                pointer-events: auto;
+                // pointer-events: none;
                 touch-action: auto;
                 @include normal_button;
                 span {
                   margin-right: map-get($size, px_8);
                 }
+                i {
+                  @include icon;
+                  background-image: url(../images/svg/link02.svg);
+                }
               }
             }
             &:nth-child(1) {
               .img-box {
-                background-image: url(../images/pc_work-responsive01.jpg);
+                background-image: url(../images/work-responsive10_m.jpg);
               }
             }
             &:nth-child(2) {
               .img-box {
-                background-color: rebeccapurple;
+                background-image: url(../images/work-responsive09.jpg);
               }
             }
             &:nth-child(3) {
               .img-box {
-                background-color: goldenrod;
+                background-image: url(../images/work-responsive08.jpg);
+              }
+            }
+            &:nth-child(4) {
+              .img-box {
+                background-image: url(../images/work-responsive07.jpg);
+              }
+            }
+            &:nth-child(5) {
+              .img-box {
+                background-image: url(../images/work-responsive06.jpg);
+              }
+            }
+            &:nth-child(6) {
+              .img-box {
+                background-image: url(../images/work-responsive05.jpg);
+              }
+            }
+            &:nth-child(7) {
+              .img-box {
+                background-image: url(../images/work-responsive04.jpg);
+              }
+            }
+            &:nth-child(8) {
+              .img-box {
+                background-image: url(../images/work-responsive03.jpg);
+              }
+            }
+            &:nth-child(9) {
+              .img-box {
+                background-image: url(../images/work-responsive02.jpg);
+              }
+            }
+            &:nth-child(10) {
+              .img-box {
+                background-image: url(../images/work-responsive01.jpg);
               }
             }
           }
@@ -765,11 +804,17 @@ page Work
             }
             .text-box {
               margin-top:80px;
+              .project-info{
+                button {
+                  // pointer-events: auto;
+                }
+              }
             }
           }
           .work-pagination {
             position: absolute;
             z-index: 1;
+            top: 53%;
             .swiper-pagination-bullet {
               width: 20px;
               height: 20px;
@@ -778,7 +823,7 @@ page Work
               font-size: 12px;
               color:#000;
               opacity: 1;
-              background: rgba(0,0,0,0.2);
+              background: #f4eafd;
             }
             .swiper-pagination-bullet-active {
               color:#fff;
@@ -882,18 +927,30 @@ page Work
             .swiper-slide {
               display: grid;
               grid-template-columns: 1fr 1fr;
+              // display: inline-block;
+              // width: 50%;
               align-content: center;
               height: 47.938rem !important;
               .img-box {
-                height: 28.125rem;
+                height: 33.625rem;
+              }
+              &:nth-child(1) {
+                .img-box {
+                  background-image: url(../images/work-responsive10.jpg);
+                }
               }
               .text-box {
                 pointer-events:auto;
                 touch-action: auto;
                 margin-left: map-get($size, px_40);
+                button {
+                  @include pc_normal_button;
+                }
               }
             }
             .swiper-slide-active {
+              z-index: 99999;
+              opacity: 1 !important;
               .text-box {
                 display: grid;
                 align-items: center;
@@ -919,24 +976,11 @@ page Work
                 }
                 .project-overview {
                 }
-                .project-info {
-                }
-                button {
-                  @include pc_normal_button;
-                }
+                
               }
             }
             .work-pagination {
-              .swiper-pagination-bullet {
-                width: map-get($size, px_10);
-                height: map-get($size, px_10);
-                line-height: 0;
-                font-size: 0;
-                color:transparent;
-              }
-              .swiper-pagination-bullet-active {
-                color:transparent;
-              }
+              top: 53%;
             }
           }
         }

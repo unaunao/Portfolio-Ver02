@@ -487,10 +487,10 @@ sub 페이지 공통요소
     }
     .content {
       padding: map-get($size, px_50) map-get($size, px_10) 0;
-      :is(.con01, .con02).active {
+      :is(.con01, .con02, .con03).active {
         display: grid !important;
       }
-      :is(.con01, .con02) {
+      :is(.con01, .con02, .con03) {
         display: none !important;
       }
     }
@@ -773,10 +773,10 @@ page 공통
       }
       .content {
         padding: map-get($size, px_50) map-get($size, px_10) 0;
-        :is(.con01, .con02).active {
+        :is(.con01, .con02, .con03).active {
           display: grid !important;
         }
-        :is(.con01, .con02) {
+        :is(.con01, .con02, .con03) {
           display: none !important;
         }
       }

@@ -33,7 +33,7 @@ $('document').ready(function () {
     autoHeight: true, //enable auto height
     spaceBetween: 0,
     loop: true,
-    touchRatio: 0.1,
+    touchRatio: 0.01,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -184,36 +184,96 @@ $('document').ready(function () {
 
   /* Tab 버튼 황성화 애니메이션 */
   let tabs = document.getElementsByClassName('tab');
-  let leftTab = tabs[0];
-  let centerTab = tabs[1];
-  // let rightTab = tabs[2];
-  let con01 = document.getElementsByClassName('con01')[0];
-  let con02 = document.getElementsByClassName('con02')[0];
-  // let con03 = document.getElementsByClassName('con03')[0];
+  let Tab_about01 = tabs[0];
+  let Tab_about02 = tabs[1];
+  let Tab_work01 = tabs[2];
+  let Tab_work02 = tabs[3];
+  let Tab_work03 = tabs[4];
+  // console.log(rightTab);
+  let con_about01 = document.getElementsByClassName('con01')[0];
+  let con_about02 = document.getElementsByClassName('con02')[0];
+  let con_work01 = document.getElementsByClassName('con01')[1];
+  let con_work02 = document.getElementsByClassName('con02')[1];
+  let con_work03 = document.getElementsByClassName('con03')[0];
   
-  leftTab.addEventListener('click', ()=>{
-    if(!leftTab.classList.contains('active')){
-      leftTab.classList.add('active');
-      con01.classList.add('active');
+  Tab_about01.addEventListener('click', ()=>{
+    if(!Tab_about01.classList.contains('active')){
+      Tab_about01.classList.add('active');
+      con_about01.classList.add('active');
     }
-    if(centerTab.classList.contains('active')){
-      centerTab.classList.remove('active');
-      con02.classList.remove('active');
+    if(Tab_about02.classList.contains('active')){
+      Tab_about02.classList.remove('active');
+      con_about02.classList.remove('active');
     }
     /* swiper-wrapper 높이 변경해 주기 */
     let clientHeight = document.getElementsByClassName('swiper-slide-active')[0].clientHeight;
     swiperH.style.height= clientHeight +'px';
   });
 
-  centerTab.addEventListener('click', ()=>{
-    if(!centerTab.classList.contains('active')){
-      centerTab.classList.add('active');
-      con02.classList.add('active');
+  Tab_about02.addEventListener('click', ()=>{
+    if(!Tab_about02.classList.contains('active')){
+      Tab_about02.classList.add('active');
+      con_about02.classList.add('active');
     }
     
-    if(leftTab.classList.contains('active')){
-      leftTab.classList.remove('active');
-      con01.classList.remove('active');
+    if(Tab_about01.classList.contains('active')){
+      Tab_about01.classList.remove('active');
+      con_about01.classList.remove('active');
+    }
+    /* swiper-wrapper 높이 변경해 주기 */
+    var clientHeight = document.getElementsByClassName('swiper-slide-active')[0].clientHeight;
+    swiperH.style.height= clientHeight +'px';
+  });
+
+  Tab_work01.addEventListener('click', ()=>{
+    if(!Tab_work01.classList.contains('active')){
+      Tab_work01.classList.add('active');
+      con_work01.classList.add('active');
+    }
+    
+    if(Tab_work02.classList.contains('active')){
+      Tab_work02.classList.remove('active');
+      con_work02.classList.remove('active');
+    }
+    if(Tab_work03.classList.contains('active')){
+      Tab_work03.classList.remove('active');
+      con_work03.classList.remove('active');
+    }
+    /* swiper-wrapper 높이 변경해 주기 */
+    var clientHeight = document.getElementsByClassName('swiper-slide-active')[0].clientHeight;
+    swiperH.style.height= clientHeight +'px';
+  });
+  Tab_work02.addEventListener('click', ()=>{
+    if(!Tab_work02.classList.contains('active')){
+      Tab_work02.classList.add('active');
+      con_work02.classList.add('active');
+    }
+    
+    if(Tab_work01.classList.contains('active')){
+      Tab_work01.classList.remove('active');
+      con_work01.classList.remove('active');
+    }
+    if(Tab_work03.classList.contains('active')){
+      Tab_work03.classList.remove('active');
+      con_work03.classList.remove('active');
+    }
+    /* swiper-wrapper 높이 변경해 주기 */
+    var clientHeight = document.getElementsByClassName('swiper-slide-active')[0].clientHeight;
+    swiperH.style.height= clientHeight +'px';
+  });
+  Tab_work03.addEventListener('click', ()=>{
+    if(!Tab_work03.classList.contains('active')){
+      Tab_work03.classList.add('active');
+      con_work03.classList.add('active');
+    }
+    
+    if(Tab_work02.classList.contains('active')){
+      Tab_work02.classList.remove('active');
+      con_work02.classList.remove('active');
+    }
+    if(Tab_work01.classList.contains('active')){
+      Tab_work01.classList.remove('active');
+      con_work01.classList.remove('active');
     }
     /* swiper-wrapper 높이 변경해 주기 */
     var clientHeight = document.getElementsByClassName('swiper-slide-active')[0].clientHeight;
@@ -224,6 +284,7 @@ $('document').ready(function () {
   var swiper = new Swiper('.rps_web_slider', {
     direction: 'vertical',
     autoHeight: true,
+    // loop: true,
     spaceBetween: 0,
     mousewheel: true,
     effect: 'fade',
