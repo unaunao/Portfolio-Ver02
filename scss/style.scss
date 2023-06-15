@@ -740,18 +740,25 @@ page Work
                   }
                 }
               }
-              button {
-                // pointer-events: none;
-                touch-action: auto;
-                @include normal_button;
-                span {
-                  margin-right: map-get($size, px_8);
+              .btn_wrap{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap:map-get($size, px_8);
+                margin-top: 3.125rem;
+                button {
+                  // pointer-events: none;
+                  touch-action: auto;
+                  @include normal_button;
+                  margin-top: 0;
+                  span {
+                    margin-right: map-get($size, px_8);
+                  }
+                  i {
+                    @include icon;
+                    background-image: url(../images/svg/link02.svg);
+                  }
                 }
-                i {
-                  @include icon;
-                  background-image: url(../images/svg/link02.svg);
-                }
-              }
+              }  
             }
           }
           .swiper-slide-active {
@@ -759,7 +766,7 @@ page Work
               opacity: 1;
             }
             .text-box {
-              margin-top:80px;
+              margin-top:map-get($size, px_80);
               .project-info{
                 button {
                   // pointer-events: auto;
@@ -834,11 +841,6 @@ page Work
         background-image: url(../images/work-responsive02.jpg);
       }
     }
-    &:nth-child(9) {
-      .img-box {
-        background-image: url(../images/work-responsive01.jpg);
-      }
-    }
   }
 }
 .rps_web_slider02 {
@@ -859,17 +861,22 @@ page Work
   .swiper-slide {
     &:nth-child(1) {
       .img-box {
-        background-image: url(../images/work-pc03.jpg);
+        background-image: url(../images/work-pc04.jpg);
       }
     }
     &:nth-child(2) {
       .img-box {
-        background-image: url(../images/work-pc02_m.jpg);
+        background-image: url(../images/work-pc03_m.jpg);
       }
     }
     &:nth-child(3) {
       .img-box {
-        background-image: url(../images/work-pc01_m.jpg);
+        background-image: url(../images/work-pc02_m.jpg);
+      }
+    }
+    &:nth-child(4) {
+      .img-box {
+        background-image: url(../images/work-pc01.jpg);
       }
     }
   }
@@ -978,6 +985,7 @@ page Work
                 margin-left: map-get($size, px_40);
                 button {
                   @include pc_normal_button;
+                  margin-top: 0;
                 }
               }
             }
@@ -1033,12 +1041,12 @@ page Work
     .swiper-slide {
       &:nth-child(2) {
         .img-box {
-          background-image: url(../images/work-pc02.png);
+          background-image: url(../images/work-pc03.png);
         }
       }
       &:nth-child(3) {
         .img-box {
-          background-image: url(../images/work-pc01.png);
+          background-image: url(../images/work-pc02.png);
         }
       }
     }
