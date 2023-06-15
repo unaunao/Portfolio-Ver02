@@ -33,15 +33,14 @@ $('document').ready(function () {
     autoHeight: true, //enable auto height
     spaceBetween: 0,
     loop: true,
-    touchRatio: 0.01,
+    touchRatio: 0.1,
+    // allowTouchMove: false,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
     },
     navigation: {
-      // nextEl: '.swiper-button-next',
       nextEl: '.next_btn',
-      // prevEl: '.swiper-button-prev',
       prevEl: '.prev_btn'
     },
     on: {
@@ -59,6 +58,8 @@ $('document').ready(function () {
 
 /* 모바일 네비 페이지 네이션 */
   var swiper = new Swiper('.fullpage', {
+    loop: true,
+    autoHeight: true,
     pagination: {
       el: '.menu_list',
       clickable: true,
@@ -239,6 +240,34 @@ $('document').ready(function () {
       Tab_work03.classList.remove('active');
       con_work03.classList.remove('active');
     }
+  
+    /* sub work slide */
+  var swiper = new Swiper('.rps_web_slider01', {
+    direction: 'vertical',
+    autoHeight: true,
+    spaceBetween: 0,
+    mousewheel: true,
+    effect: 'fade',
+    pagination: {
+      el: '.work-pagination01',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      },
+    },
+    on: {
+      reachEnd: function () {
+        swiper.mousewheel.disable();
+      }
+    }
+  });//Swiper(rps_web_slider)
+  window.addEventListener('wheel', function (event) {
+    if (event.deltaY < 0) {
+      swiper.mousewheel.enable();
+    } else if (event.deltaY > 0) {
+    }
+  });
+
     /* swiper-wrapper 높이 변경해 주기 */
     var clientHeight = document.getElementsByClassName('swiper-slide-active')[0].clientHeight;
     swiperH.style.height= clientHeight +'px';
@@ -260,6 +289,33 @@ $('document').ready(function () {
     /* swiper-wrapper 높이 변경해 주기 */
     var clientHeight = document.getElementsByClassName('swiper-slide-active')[0].clientHeight;
     swiperH.style.height= clientHeight +'px';
+
+    /* sub work slide */
+    var swiper = new Swiper('.rps_web_slider02', {
+      direction: 'vertical',
+      autoHeight: true,
+      spaceBetween: 0,
+      mousewheel: true,
+      effect: 'fade',
+      pagination: {
+        el: '.work-pagination02',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+      },
+      on: {
+        reachEnd: function () {
+          swiper.mousewheel.disable();
+        }
+      }
+    });//Swiper(rps_web_slider02)
+    window.addEventListener('wheel', function (event) {
+      if (event.deltaY < 0) {
+        swiper.mousewheel.enable();
+      } else if (event.deltaY > 0) {
+      }
+    });
   });
   Tab_work03.addEventListener('click', ()=>{
     if(!Tab_work03.classList.contains('active')){
@@ -278,25 +334,62 @@ $('document').ready(function () {
     /* swiper-wrapper 높이 변경해 주기 */
     var clientHeight = document.getElementsByClassName('swiper-slide-active')[0].clientHeight;
     swiperH.style.height= clientHeight +'px';
+
+    /* sub work slide */
+    var swiper = new Swiper('.rps_web_slider03', {
+      direction: 'vertical',
+      autoHeight: true,
+      spaceBetween: 0,
+      mousewheel: true,
+      effect: 'fade',
+      pagination: {
+        el: '.work-pagination03',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+      },
+      on: {
+        reachEnd: function () {
+          swiper.mousewheel.disable();
+        }
+      }
+    });//Swiper(rps_web_slider02)
+    window.addEventListener('wheel', function (event) {
+      if (event.deltaY < 0) {
+        swiper.mousewheel.enable();
+      } else if (event.deltaY > 0) {
+      }
+    });
   });
 
   /* sub work slide */
-  var swiper = new Swiper('.rps_web_slider', {
+  var swiper = new Swiper('.rps_web_slider01', {
     direction: 'vertical',
     autoHeight: true,
-    // loop: true,
     spaceBetween: 0,
     mousewheel: true,
     effect: 'fade',
-    // touchRatio: 0,
     pagination: {
-      el: '.work-pagination',
+      el: '.work-pagination01',
       clickable: true,
       renderBullet: function (index, className) {
         return '<span class="' + className + '">' + (index + 1) + '</span>';
       },
     },
+    on: {
+      reachEnd: function () {
+        swiper.mousewheel.disable();
+      }
+    }
   });//Swiper(rps_web_slider)
+  window.addEventListener('wheel', function (event) {
+    if (event.deltaY < 0) {
+      swiper.mousewheel.enable();
+    } else if (event.deltaY > 0) {
+    }
+  });
+  
 
   /* Modal design */
   // const modalBody = document.getElementsByClassName('container')[0];

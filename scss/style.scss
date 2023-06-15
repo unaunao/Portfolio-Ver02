@@ -651,12 +651,18 @@ page Work
             display: block;
             font-size: map-get($font_size_pc, body_lg);
             margin-top: map-get($size, px_8);
+            b {
+              background-color: rgb(255, 255, 187);
+              // border-bottom: 2px solid map-get($color, primary-point);
+              color:map-get($color, text);
+              // font-weight:map-get($font_wight, medium);
+            }
           }
         }
         .work-slider {
           position:relative;
           padding: map-get($size, px_72) 0 map-get($size, px_50) 0;
-          margin-bottom: 38.75rem;
+          margin-bottom: 41.75rem;
           // overflow:hidden;
           &::before, &::after {
             content: '';
@@ -747,56 +753,6 @@ page Work
                 }
               }
             }
-            &:nth-child(1) {
-              .img-box {
-                background-image: url(../images/work-responsive10_m.jpg);
-              }
-            }
-            &:nth-child(2) {
-              .img-box {
-                background-image: url(../images/work-responsive09.jpg);
-              }
-            }
-            &:nth-child(3) {
-              .img-box {
-                background-image: url(../images/work-responsive08.jpg);
-              }
-            }
-            &:nth-child(4) {
-              .img-box {
-                background-image: url(../images/work-responsive07.jpg);
-              }
-            }
-            &:nth-child(5) {
-              .img-box {
-                background-image: url(../images/work-responsive06.jpg);
-              }
-            }
-            &:nth-child(6) {
-              .img-box {
-                background-image: url(../images/work-responsive05.jpg);
-              }
-            }
-            &:nth-child(7) {
-              .img-box {
-                background-image: url(../images/work-responsive04.jpg);
-              }
-            }
-            &:nth-child(8) {
-              .img-box {
-                background-image: url(../images/work-responsive03.jpg);
-              }
-            }
-            &:nth-child(9) {
-              .img-box {
-                background-image: url(../images/work-responsive02.jpg);
-              }
-            }
-            &:nth-child(10) {
-              .img-box {
-                background-image: url(../images/work-responsive01.jpg);
-              }
-            }
           }
           .swiper-slide-active {
             .img-box, .text-box  {
@@ -831,6 +787,94 @@ page Work
             }
           }
         }
+      }
+    }
+  }
+}
+
+.rps_web_slider01 {
+  .swiper-slide {
+    &:nth-child(1) {
+      .img-box {
+        background-image: url(../images/work-responsive10_m.jpg);
+      }
+    }
+    &:nth-child(2) {
+      .img-box {
+        background-image: url(../images/work-responsive09.jpg);
+      }
+    }
+    &:nth-child(3) {
+      .img-box {
+        background-image: url(../images/work-responsive08.jpg);
+      }
+    }
+    &:nth-child(4) {
+      .img-box {
+        background-image: url(../images/work-responsive07.jpg);
+      }
+    }
+    &:nth-child(5) {
+      .img-box {
+        background-image: url(../images/work-responsive06.jpg);
+      }
+    }
+    &:nth-child(6) {
+      .img-box {
+        background-image: url(../images/work-responsive05.jpg);
+      }
+    }
+    &:nth-child(7) {
+      .img-box {
+        background-image: url(../images/work-responsive04.jpg);
+      }
+    }
+    &:nth-child(8) {
+      .img-box {
+        background-image: url(../images/work-responsive03.jpg);
+      }
+    }
+    &:nth-child(9) {
+      .img-box {
+        background-image: url(../images/work-responsive02.jpg);
+      }
+    }
+    &:nth-child(10) {
+      .img-box {
+        background-image: url(../images/work-responsive01.jpg);
+      }
+    }
+  }
+}
+.rps_web_slider02 {
+  .swiper-slide {
+    &:nth-child(1) {
+      .img-box {
+        background-image: url(../images/work-webapp01.jpg);
+      }
+    }
+    &:nth-child(2) {
+      .img-box {
+        background-image: url(../images/work-webapp02.jpg);
+      }
+    }
+  }
+}
+.rps_web_slider03 {
+  .swiper-slide {
+    &:nth-child(1) {
+      .img-box {
+        background-image: url(../images/work-pc03.jpg);
+      }
+    }
+    &:nth-child(2) {
+      .img-box {
+        background-image: url(../images/work-pc02_m.jpg);
+      }
+    }
+    &:nth-child(3) {
+      .img-box {
+        background-image: url(../images/work-pc01_m.jpg);
       }
     }
   }
@@ -911,7 +955,6 @@ page Work
     }
   }
 }
-// 필요없는 부분은 삭제 하면서 정리중
 @media (min-width:1200px) {
   #page-work {
     .div-cont {
@@ -933,11 +976,6 @@ page Work
               height: 47.938rem !important;
               .img-box {
                 height: 33.625rem;
-              }
-              &:nth-child(1) {
-                .img-box {
-                  background-image: url(../images/work-responsive10.jpg);
-                }
               }
               .text-box {
                 pointer-events:auto;
@@ -987,6 +1025,29 @@ page Work
       }
     }
   }  
+  .rps_web_slider01 {
+    .swiper-slide {
+      &:nth-child(1) {
+        .img-box {
+          background-image: url(../images/work-responsive10.jpg);
+        }
+      }
+    }
+  }
+  .rps_web_slider03 {
+    .swiper-slide {
+      &:nth-child(2) {
+        .img-box {
+          background-image: url(../images/work-pc02.png);
+        }
+      }
+      &:nth-child(3) {
+        .img-box {
+          background-image: url(../images/work-pc01.png);
+        }
+      }
+    }
+  }
 }
 /* ===========================
 page Design 
