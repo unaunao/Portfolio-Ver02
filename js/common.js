@@ -481,6 +481,7 @@ $('document').ready(function () {
   let mobilego05 = document.getElementsByClassName('go_mobile')[4];
   let mobilego06 = document.getElementsByClassName('go_mobile')[5];
   let mobilego07 = document.getElementsByClassName('go_mobile')[6];
+  let mobilego08 = document.getElementsByClassName('go_mobile')[7];
   let iframeImg = document.getElementsByClassName('iframe-mobile')[0];
   mockclose.addEventListener('click', ()=> {
     overlay.classList.remove('active');
@@ -491,6 +492,34 @@ $('document').ready(function () {
   mobilego01.addEventListener('click', ()=> {
     overlay.classList.add('active');
     iframeImg.src ="https://unaunao.github.io/Portfolio-Ver02/";
+  })
+  mobilego02.addEventListener('click', ()=> {
+    overlay.classList.add('active');
+    iframeImg.src ="https://www.brandcast.co.kr/";
+  })
+  mobilego03.addEventListener('click', ()=> {
+    overlay.classList.add('active');
+    iframeImg.src ="https://www.wstdent.com/";
+  })
+  mobilego04.addEventListener('click', ()=> {
+    overlay.classList.add('active');
+    iframeImg.src ="https://dje.dicia.or.kr/sub02_m01";
+  })
+  mobilego05.addEventListener('click', ()=> {
+    overlay.classList.add('active');
+    iframeImg.src ="https://soundgram.co.kr/";
+  })
+  mobilego06.addEventListener('click', ()=> {
+    overlay.classList.add('active');
+    iframeImg.src ="https://unaunao.github.io/2020-22_works/spain/";
+  })
+  mobilego07.addEventListener('click', ()=> {
+    overlay.classList.add('active');
+    iframeImg.src ="https://unaunao.github.io/2020-22_works/yo_surf/";
+  })
+  mobilego08.addEventListener('click', ()=> {
+    overlay.classList.add('active');
+    iframeImg.src ="https://unaunao.github.io/2020-22_works/airsens_mobil/";
   })
 
   }//includeHTML

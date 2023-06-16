@@ -904,7 +904,6 @@ sub 페이지 공통요소
 }
 .overlay.active .mockup .mobile-mockup .home-btn span::before {
   content: "";
-  color: #fff;
   position: absolute;
   width: 60px;
   height: 60px;

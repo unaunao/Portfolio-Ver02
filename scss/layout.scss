@@ -625,7 +625,7 @@ sub 페이지 공통요소
           }
           &::before {
             content: '';
-            color:#fff;
+            // color:#fff;
             position: absolute;
             width: 60px;
             height: 60px;
