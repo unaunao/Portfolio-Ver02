@@ -497,6 +497,193 @@ sub 페이지 공통요소
   }
 }
 
+/* S: Mockup */
+.overlay {
+  display: none;
+}
+.overlay.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: map-get($size, px_8);
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 0 1.125rem;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 999999;
+  overflow:hidden;
+  backdrop-filter: blur(0.8rem);
+  .mockup {
+    // display: inline-block;
+    // margin: 15px;
+    .mobile-mockup{
+      border: 1px solid #f7f7f7;
+      width: 430px;
+      height: 850px;
+      position: relative;
+      border-radius: 30px;
+      background-color: #fafafa;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 97.5%;
+        height: 98.5%;
+        border-radius: 27px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+      }
+      .ifreme-url {
+        position: absolute;
+        width: 400px;
+        height: 680px;
+        // background-color: #333;
+        border: 1px solid #eee;
+        color: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        // centering
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        iframe {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .camera {
+        position: absolute;
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 400px;
+        height: 70px;
+        span {
+          background-color: #555;
+          position: absolute;
+          &:nth-child(1) {
+            width: 80px;
+            height: 7px;
+            border-radius: 7px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          &:nth-child(2) {
+            width: 15px;
+            height: 15px;
+            background-color: #555;
+            border-radius: 50%;
+            top:50%;
+            left: 130px;
+            transform: translateY(-50%);
+          }
+          &:nth-child(3) {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+      .home-btn {
+        position: absolute;
+        width: 400px;
+        height: 85px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 50px;
+          height: 50px;
+          border: 1px solid #ddd;
+          border-radius: 50%;
+          cursor: pointer;
+          transition: 0.5s;
+          &:hover {
+            background-color: #f1f1f1;
+          }
+          &:hover::before {
+            content: 'Exit';
+            color:#cacaca;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+          }
+          &::before {
+            content: '';
+            color:#fff;
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: inset 0 0 5px #606060;
+            transition: 0.5s;
+            text-align: center;
+            line-height: 60px;
+          }
+        }
+      }
+      .power {
+        position: absolute;
+        right: 0;
+        top: 87px;
+        span {
+          position: absolute;
+          width: 7px;
+          height: 40px;
+          border-radius: 0 5px 5px 0;
+        }
+      }
+      .volume {
+        position: absolute;
+        width: 7px;
+        height: 150px;
+        top: 87px;
+        right: 100%;
+        span {
+          position: absolute;
+          width: 7px;
+          height: 40px;
+          border-radius: 0 5px 5px 0;
+          transform: rotateY(180deg);
+          &:nth-child(1){
+            top:0;
+            height: 25px;
+          }
+          &:nth-child(2){
+            bottom: 55px;
+          }
+          &:nth-child(3){
+            bottom: 0;
+          }
+        }
+      }
+      .volume span, .power span {
+        background-color: #ddd;
+      }
+    }  
+  }
+}
+
+/* E: Mockup */
+
 
 @media (min-width:768px) {
   /* Bottom Navigation */

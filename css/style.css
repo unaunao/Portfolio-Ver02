@@ -746,6 +746,221 @@ sub 페이지 공통요소
   display: none !important;
 }
 
+/* S: Mockup */
+.overlay {
+  display: none;
+}
+
+.overlay.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 0 1.125rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999999;
+  overflow: hidden;
+  -webkit-backdrop-filter: blur(0.8rem);
+          backdrop-filter: blur(0.8rem);
+}
+.overlay.active .mockup .mobile-mockup {
+  border: 1px solid #f7f7f7;
+  width: 430px;
+  height: 850px;
+  position: relative;
+  border-radius: 30px;
+  background-color: #fafafa;
+}
+.overlay.active .mockup .mobile-mockup::before {
+  content: "";
+  position: absolute;
+  width: 97.5%;
+  height: 98.5%;
+  border-radius: 27px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+.overlay.active .mockup .mobile-mockup .ifreme-url {
+  position: absolute;
+  width: 400px;
+  height: 680px;
+  border: 1px solid #eee;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2em;
+}
+.overlay.active .mockup .mobile-mockup .ifreme-url iframe {
+  width: 100%;
+  height: 100%;
+}
+.overlay.active .mockup .mobile-mockup .camera {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 400px;
+  height: 70px;
+}
+.overlay.active .mockup .mobile-mockup .camera span {
+  background-color: #555;
+  position: absolute;
+}
+.overlay.active .mockup .mobile-mockup .camera span:nth-child(1) {
+  width: 80px;
+  height: 7px;
+  border-radius: 7px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.overlay.active .mockup .mobile-mockup .camera span:nth-child(2) {
+  width: 15px;
+  height: 15px;
+  background-color: #555;
+  border-radius: 50%;
+  top: 50%;
+  left: 130px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.overlay.active .mockup .mobile-mockup .camera span:nth-child(3) {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.overlay.active .mockup .mobile-mockup .home-btn {
+  position: absolute;
+  width: 400px;
+  height: 85px;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.overlay.active .mockup .mobile-mockup .home-btn span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.overlay.active .mockup .mobile-mockup .home-btn span:hover {
+  background-color: #f1f1f1;
+}
+.overlay.active .mockup .mobile-mockup .home-btn span:hover::before {
+  content: "Exit";
+  color: #cacaca;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.overlay.active .mockup .mobile-mockup .home-btn span::before {
+  content: "";
+  color: #fff;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: inset 0 0 5px #606060;
+          box-shadow: inset 0 0 5px #606060;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-align: center;
+  line-height: 60px;
+}
+.overlay.active .mockup .mobile-mockup .power {
+  position: absolute;
+  right: 0;
+  top: 87px;
+}
+.overlay.active .mockup .mobile-mockup .power span {
+  position: absolute;
+  width: 7px;
+  height: 40px;
+  border-radius: 0 5px 5px 0;
+}
+.overlay.active .mockup .mobile-mockup .volume {
+  position: absolute;
+  width: 7px;
+  height: 150px;
+  top: 87px;
+  right: 100%;
+}
+.overlay.active .mockup .mobile-mockup .volume span {
+  position: absolute;
+  width: 7px;
+  height: 40px;
+  border-radius: 0 5px 5px 0;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.overlay.active .mockup .mobile-mockup .volume span:nth-child(1) {
+  top: 0;
+  height: 25px;
+}
+.overlay.active .mockup .mobile-mockup .volume span:nth-child(2) {
+  bottom: 55px;
+}
+.overlay.active .mockup .mobile-mockup .volume span:nth-child(3) {
+  bottom: 0;
+}
+.overlay.active .mockup .mobile-mockup .volume span, .overlay.active .mockup .mobile-mockup .power span {
+  background-color: #ddd;
+}
+
+/* E: Mockup */
 @media (min-width: 768px) {
   /* Bottom Navigation */
   .div-cont .sub-body nav .tab-list .tab span {
@@ -2072,7 +2287,7 @@ page Design
       -ms-flex-align: center;
           align-items: center;
   gap: 0.5rem;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -2081,6 +2296,8 @@ page Design
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 999999;
   overflow: hidden;
+  -webkit-backdrop-filter: blur(0.625rem);
+          backdrop-filter: blur(0.625rem);
 }
 .desgin-modal .desgin-modal-close {
   display: -webkit-box;
@@ -2118,10 +2335,6 @@ page Design
   border-radius: 0.625rem;
 }
 
-.container.modal {
-  height: 100vh;
-  overflow: hidden;
-}
 .container.modal .desgin-modal {
   display: -webkit-box;
   display: -ms-flexbox;

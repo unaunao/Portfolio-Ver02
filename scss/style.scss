@@ -1140,7 +1140,7 @@ page Design
   justify-content: center;
   align-items: center;
   gap: map-get($size, px_8);
-  position: absolute;
+  position: fixed;
   top:0;
   left: 0;
   width: 100%;
@@ -1149,6 +1149,7 @@ page Design
   background-color: rgba(0,0,0,0.7);
   z-index: 999999;
   overflow:hidden;
+  backdrop-filter: blur(0.625rem);
   .desgin-modal-close {
     display: flex;
     justify-content: center;
@@ -1180,8 +1181,8 @@ page Design
   }
 }
 .container.modal {
-  height: 100vh;
-  overflow: hidden;
+  // height: 100vh;
+  // overflow: hidden;
   .desgin-modal{
     display: flex;
   }

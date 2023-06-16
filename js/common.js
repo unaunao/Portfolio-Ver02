@@ -471,6 +471,27 @@ $('document').ready(function () {
     }
   })
 
+  /* Mobile Mockup */
+  let mockclose = document.getElementsByClassName('close_btn')[0];
+  let overlay = document.getElementsByClassName('overlay')[0];
+  let mobilego01 = document.getElementsByClassName('go_mobile')[0];
+  let mobilego02 = document.getElementsByClassName('go_mobile')[1];
+  let mobilego03 = document.getElementsByClassName('go_mobile')[2];
+  let mobilego04 = document.getElementsByClassName('go_mobile')[3];
+  let mobilego05 = document.getElementsByClassName('go_mobile')[4];
+  let mobilego06 = document.getElementsByClassName('go_mobile')[5];
+  let mobilego07 = document.getElementsByClassName('go_mobile')[6];
+  let iframeImg = document.getElementsByClassName('iframe-mobile')[0];
+  mockclose.addEventListener('click', ()=> {
+    overlay.classList.remove('active');
+  })
+  overlay.addEventListener('click', ()=> {
+    overlay.classList.remove('active');
+  })
+  mobilego01.addEventListener('click', ()=> {
+    overlay.classList.add('active');
+    iframeImg.src ="https://unaunao.github.io/Portfolio-Ver02/";
+  })
 
   }//includeHTML
 
