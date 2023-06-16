@@ -730,8 +730,8 @@ sub 페이지 공통요소
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
-.sub-body .sub-con nav .tab-container .tab-list .tab:hover::before {
-  background: rgba(184, 142, 224, 0.8);
+.sub-body .sub-con nav .tab-container .tab-list .tab:hover {
+  background: rgba(0, 0, 0, 0.05);
 }
 .sub-body .sub-con nav .tab-container .tab-list .tab span {
   z-index: 1;
@@ -980,6 +980,9 @@ sub 페이지 공통요소
 }
 .container.dark .sub-body .sub-con nav .tab-container .tab-list .tab:hover::before {
   background: #470c80;
+}
+.container.dark .sub-body .sub-con nav .tab-container .tab-list .tab:hover {
+  background: rgba(255, 255, 255, 0.05);
 }
 .container.dark .sub-body .sub-con .content {
   padding: 3.125rem 0.625rem 0;

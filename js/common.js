@@ -33,7 +33,7 @@ $('document').ready(function () {
     autoHeight: true, //enable auto height
     spaceBetween: 0,
     loop: true,
-    touchRatio: 0.1,
+    // touchRatio: 0.1,
     // allowTouchMove: false,
     pagination: {
       el: '.swiper-pagination',
@@ -41,7 +41,8 @@ $('document').ready(function () {
     },
     navigation: {
       nextEl: '.next_btn',
-      prevEl: '.prev_btn'
+      prevEl: '.prev_btn',
+      clickable: true
     },
     on: {
       /* 다음 슬라이드로 넘어갈때 항상위로)(일반화면및 버튼적용) */

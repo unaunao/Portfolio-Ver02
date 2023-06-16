@@ -475,8 +475,8 @@ sub 페이지 공통요소
               opacity: 1;
               transform: scaleX(1);
             }
-            &:hover::before {
-              background: map-get($color, tertiary);
+            &:hover {
+              background:rgba($color: #000000, $alpha: 0.05);
             }
             span {
               z-index: 1;
@@ -766,6 +766,9 @@ page 공통
               }
               &:hover::before {
                 background: map-get($color, dark-tertiary);
+              }
+              &:hover {
+                background:rgba($color: #fff, $alpha: 0.05);
               }
             }
           }
