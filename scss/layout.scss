@@ -554,7 +554,7 @@ sub 페이지 공통요소
         align-items: center;
         font-size: 2em;
         iframe {
-          width: 100%;
+          width: 100vw;
           height: 100%;
         }
       }
