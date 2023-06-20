@@ -25,7 +25,7 @@ page Main
     background-color: #fdfdfd;
     animation:bgScale 3s 3s ease-in-out infinite alternate-reverse,
     bgblur 4s linear;
-    z-index: -1;
+    z-index: -10;
   }
   .div-cont{
     height: 100vh;
@@ -153,6 +153,9 @@ page Main
   50% {
     transform: scaleY(1.02) translateY(-0.5%) translateX(-50%) rotate3d(1, 1, 1, 0.1deg);
   }
+  // 50% {
+  //   transform: scaleY(1.02) translateY(-0.5%) translateX(-50%) rotate3d(1, 1, 1, 0.1deg);
+  // }
   100% {
     transform: scaleY(1) translateX(-50%) rotate3d(0);
   }
