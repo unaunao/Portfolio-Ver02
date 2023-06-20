@@ -148,16 +148,16 @@ page Main
 } 
 @keyframes bgScale {
   0% {
-    transform: scaleY(1) translateY(0%) translateX(-50%) rotate3d(0);
+    transform: scaleY(1) translateY(0%) translateX(-50%);
   }
   50% {
-    transform: scaleY(1.02) translateY(-0.5%) translateX(-50%) rotate3d(1, 1, 1, 0.1deg);
+    transform: scaleY(1.02) translateY(-0.5%) translateX(-50%);
   }
   // 50% {
   //   transform: scaleY(1.02) translateY(-0.5%) translateX(-50%) rotate3d(1, 1, 1, 0.1deg);
   // }
   100% {
-    transform: scaleY(1) translateX(-50%) rotate3d(0);
+    transform: scaleY(1) translateX(-50%);
   }
 }
 @keyframes bgblur {
