@@ -696,8 +696,8 @@ page Work
             .text-box {
               display: grid;
               gap: map-get($size, px_32);
-              // pointer-events: none;
-              // touch-action: none;
+              pointer-events: none;
+              touch-action: none;
               max-width: 28.75rem;
               .project-title {
                 span {
@@ -746,7 +746,7 @@ page Work
                 gap:map-get($size, px_8);
                 margin-top: 3.125rem;
                 button {
-                  // pointer-events: none;
+                  // pointer-events:none;
                   touch-action: auto;
                   @include normal_button;
                   margin-top: 0;
@@ -769,7 +769,7 @@ page Work
               margin-top:map-get($size, px_80);
               .project-info{
                 button {
-                  // pointer-events: auto;
+                  pointer-events: auto;
                 }
               }
             }

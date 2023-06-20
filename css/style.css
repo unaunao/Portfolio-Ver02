@@ -1927,6 +1927,9 @@ page Work
 #page-work .div-cont .sub-body .content .work-slider .swiper-slide .text-box {
   display: grid;
   gap: 2rem;
+  pointer-events: none;
+  -ms-touch-action: none;
+      touch-action: none;
   max-width: 28.75rem;
 }
 #page-work .div-cont .sub-body .content .work-slider .swiper-slide .text-box .project-title span {
@@ -2010,6 +2013,9 @@ page Work
 }
 #page-work .div-cont .sub-body .content .work-slider .swiper-slide-active .text-box {
   margin-top: 5rem;
+}
+#page-work .div-cont .sub-body .content .work-slider .swiper-slide-active .text-box .project-info button {
+  pointer-events: auto;
 }
 #page-work .div-cont .sub-body .content .work-slider .work-pagination {
   position: absolute;
