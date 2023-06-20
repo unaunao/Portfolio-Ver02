@@ -181,7 +181,7 @@ body {
             position: relative;
             background-color: transparent;
             opacity: 1;
-            &:nth-child(1), &:nth-child(7) {
+            &:nth-child(7) {
               display: none;
             }
             &::after {
@@ -198,19 +198,19 @@ body {
               text-decoration: underline;
               text-underline-position: under;
             }
-            &:nth-child(2)::after {
+            &:nth-child(1)::after {
               content: 'Main';
             }
-            &:nth-child(3)::after {
+            &:nth-child(2)::after {
               content: 'About';
             }
-            &:nth-child(4)::after {
+            &:nth-child(3)::after {
               content: 'Work';
             }
-            &:nth-child(5)::after {
+            &:nth-child(4)::after {
               content: 'Design';
             }
-            &:nth-child(6)::after {
+            &:nth-child(5)::after {
               content: 'Contact';
             }
           }  

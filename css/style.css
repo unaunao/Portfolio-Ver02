@@ -392,7 +392,7 @@ body {
   background-color: transparent;
   opacity: 1;
 }
-.nav .mobile-nav-overlay .mobile-nav .inner .menu_list .swiper-pagination-bullet:nth-child(1), .nav .mobile-nav-overlay .mobile-nav .inner .menu_list .swiper-pagination-bullet:nth-child(7) {
+.nav .mobile-nav-overlay .mobile-nav .inner .menu_list .swiper-pagination-bullet:nth-child(7) {
   display: none;
 }
 .nav .mobile-nav-overlay .mobile-nav .inner .menu_list .swiper-pagination-bullet::after {
@@ -409,19 +409,19 @@ body {
   text-decoration: underline;
   text-underline-position: under;
 }
-.nav .mobile-nav-overlay .mobile-nav .inner .menu_list .swiper-pagination-bullet:nth-child(2)::after {
+.nav .mobile-nav-overlay .mobile-nav .inner .menu_list .swiper-pagination-bullet:nth-child(1)::after {
   content: "Main";
 }
-.nav .mobile-nav-overlay .mobile-nav .inner .menu_list .swiper-pagination-bullet:nth-child(3)::after {
+.nav .mobile-nav-overlay .mobile-nav .inner .menu_list .swiper-pagination-bullet:nth-child(2)::after {
   content: "About";
 }
-.nav .mobile-nav-overlay .mobile-nav .inner .menu_list .swiper-pagination-bullet:nth-child(4)::after {
+.nav .mobile-nav-overlay .mobile-nav .inner .menu_list .swiper-pagination-bullet:nth-child(3)::after {
   content: "Work";
 }
-.nav .mobile-nav-overlay .mobile-nav .inner .menu_list .swiper-pagination-bullet:nth-child(5)::after {
+.nav .mobile-nav-overlay .mobile-nav .inner .menu_list .swiper-pagination-bullet:nth-child(4)::after {
   content: "Design";
 }
-.nav .mobile-nav-overlay .mobile-nav .inner .menu_list .swiper-pagination-bullet:nth-child(6)::after {
+.nav .mobile-nav-overlay .mobile-nav .inner .menu_list .swiper-pagination-bullet:nth-child(5)::after {
   content: "Contact";
 }
 .nav .mobile-nav-overlay .mobile-nav .inner .sns {
