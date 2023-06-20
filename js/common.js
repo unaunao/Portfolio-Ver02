@@ -61,8 +61,6 @@ $('document').ready(function () {
 
 /* 모바일 네비 페이지 네이션 */
   var swiper = new Swiper('.fullpage', {
-    loop: true,
-    autoHeight: true,
     pagination: {
       el: '.menu_list',
       clickable: true,
