@@ -41,7 +41,9 @@ $('document').ready(function () {
     },
     navigation: {
       nextEl: '.next_btn',
+      // nextEl: '.swiper-button-next',
       prevEl: '.prev_btn',
+      // nextEl: '.swiper-button-prev',
       clickable: true
     },
     on: {
