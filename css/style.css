@@ -1247,7 +1247,7 @@ page Main
   background-color: #fdfdfd;
   -webkit-animation: bgScale 3s 3s ease-in-out infinite alternate-reverse, bgblur 4s linear;
           animation: bgScale 3s 3s ease-in-out infinite alternate-reverse, bgblur 4s linear;
-  z-index: -1;
+  z-index: -10;
 }
 .main_wrap .div-cont {
   height: 100vh;
@@ -1441,30 +1441,30 @@ page Main
 }
 @-webkit-keyframes bgScale {
   0% {
-    -webkit-transform: scaleY(1) translateY(0%) translateX(-50%) rotate3d(0);
-            transform: scaleY(1) translateY(0%) translateX(-50%) rotate3d(0);
+    -webkit-transform: scaleY(1) translateY(0%) translateX(-50%);
+            transform: scaleY(1) translateY(0%) translateX(-50%);
   }
   50% {
-    -webkit-transform: scaleY(1.02) translateY(-0.5%) translateX(-50%) rotate3d(1, 1, 1, 0.1deg);
-            transform: scaleY(1.02) translateY(-0.5%) translateX(-50%) rotate3d(1, 1, 1, 0.1deg);
+    -webkit-transform: scaleY(1.02) translateY(-0.5%) translateX(-50%);
+            transform: scaleY(1.02) translateY(-0.5%) translateX(-50%);
   }
   100% {
-    -webkit-transform: scaleY(1) translateX(-50%) rotate3d(0);
-            transform: scaleY(1) translateX(-50%) rotate3d(0);
+    -webkit-transform: scaleY(1) translateX(-50%);
+            transform: scaleY(1) translateX(-50%);
   }
 }
 @keyframes bgScale {
   0% {
-    -webkit-transform: scaleY(1) translateY(0%) translateX(-50%) rotate3d(0);
-            transform: scaleY(1) translateY(0%) translateX(-50%) rotate3d(0);
+    -webkit-transform: scaleY(1) translateY(0%) translateX(-50%);
+            transform: scaleY(1) translateY(0%) translateX(-50%);
   }
   50% {
-    -webkit-transform: scaleY(1.02) translateY(-0.5%) translateX(-50%) rotate3d(1, 1, 1, 0.1deg);
-            transform: scaleY(1.02) translateY(-0.5%) translateX(-50%) rotate3d(1, 1, 1, 0.1deg);
+    -webkit-transform: scaleY(1.02) translateY(-0.5%) translateX(-50%);
+            transform: scaleY(1.02) translateY(-0.5%) translateX(-50%);
   }
   100% {
-    -webkit-transform: scaleY(1) translateX(-50%) rotate3d(0);
-            transform: scaleY(1) translateX(-50%) rotate3d(0);
+    -webkit-transform: scaleY(1) translateX(-50%);
+            transform: scaleY(1) translateX(-50%);
   }
 }
 @-webkit-keyframes bgblur {
