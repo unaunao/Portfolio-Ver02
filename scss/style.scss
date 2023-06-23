@@ -25,7 +25,7 @@ page Main
     background-color: #fdfdfd;
     animation:bgScale 3s 3s ease-in-out infinite alternate-reverse,
     bgblur 4s linear;
-    z-index: -10;
+    z-index: -1;
   }
   .div-cont{
     height: 100vh;
@@ -39,10 +39,10 @@ page Main
       align-items: center;
       .visual-txt{
         text-align: center;
-        h1 {
+        h2 {
           @include logo;
         }
-        h2 {
+        h3 {
           text-transform: uppercase;
           font-weight: map-get($font_wight, light);
         }
@@ -182,7 +182,7 @@ page Main
       .visual-con{
         .visual-txt{
           text-align: center;
-          h1 {
+          h2 {
             text-shadow: none;
           }
           .gide {
@@ -219,12 +219,12 @@ page Main
     .div-cont {
       .visual-con{
         .visual-txt {
-          h2 {
+          h3 {
             font-size: 3.563rem;
             margin:map-get($size, px_8 ) 0;
           }
           p {
-            font-size: map-get($font_size_pc, h4);
+            font-size: map-get($font_size_pc, h5);
           }
         }
       }
@@ -289,8 +289,8 @@ page About
   }
   .sub-body {
     .sub-con {
-      .content {
-        .con01 {
+      .content_list {
+        .content_list_item01 {
           .profil {
             position: relative;
             .name {
@@ -315,8 +315,8 @@ page About
             }
           }
           .about-text {
-            h2 {
-              font-size: map-get($font_size_pc, h2_ko);
+            h3 {
+              font-size: map-get($font_size_pc, h3_ko);
               margin: map-get($size, px_40) 0  map-get($size, px_32)  0;
             }
             button {
@@ -327,11 +327,11 @@ page About
             }
           }
         }
-        .con02 {
+        .content_list_item02 {
           margin-top: map-get($size, px_20 );
           .tech-wrap {
             .tech-box {
-              h2 {
+              h3 {
                 font-weight: map-get($font_wight, light);
                 b {
                   font-weight: map-get($font_wight, medium);
@@ -434,19 +434,19 @@ page About
     }
     .sub-body {
       .sub-con {
-        .content {
-          .con01 {
+        .content_list {
+          .content_list_item01 {
             .about-text {
-              h2 {
+              h3 {
                 font-weight: map-get($font_wight, regular);
               }
             }
           }
-          .con02 {
+          .content_list_item02 {
             margin-top: map-get($size, px_20 );
             .tech-wrap {
               .tech-box {
-                h2 {
+                h3 {
                   font-weight: map-get($font_wight, thin);
                   b {
                     font-weight: map-get($font_wight, regular);
@@ -496,8 +496,8 @@ page About
             }
           }
         }
-        .content {
-          .con01 {
+        .content_list {
+          .content_list_item01 {
             .profil {
               .name {
                 top: map-get($size, px_120);
@@ -505,7 +505,7 @@ page About
                 transform: translateX(100%);
                 span{
                   width: 6.563rem;
-                  font-size: map-get($font_size_pc, h4);
+                  font-size: map-get($font_size_pc, h5);
                   font-weight: map-get($font_wight, medium);
                   line-height: 120%;
                 }
@@ -517,7 +517,7 @@ page About
               }
             }
             .about-text {
-              h2 {
+              h3 {
                 text-align: center;
               }
               p {
@@ -532,7 +532,7 @@ page About
               }
             }
           }
-          .con02 {
+          .content_list_item02 {
             .tech-wrap {
               .tech-box {
                 .tech-explain {
@@ -584,14 +584,14 @@ page About
     }
     .div-cont {
       .sub-body { 
-        .content {
+        .content_list {
           padding: map-get($size , px_72) 0.625rem 0;
-          .con01 {
+          .content_list_item01 {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             .about-text {
               padding-left: map-get($size, px_64);
-              h2 {
+              h3 {
                 text-align: left;
                 margin: map-get($size, px_40) 0  map-get($size, px_32)  0;
               }
@@ -605,7 +605,7 @@ page About
               }
             }
           }
-          .con02 {
+          .content_list_item02 {
             margin-top: map-get($size, px_28);
             .tech-wrap {
               .tech-box {
@@ -640,11 +640,11 @@ page Work
   }
   .div-cont {
     .sub-body {
-      .content {
+      .content_list {
         .title-wrap{
           margin: map-get($size, px_20) 0 map-get($size, px_50) 0;
           text-align: center;
-          h3 {
+          h4 {
             font-weight: map-get($size, medium);
           }
           span {
@@ -888,7 +888,7 @@ page Work
     }
     .div-cont {
       .sub-body {
-        .content {
+        .content_list {
           .work-slider {
             .work-pagination {
               .swiper-pagination-bullet {
@@ -961,7 +961,7 @@ page Work
   #page-work {
     .div-cont {
       .sub-body {
-        .content {
+        .content_list {
           .work-slider {
             padding: 0;
             margin-bottom: 0;
@@ -990,7 +990,7 @@ page Work
               }
             }
             .swiper-slide-active {
-              z-index: 99999;
+              z-index: 3;
               opacity: 1 !important;
               .text-box {
                 display: grid;
@@ -1061,7 +1061,7 @@ page Design
   }
   .div-cont {
     .sub-body {
-      .content {
+      .content_list {
         .design-list {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -1202,7 +1202,7 @@ page Design
     }
     .div-cont {
       .sub-body {
-        .content {
+        .content_list {
           margin:map-get($size, px_80) 0 map-get($size, px_10);
           .design-list {
             grid-template-columns: 1fr 1fr 1fr;
@@ -1262,7 +1262,7 @@ page Contact
     }
     .tit-box {
       padding: 8.375em 0 7.5em 2em;
-      h1 {
+      h2 {
         text-transform: uppercase;
       }
       p {
@@ -1346,7 +1346,7 @@ page Contact
     .div-cont {
       .tit-box {
         p {
-          font-size: map-get($font_size_pc, h4_ko);
+          font-size: map-get($font_size_pc, h5_ko);
         }
       }
       .btn-box {

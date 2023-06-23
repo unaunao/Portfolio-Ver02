@@ -12,7 +12,7 @@
   text-shadow: 0 0.313rem 0.313rem #fff;
 }
 @mixin logo_m {
-  font-size: map-get($font_size_pc, h3_ko);
+  font-size: map-get($font_size_pc, h4_ko);
   font-weight: map-get($font_wight, semibold);
   text-transform: uppercase;
   letter-spacing: -0.1rem;
@@ -20,7 +20,7 @@
   line-height: map-get($size, px_28);
 }
 @mixin logo_s {
-  font-size: map-get($font_size_mobile, h3_ko);
+  font-size: map-get($font_size_mobile, h4_ko);
   font-weight: map-get($font_wight, medium);
   text-transform: uppercase;
   letter-spacing: -0.1rem;

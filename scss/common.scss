@@ -112,27 +112,27 @@
 //   url('./fonts/Pretendard-Thin.otf') format('opentype');
 // }
 /* Mobile */
-h1 {
+h1, h2 {
   font-size: map-get($font_size_mobile, h1);
   font-weight: map-get($font_wight, light);
 }
-h2{
-  font-size: map-get($font_size_mobile, h2);
-}
 h3{
-  font-size: map-get($font_size_mobile, h3_ko);
-  font-weight: map-get($font_wight, bold);
+  font-size: map-get($font_size_mobile, h3);
 }
 h4{
-  font-size: map-get($font_size_mobile, h4); 
+  font-size: map-get($font_size_mobile, h4_ko);
+  font-weight: map-get($font_wight, bold);
 }
-h2, h3, h4 {
+h5{
+  font-size: map-get($font_size_mobile, h5); 
+}
+h3, h4, h5 {
   line-height: 1.2em;
 }
-button,h2,h4{
+button,h3,h5{
   font-weight: map-get($font_wight, medium);
 }
-h1, button {
+h1, h2, button {
   line-height: 100%;
 }
 p {
@@ -145,25 +145,25 @@ p {
 
 /* PC */
 @media (min-width: 768px) {
-  h1 {
+  h1, h2 {
     font-size: map-get($font_size_pc, h1);
     font-weight: map-get($font_wight, thin);
   }
-  h2{
-    font-size: map-get($font_size_pc, h2);
-  }
   h3{
-    font-size: map-get($font_size_pc, h3_ko);
-    font-weight: map-get($font_wight, semibold);
+    font-size: map-get($font_size_pc, h3);
   }
   h4{
-    font-size: map-get($font_size_pc, h4); 
+    font-size: map-get($font_size_pc, h4_ko);
+    font-weight: map-get($font_wight, semibold);
+  }
+  h5{
+    font-size: map-get($font_size_pc, h5); 
   }
   .container.dark {
-    h2{
+    h3{
       font-weight: map-get($font_wight, regular);
     }
-    h3{
+    h4{
       font-weight: map-get($font_wight, medium);
     }
   }

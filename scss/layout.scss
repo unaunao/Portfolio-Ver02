@@ -66,7 +66,7 @@ body {
       background-color: transparent;
       &::after {
         left: map-get($size, px_10);
-        font-size: map-get($font_size_pc, h4);
+        font-size: map-get($font_size_pc, h5);
         text-decoration: underline;
         text-underline-position: under;
         line-height: 100%;
@@ -121,7 +121,7 @@ body {
   width: 100%;
   height: map-get($size , px_64);
   background-color: transparent;
-  z-index: 9000;
+  z-index: 4;
   transition: 0.5s;
   .inner {
     display: flex;
@@ -295,11 +295,11 @@ body {
 /* Bottom Navigation */
 .div-cont{
   width: 100%;
-  .nav_btn_wrap{
+  .nav_link_wrap{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap:8px;
-    .nav_btn{
+    .nav_link{
       a {
         padding:map-get($size, px_20 ) map-get($size, px_24);
         background-color: map-get($color, secondary); 
@@ -405,7 +405,7 @@ sub 페이지 공통요소
   .inner {
     padding: 4.375em 0 4.375em 2em;
   }
-  h1 {
+  h2 {
     text-transform: uppercase;
   }
   p {
@@ -426,7 +426,7 @@ sub 페이지 공통요소
       transition-duration: .3s;
       transition-property: max-width,margin;
       transition-timing-function: cubic-bezier(.2,0,0,1);
-      z-index: 9001;
+      z-index: 4;
       .tab-container {
         height: 2.625rem;
         display: flex;
@@ -439,8 +439,11 @@ sub 페이지 공통요소
           justify-content: flex-start;
           width: 100%;
           height: 100%;
-          border-radius: map-get($size, px_40);
-          background: map-get($color, secondary);
+          // padding:0.313rem;
+          // border-radius: map-get($size, px_40);
+          // border-radius: map-get($size, px_32); 
+          border-radius: map-get($size, px_32) map-get($size, px_32) map-get($size, px_8) map-get($size, px_8);
+          // background: map-get($color, secondary);
           text-align: center;
           white-space: nowrap;
           overflow: auto;
@@ -454,7 +457,8 @@ sub 페이지 공통요소
             justify-content: center;
             padding: 0 map-get($size, px_24);
             border: none;
-            border-radius: map-get($size, px_40);
+            // border-radius: map-get($size, px_40);
+            border-radius: map-get($size, px_32) map-get($size, px_32) 0 0; 
             background: map-get($color, secondary);
             cursor: pointer;
             vertical-align: middle;
@@ -467,7 +471,8 @@ sub 페이지 공통요소
               transition-duration: .2s;
               transition-property: transform,opacity;
               transition-timing-function: cubic-bezier(.2,0,0,1);
-              border-radius: map-get($size, px_40);
+              // border-radius: map-get($size, px_40);
+              border-radius: map-get($size, px_32) map-get($size, px_32) 0 0; 
               background: map-get($color, primary);
               content: "";
             }
@@ -485,12 +490,12 @@ sub 페이지 공통요소
         }
       }
     }
-    .content {
+    .content_list {
       padding: map-get($size, px_50) map-get($size, px_10) 0;
-      :is(.con01, .con02, .con03).active {
+      :is(.content_list_item01, .content_list_item02, .content_list_item03).active {
         display: grid !important;
       }
-      :is(.con01, .con02, .con03) {
+      :is(.content_list_item01, .content_list_item02, .content_list_item03) {
         display: none !important;
       }
     }
@@ -514,7 +519,7 @@ sub 페이지 공통요소
   height: 100vh;
   padding: 0 1.125rem;
   background-color: rgba(0,0,0,0.7);
-  z-index: 999999;
+  z-index: 5;
   overflow:hidden;
   backdrop-filter: blur(0.8rem);
   .mockup {
@@ -704,8 +709,8 @@ sub 페이지 공통요소
           }
         }
     }
-    .nav_btn_wrap{
-      .nav_btn{
+    .nav_link_wrap{
+      .nav_link{
         a {
           padding:1.625rem map-get($size, px_24);
           grid-gap: 0.75rem;
@@ -819,7 +824,7 @@ page 공통
         width:1200px;
         margin:0 auto;
         p {
-          font-size: map-get($font_size_pc, h4_ko);
+          font-size: map-get($font_size_pc, h5_ko);
         }
       }
     }
@@ -841,7 +846,7 @@ page 공통
             }
           }
         }
-        .content {
+        .content_list {
           padding: map-get($size, px_50) map-get($size, px_10) 0;
         }
       }
@@ -897,8 +902,8 @@ page 공통
   }// Navigation bar
   /* Bottom Navigation */
   .div-cont{
-    .nav_btn_wrap{
-      .nav_btn{
+    .nav_link_wrap{
+      .nav_link{
           a {
             background-color: map-get($color, dark-secondary); 
             span{
@@ -961,12 +966,12 @@ page 공통
           }
         }
       }
-      .content {
+      .content_list {
         padding: map-get($size, px_50) map-get($size, px_10) 0;
-        :is(.con01, .con02, .con03).active {
+        :is(.content_list_item01, .content_list_item02, .content_list_item03).active {
           display: grid !important;
         }
-        :is(.con01, .con02, .con03) {
+        :is(.content_list_item01, .content_list_item02, .content_list_item03) {
           display: none !important;
         }
       }

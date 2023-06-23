@@ -1,30 +1,58 @@
 /* font */
 $font_size_pc: (
   h1: 6.875rem,
-  h2: 3.125rem,
-  h2_ko: 3rem,
-  h3_ko: 1.875rem,
-  h4: 1.5rem,
-  h4_ko: 1.375rem,
+  h2: 6.875rem,
+  h3: 3.125rem,
+  h3_ko: 3rem,
+  h4_ko: 1.875rem,
+  h5: 1.5rem,
+  h5_ko: 1.375rem,
   body_lg: 1.125rem,
   body_sm: 0.75rem,
   btn_lg:1.5rem,
   btn_md: 1.125rem,
   btn_sm: 1rem
 );
+// $font_size_pc: (
+//   h1: 6.875rem,
+//   h2: 3.125rem,
+//   h2_ko: 3rem,
+//   h3_ko: 1.875rem,
+//   h4: 1.5rem,
+//   h4_ko: 1.375rem,
+//   body_lg: 1.125rem,
+//   body_sm: 0.75rem,
+//   btn_lg:1.5rem,
+//   btn_md: 1.125rem,
+//   btn_sm: 1rem
+// );
 $font_size_mobile: (
   h1: 3.563rem,
-  h2: 2.250rem,
-  h2_ko: 2.125rem,
-  h3_ko: 1.5rem,
-  h4: 1.5rem,
-  h4_ko: 1.375rem,
+  h2: 3.563rem,
+  h3: 2.250rem,
+  h3_ko: 2.125rem,
+  h4_ko: 1.5rem,
+  h5: 1.5rem,
+  h5_ko: 1.375rem,
   body_lg: 1.125rem,
   body_sm: 0.75rem,
   btn_lg:1.125rem,
   btn_md: 1rem,
   btn_sm: 0.875rem
 );
+// $font_size_mobile: (
+//   h1: 3.563rem,
+//   h2: 2.250rem,
+//   h2_ko: 2.125rem,
+//   h3_ko: 1.5rem,
+//   h4: 1.5rem,
+//   h4_ko: 1.375rem,
+//   body_lg: 1.125rem,
+//   body_sm: 0.75rem,
+//   btn_lg:1.125rem,
+//   btn_md: 1rem,
+//   btn_sm: 0.875rem
+// );
 $font_wight : (
   thin:100,
   light:300,

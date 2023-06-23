@@ -40,9 +40,9 @@ $('document').ready(function () {
       clickable: true,
     },
     navigation: {
-      nextEl: '.next_btn',
+      nextEl: '.next_link',
       // nextEl: '.swiper-button-next',
-      prevEl: '.prev_btn',
+      prevEl: '.prev_link',
       // nextEl: '.swiper-button-prev',
       clickable: true
     },
@@ -192,11 +192,11 @@ $('document').ready(function () {
   let Tab_work02 = tabs[3];
   let Tab_work03 = tabs[4];
   // console.log(rightTab);
-  let con_about01 = document.getElementsByClassName('con01')[0];
-  let con_about02 = document.getElementsByClassName('con02')[0];
-  let con_work01 = document.getElementsByClassName('con01')[1];
-  let con_work02 = document.getElementsByClassName('con02')[1];
-  let con_work03 = document.getElementsByClassName('con03')[0];
+  let con_about01 = document.getElementsByClassName('content_list_item01')[0];
+  let con_about02 = document.getElementsByClassName('content_list_item02')[0];
+  let con_work01 = document.getElementsByClassName('content_list_item01')[1];
+  let con_work02 = document.getElementsByClassName('content_list_item02')[1];
+  let con_work03 = document.getElementsByClassName('content_list_item03')[0];
   
   Tab_about01.addEventListener('click', ()=>{
     if(!Tab_about01.classList.contains('active')){

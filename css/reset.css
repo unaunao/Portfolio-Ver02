@@ -47,14 +47,16 @@ svg, path {
   top: -1000px;
   left: -1000px;
   overflow: hidden;
-  z-index: 9000;
+  z-index: 5;
 }
 .skipNavi .skipLink:focus, .skipNavi .skipLink:active {
   top: 0;
   left: 0;
-  padding: 10px 20px;
+  padding: 10px 0;
+  width: 100%;
   background: #1e64ba;
   color: #fff;
+  text-align: center;
 }
 
 /* common hidden */
