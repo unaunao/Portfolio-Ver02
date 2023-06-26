@@ -416,6 +416,7 @@ $('document').ready(function () {
     container.classList.remove('modal');
   })
   design01.addEventListener('click',()=>{
+    modalImg.alt = "사운드그램 앱 정보 이미지제작";
     if (container.classList.contains('dark')) {
       modalImg.src = "./images/dark_design_detail01.jpg";
     } else {
@@ -423,6 +424,7 @@ $('document').ready(function () {
     }
   })
   design02.addEventListener('click',()=>{
+    modalImg.alt = "사운드그램 Mall 메인배너 및 상품대표 이미지";
     if (container.classList.contains('dark')) {
       modalImg.src = "./images/dark_design_detail02.jpg";
     } else {
@@ -430,9 +432,11 @@ $('document').ready(function () {
     }
   })
   design03.addEventListener('click',()=>{
+    modalImg.alt = "사운드그램 칩디스크상품 상세 이미지";
     modalImg.src = "./images/design_detail03.jpg";
   })
   design04.addEventListener('click',()=>{
+    modalImg.alt = "사운드그램 SNS 피드 게시물 이미지 제작";
     if (container.classList.contains('dark')) {
       modalImg.src = "./images/dark_design_detail04.jpg";
     } else {
@@ -440,6 +444,7 @@ $('document').ready(function () {
     }
   })
   design05.addEventListener('click',()=>{
+    modalImg.alt = "화이트바른이치과 공식홈페이지 사용 이미지제작";
     if (container.classList.contains('dark')) {
       modalImg.src = "./images/dark_design_detail05.jpg";
     } else {
@@ -447,6 +452,7 @@ $('document').ready(function () {
     }
   })
   design06.addEventListener('click',()=>{
+    modalImg.alt = "화이트바른이치과 블로그 게시물 이미지 제작";
     if (container.classList.contains('dark')) {
       modalImg.src = "./images/dark_design_detail06.jpg";
     } else {
@@ -454,9 +460,11 @@ $('document').ready(function () {
     }
   })
   design07.addEventListener('click',()=>{
+    modalImg.alt = "벤틀리 웹사이트 RE Disine";
     modalImg.src = "./images/design_detail07.jpg";
   })
   design08.addEventListener('click',()=>{
+    modalImg.alt = "포토샵디자인";
     if (container.classList.contains('dark')) {
       modalImg.src = "./images/dark_design_detail08.jpg";
     } else {
@@ -464,6 +472,7 @@ $('document').ready(function () {
     }
   })
   design09.addEventListener('click',()=>{
+    modalImg.alt = "일러스트레이터 디자인";
     if (container.classList.contains('dark')) {
       modalImg.src = "./images/dark_design_detail09.jpg";
     } else {

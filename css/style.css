@@ -1591,9 +1591,17 @@ page Main
   .main_wrap .div-cont .visual-con .visual-txt {
     padding-top: 9.375rem;
   }
+  .container .main_wrap .div-cont .visual-con .visual-txt .gide .hand {
+    background: url(../images/svg/pointer.svg) no-repeat;
+    background-position: 0rem 0rem;
+  }
   /* Dark Mode */
   .container.dark .main_wrap .bg {
     background-image: url(../images/dark_bg_pc_main.jpg);
+  }
+  .container.dark .main_wrap .div-cont .visual-con .visual-txt .gide .hand {
+    background: url(../images/svg/dark-pointer.svg) no-repeat;
+    background-position: 0rem 0rem;
   }
 }
 /* ===========================
