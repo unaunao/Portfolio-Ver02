@@ -110,17 +110,17 @@ page Main
 }
 @keyframes gide-hand {
   0% {
-    transform: translateX(-80%) rotate(0deg) scale(84%);
+    transform: translateX(-80%) rotate(0deg) scale(0.84);
   }
   50% {
-    transform:translateX(-30%) rotate(5deg) scale(75%);
+    transform:translateX(-30%) rotate(5deg) scale(0.75);
     opacity: 0;
   }
   80%{
     opacity: 100%;
   }
   100%{
-    transform:translateX(-80%) rotate(0deg) scale(84%);
+    transform:translateX(-80%) rotate(0deg) scale(0.84);
     opacity: 100%;
   }
 } 
@@ -240,17 +240,17 @@ page Main
   /* main 가이드*/
   @keyframes gide-hand {
     0% {
-      transform: translateX(-80%) rotate(0deg) scale(100%);
+      transform: translateX(-80%) rotate(0deg) scale(1);
     }
     50% {
-      transform:translateX(-30%) rotate(5deg) scale(85%);
+      transform:translateX(-30%) rotate(5deg) scale(0.85);
       opacity: 0%;
     }
     80%{
       opacity: 100%;
     }
     100%{
-      transform:translateX(-80%) rotate(0deg) scale(100%);
+      transform:translateX(-80%) rotate(0deg) scale(1);
       opacity: 100%;
     }
   } 
@@ -1104,7 +1104,7 @@ page Design
               border-radius: map-get($size, px_20);
               filter: grayscale(0);
               a {
-                transform: scale(110%);
+                transform: scale(1.1);
               }
             }
             &::before {

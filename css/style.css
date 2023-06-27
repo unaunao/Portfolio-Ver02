@@ -1360,40 +1360,40 @@ page Main
 
 @-webkit-keyframes gide-hand {
   0% {
-    -webkit-transform: translateX(-80%) rotate(0deg) scale(84%);
-            transform: translateX(-80%) rotate(0deg) scale(84%);
+    -webkit-transform: translateX(-80%) rotate(0deg) scale(0.84);
+            transform: translateX(-80%) rotate(0deg) scale(0.84);
   }
   50% {
-    -webkit-transform: translateX(-30%) rotate(5deg) scale(75%);
-            transform: translateX(-30%) rotate(5deg) scale(75%);
+    -webkit-transform: translateX(-30%) rotate(5deg) scale(0.75);
+            transform: translateX(-30%) rotate(5deg) scale(0.75);
     opacity: 0;
   }
   80% {
     opacity: 100%;
   }
   100% {
-    -webkit-transform: translateX(-80%) rotate(0deg) scale(84%);
-            transform: translateX(-80%) rotate(0deg) scale(84%);
+    -webkit-transform: translateX(-80%) rotate(0deg) scale(0.84);
+            transform: translateX(-80%) rotate(0deg) scale(0.84);
     opacity: 100%;
   }
 }
 
 @keyframes gide-hand {
   0% {
-    -webkit-transform: translateX(-80%) rotate(0deg) scale(84%);
-            transform: translateX(-80%) rotate(0deg) scale(84%);
+    -webkit-transform: translateX(-80%) rotate(0deg) scale(0.84);
+            transform: translateX(-80%) rotate(0deg) scale(0.84);
   }
   50% {
-    -webkit-transform: translateX(-30%) rotate(5deg) scale(75%);
-            transform: translateX(-30%) rotate(5deg) scale(75%);
+    -webkit-transform: translateX(-30%) rotate(5deg) scale(0.75);
+            transform: translateX(-30%) rotate(5deg) scale(0.75);
     opacity: 0;
   }
   80% {
     opacity: 100%;
   }
   100% {
-    -webkit-transform: translateX(-80%) rotate(0deg) scale(84%);
-            transform: translateX(-80%) rotate(0deg) scale(84%);
+    -webkit-transform: translateX(-80%) rotate(0deg) scale(0.84);
+            transform: translateX(-80%) rotate(0deg) scale(0.84);
     opacity: 100%;
   }
 }
@@ -1546,39 +1546,39 @@ page Main
   /* main 가이드*/
   @-webkit-keyframes gide-hand {
     0% {
-      -webkit-transform: translateX(-80%) rotate(0deg) scale(100%);
-              transform: translateX(-80%) rotate(0deg) scale(100%);
+      -webkit-transform: translateX(-80%) rotate(0deg) scale(1);
+              transform: translateX(-80%) rotate(0deg) scale(1);
     }
     50% {
-      -webkit-transform: translateX(-30%) rotate(5deg) scale(85%);
-              transform: translateX(-30%) rotate(5deg) scale(85%);
+      -webkit-transform: translateX(-30%) rotate(5deg) scale(0.85);
+              transform: translateX(-30%) rotate(5deg) scale(0.85);
       opacity: 0%;
     }
     80% {
       opacity: 100%;
     }
     100% {
-      -webkit-transform: translateX(-80%) rotate(0deg) scale(100%);
-              transform: translateX(-80%) rotate(0deg) scale(100%);
+      -webkit-transform: translateX(-80%) rotate(0deg) scale(1);
+              transform: translateX(-80%) rotate(0deg) scale(1);
       opacity: 100%;
     }
   }
   @keyframes gide-hand {
     0% {
-      -webkit-transform: translateX(-80%) rotate(0deg) scale(100%);
-              transform: translateX(-80%) rotate(0deg) scale(100%);
+      -webkit-transform: translateX(-80%) rotate(0deg) scale(1);
+              transform: translateX(-80%) rotate(0deg) scale(1);
     }
     50% {
-      -webkit-transform: translateX(-30%) rotate(5deg) scale(85%);
-              transform: translateX(-30%) rotate(5deg) scale(85%);
+      -webkit-transform: translateX(-30%) rotate(5deg) scale(0.85);
+              transform: translateX(-30%) rotate(5deg) scale(0.85);
       opacity: 0%;
     }
     80% {
       opacity: 100%;
     }
     100% {
-      -webkit-transform: translateX(-80%) rotate(0deg) scale(100%);
-              transform: translateX(-80%) rotate(0deg) scale(100%);
+      -webkit-transform: translateX(-80%) rotate(0deg) scale(1);
+              transform: translateX(-80%) rotate(0deg) scale(1);
       opacity: 100%;
     }
   }
@@ -2230,8 +2230,8 @@ page Design
           filter: grayscale(0);
 }
 #page-design .div-cont .sub-body .content_list .design-list .design-item:hover a {
-  -webkit-transform: scale(110%);
-          transform: scale(110%);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 #page-design .div-cont .sub-body .content_list .design-list .design-item::before {
   position: absolute;
