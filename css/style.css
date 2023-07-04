@@ -1658,6 +1658,9 @@ page About
   margin-top: 3.125rem;
   background-color: #7900EC;
 }
+#page-about .sub-body .sub-con .content_list .content_list_item01 .about-text button:hover {
+  background-color: #510A94;
+}
 #page-about .sub-body .sub-con .content_list .content_list_item01 .about-text button span {
   margin-right: 0.5rem;
 }
@@ -2007,6 +2010,9 @@ page Work
   margin-top: 3.125rem;
   background-color: #7900EC;
   margin-top: 0;
+}
+#page-work .div-cont .sub-body .content_list .work-slider .swiper-slide .text-box .btn_wrap button:hover {
+  background-color: #510A94;
 }
 #page-work .div-cont .sub-body .content_list .work-slider .swiper-slide .text-box .btn_wrap button span {
   margin-right: 0.5rem;
@@ -2459,6 +2465,9 @@ page Contact
   margin-top: 3.125rem;
   background-color: #7900EC;
   margin: 0;
+}
+#page-contact .div-cont .btn-box li:hover {
+  background-color: #510A94;
 }
 #page-contact .div-cont .btn-box li a {
   display: grid;

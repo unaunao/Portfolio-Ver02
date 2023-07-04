@@ -774,7 +774,6 @@ page Work
                 gap:map-get($size, px_8);
                 margin-top: 3.125rem;
                 button {
-                  // pointer-events:none;
                   touch-action: auto;
                   @include normal_button;
                   margin-top: 0;
