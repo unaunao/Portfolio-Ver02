@@ -1422,10 +1422,7 @@ page Contact
           li{
             a {
               span {
-                &:first-child {
-                }
                 &:last-child {
-                  font-size: map-get($font_size_pc, btn_lg);
                   display: inline-block;
                 }
               }
